@@ -5,14 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+import { IonicModule } from '@ionic/angular';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
