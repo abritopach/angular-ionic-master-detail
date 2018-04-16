@@ -4,6 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project show how to implement a Master Detail Pattern in Ionic 4 with Angular Routing.
 
+Technologies: Angular, Ionic.
+
+![Technologies](readme_resources/technologies.png "Technologies")
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
