@@ -6,12 +6,18 @@
 
 <ion-content no-bounce>
   <ion-list>
-    <ion-item tappable routerLink="/detail/{{ item.title }}" detail="true" *ngFor="let item of items">
-        <ion-avatar item-start>
-          <img [src]="item.image">
-        </ion-avatar>
+    <ion-item *ngFor="let item of itemService.items" detail="true" tappable routerLink="/detail/{{ item.id }}">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" alt="">
+      </ion-thumbnail>
+      <ion-label>
         <h2>{{ item.title }}</h2>
         <h3>{{ item.description }}</h3>
-      </ion-item>
+      </ion-label>
+      <!--
+      <ion-note slot="end">
+      </ion-note>
+      -->    
+    </ion-item>
   </ion-list>
 </ion-content>

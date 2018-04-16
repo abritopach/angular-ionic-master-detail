@@ -8,39 +8,34 @@
 </ion-header>
 
 <ion-content no-bounce>
-    <ion-card>
+    <ion-card *ngIf="item">
         <ion-item>
           <ion-avatar item-start>
-            <img src="http://i.pravatar.cc/300?img=1">
+            <img [src]="item?.image">
           </ion-avatar>
-          <h2>Marty McFly</h2>
-          <p>November 5, 1955</p>
+          <h2>{{ item?.title }}</h2>
         </ion-item>
       
         <img src="https://placeimg.com/640/480/nature">
       
         <ion-card-content>
-          <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+          <p>{{ item?.description }}</p>
         </ion-card-content>
       
         <ion-row>
-          <ion-col>
-            <button ion-button icon-left clear small>
-              <ion-icon name="thumbs-up"></ion-icon>
-              <div>12 Likes</div>
-            </button>
-          </ion-col>
-          <ion-col>
-            <button ion-button icon-left clear small>
-              <ion-icon name="text"></ion-icon>
-              <div>4 Comments</div>
-            </button>
-          </ion-col>
-          <ion-col center text-center>
-            <ion-note>
+          <ion-item>
+          <ion-button icon-left clear small class="action-button">
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </ion-button>
+          <ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </ion-button>
+          <ion-note slot="end">
               11h ago
-            </ion-note>
-          </ion-col>
+          </ion-note>
+          </ion-item>
         </ion-row>
       
       </ion-card>

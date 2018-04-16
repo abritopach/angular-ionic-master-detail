@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, Item } from '@ionic/angular';
+
+import { ItemService } from './providers/item-service';
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { IonicModule } from '@ionic/angular';
     AppRoutingModule,
     IonicModule.forRoot()
   ],
-  providers: [],
+  providers: [ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
