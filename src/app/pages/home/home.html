@@ -1,0 +1,17 @@
+<ion-header no-border>
+  <ion-toolbar color='primary'>
+      <ion-title>Master Detail Pattern Ionic 4 with Angular Routing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-list>
+    <ion-item tappable routerLink="/detail/{{ item.title }}" detail="true" *ngFor="let item of items">
+        <ion-avatar item-start>
+          <img [src]="item.image">
+        </ion-avatar>
+        <h2>{{ item.title }}</h2>
+        <h3>{{ item.description }}</h3>
+      </ion-item>
+  </ion-list>
+</ion-content>
