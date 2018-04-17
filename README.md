@@ -8,17 +8,41 @@ Technologies: Angular, Ionic.
 
 ![Technologies](readme_resources/technologies.png "Technologies")
 
+## Example
+
+![App](readme_resources/app.gif "App")
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Capacitor: Add Platforms
+
+``` bash
+    npx cap add ios
+    npx cap add android
+```
+
+## Capacitor: Syncing your app
+Every time you perform a build (e.g. npm run build) that changes your web directory (default: www), you'll need to copy those changes down to your native projects:
+
+``` bash
+    npx cap copy
+```
+
+## Capacitor: Open IDE to build
+
+``` bash
+    npx cap open ios
+    npx cap open android
+```
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 

@@ -27,6 +27,7 @@
     "@capacitor/android": "^1.0.0-alpha.34",
     "@capacitor/cli": "^1.0.0-alpha.34",
     "@capacitor/core": "^1.0.0-alpha.34",
+    "@capacitor/ios": "^1.0.0-alpha.34",
     "@ionic/angular": "^4.0.0-alpha.2",
     "@ionic/cli-hooks": "1.0.0-rc.1",
     "@ionic/schematics-angular": "canary",
