@@ -10,6 +10,6 @@ import { ItemService } from '../../providers/item-service';
 export class HomeComponent {
 
 
-  constructor(private itemService: ItemService) {
+  constructor(public itemService: ItemService) {
   }
 }

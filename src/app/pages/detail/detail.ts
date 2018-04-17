@@ -10,9 +10,9 @@ import { ItemService, Item } from '../../providers/item-service';
 })
 export class DetailComponent {
 
-  private item: Item;
+  item: Item;
 
-  constructor(private route: ActivatedRoute, private itemService: ItemService) {
+  constructor(private route: ActivatedRoute, public itemService: ItemService) {
 
   }
 
