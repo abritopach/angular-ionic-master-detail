@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 import { ItemService } from '../../providers/item-service';
+
 @Component({
   selector: 'app-page-home',
   templateUrl: './home.html',
@@ -9,6 +10,7 @@ import { ItemService } from '../../providers/item-service';
 })
 export class HomeComponent {
 
+  currentYear = new Date().getFullYear();
 
   constructor(public itemService: ItemService) {
   }
