@@ -51,7 +51,7 @@ var DetailComponentRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header no-border>\n  <ion-toolbar color='primary'>\n      <ion-buttons slot=\"start\">\n        <ion-back-button text=\"home\"></ion-back-button>\n      </ion-buttons>\n      <ion-title>Master Detail Pattern Ionic 4 with Angular Routing</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content no-bounce>\n    <ion-card *ngIf=\"item\">\n        <ion-item>\n          <ion-avatar item-start>\n            <img [src]=\"item?.image\">\n          </ion-avatar>\n          <h2>{{ item?.title }}</h2>\n        </ion-item>\n      \n        <img src=\"https://placeimg.com/640/480/nature\">\n      \n        <ion-card-content>\n          <p>{{ item?.description }}</p>\n        </ion-card-content>\n      \n        <ion-row>\n          <ion-item>\n          <ion-button icon-left clear small class=\"action-button\">\n            <ion-icon name=\"thumbs-up\"></ion-icon>\n            <div>12 Likes</div>\n          </ion-button>\n          <ion-button icon-left clear small>\n            <ion-icon name=\"text\"></ion-icon>\n            <div>4 Comments</div>\n          </ion-button>\n          <ion-note slot=\"end\">\n              11h ago\n          </ion-note>\n          </ion-item>\n        </ion-row>\n      \n      </ion-card>\n</ion-content>\n"
+module.exports = "<ion-header no-border>\n  <ion-toolbar color='primary'>\n      <ion-buttons slot=\"start\">\n        <ion-back-button text=\"home\"></ion-back-button>\n      </ion-buttons>\n      <ion-title>Master Detail Pattern Ionic 4 with Angular Routing</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content no-bounce>\n    <ion-card *ngIf=\"item\">\n        <ion-item>\n          <ion-avatar item-start>\n            <img [src]=\"item?.image\">\n          </ion-avatar>\n          <h2>{{ item?.title }}</h2>\n        </ion-item>\n      \n        <img src=\"https://placeimg.com/640/480/nature\">\n      \n        <ion-card-content>\n          <p>{{ item?.description }}</p>\n        </ion-card-content>\n      \n        <ion-row>\n          <ion-item>\n          <ion-button icon-left clear small class=\"action-button\">\n            <ion-icon name=\"thumbs-up\"></ion-icon>\n            <div>12 Likes</div>\n          </ion-button>\n          <ion-button icon-left clear small>\n            <ion-icon name=\"text\"></ion-icon>\n            <div>4 Comments</div>\n          </ion-button>\n          <ion-note slot=\"end\">\n              11h ago\n          </ion-note>\n          </ion-item>\n        </ion-row>\n      \n      </ion-card>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar color=\"primary\">\n      <ion-title>© {{ currentYear }} Adrián Brito Pacheco</ion-title>\n      <ion-buttons slot=\"end\">\n        <div class=\"github-button\"><iframe allowtransparency=\"true\" scrolling=\"no\" frameborder=\"0\" src=\"https://buttons.github.io/buttons.html#href=https%3A%2F%2Fgithub.com%2Fabritopach%2Fangular-ionic-master-detail&amp;title=&amp;aria-label=Star%20abritopach%2Fangular-ionic-master-detail%20on%20GitHub&amp;data-icon=octicon-star&amp;data-text=Star\" style=\"width: 50px; height: 20px; border: none;\"></iframe></div>\n        <div class=\"github-button\"><iframe allowtransparency=\"true\" scrolling=\"no\" frameborder=\"0\" src=\"https://buttons.github.io/buttons.html#href=https%3A%2F%2Fgithub.com%2Fabritopach&amp;title=&amp;aria-label=Follow%20%40abritopach%20on%20GitHub&amp;data-text=GitHub\" style=\"width: 67px; height: 20px; border: none;\"></iframe></div>\n      </ion-buttons>\n  </ion-toolbar>\n</ion-footer>\n"
 
 /***/ }),
 
@@ -109,7 +109,7 @@ var DetailModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".action-button {\n  padding-right: 10px; }\n"
+module.exports = ".action-button {\n  padding-right: 10px; }\n\n.github-button {\n  width: 49px;\n  height: 20px;\n  padding-right: 5px;\n  display: inline; }\n"
 
 /***/ }),
 
@@ -142,6 +142,7 @@ var DetailComponent = /** @class */ (function () {
     function DetailComponent(route, itemService) {
         this.route = route;
         this.itemService = itemService;
+        this.currentYear = new Date().getFullYear();
     }
     DetailComponent.prototype.ionViewWillEnter = function () {
         console.log('ionViewWillEnter');

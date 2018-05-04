@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /**
- * @license Angular v6.0.0-rc.5
+ * @license Angular v6.0.0
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -5929,7 +5929,7 @@ function isPlatformWorkerUi(platformId) {
 /**
  *
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('6.0.0-rc.5');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('6.0.0');
 
 /**
  * @license
@@ -6205,7 +6205,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeSummaryDuplicates", function() { return removeSummaryDuplicates; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /**
- * @license Angular v6.0.0-rc.5
+ * @license Angular v6.0.0
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -6468,7 +6468,6 @@ function utf8Encode(str) {
     }
     return encoded;
 }
-var MAX_LENGTH_STRINGIFY = 100;
 function stringify(token) {
     if (typeof token === 'string') {
         return token;
@@ -6485,24 +6484,14 @@ function stringify(token) {
     if (token.name) {
         return "" + token.name;
     }
-    var res;
-    try {
-        res = JSON.stringify(token);
-    }
-    catch (_a) {
-        res = token.toString();
-    }
+    // WARNING: do not try to `JSON.stringify(token)` here
+    // see https://github.com/angular/angular/issues/23440
+    var res = token.toString();
     if (res == null) {
         return '' + res;
     }
     var newLineIndex = res.indexOf('\n');
-    if (0 < newLineIndex) {
-        res = res.substring(0, newLineIndex);
-    }
-    if (MAX_LENGTH_STRINGIFY < res.length) {
-        res = res.substring(0, MAX_LENGTH_STRINGIFY) + '...';
-    }
-    return res;
+    return newLineIndex === -1 ? res : res.substring(0, newLineIndex);
 }
 /**
  * Lazily retrieves the reference value from a forwardRef.
@@ -6549,7 +6538,7 @@ var Version = /** @class */ (function () {
 /**
  *
  */
-var VERSION = new Version('6.0.0-rc.5');
+var VERSION = new Version('6.0.0');
 
 /**
  * @license
@@ -27081,7 +27070,9 @@ var StaticReflector = /** @class */ (function () {
             var ownAnnotations_1 = [];
             if (classMetadata['decorators']) {
                 ownAnnotations_1 = simplify(type, classMetadata['decorators']);
-                annotations.push.apply(annotations, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(ownAnnotations_1));
+                if (ownAnnotations_1) {
+                    annotations.push.apply(annotations, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(ownAnnotations_1));
+                }
             }
             if (parentType && !this.summaryResolver.isLibraryFile(type.filePath) &&
                 this.summaryResolver.isLibraryFile(parentType.filePath)) {
@@ -29451,7 +29442,7 @@ var Extractor = /** @class */ (function () {
 /*!**************************************************!*\
   !*** ./node_modules/@angular/core/fesm5/core.js ***!
   \**************************************************/
-/*! exports provided: ɵangular_packages_core_core_j, ɵangular_packages_core_core_k, ɵangular_packages_core_core_l, ɵangular_packages_core_core_f, ɵangular_packages_core_core_g, ɵangular_packages_core_core_h, ɵangular_packages_core_core_i, ɵangular_packages_core_core_c, ɵangular_packages_core_core_d, ɵangular_packages_core_core_e, ɵangular_packages_core_core_m, ɵangular_packages_core_core_o, ɵangular_packages_core_core_n, ɵangular_packages_core_core_r, ɵangular_packages_core_core_p, ɵangular_packages_core_core_q, ɵangular_packages_core_core_v, ɵangular_packages_core_core_x, ɵangular_packages_core_core_w, ɵangular_packages_core_core_u, ɵangular_packages_core_core_y, ɵangular_packages_core_core_bb, ɵangular_packages_core_core_bd, ɵangular_packages_core_core_be, ɵangular_packages_core_core_bc, ɵangular_packages_core_core_ba, ɵangular_packages_core_core_z, ɵangular_packages_core_core_a, ɵangular_packages_core_core_b, ɵangular_packages_core_core_s, ɵangular_packages_core_core_t, createPlatform, assertPlatform, destroyPlatform, getPlatform, PlatformRef, ApplicationRef, enableProdMode, isDevMode, createPlatformFactory, NgProbeToken, APP_ID, PACKAGE_ROOT_URL, PLATFORM_INITIALIZER, PLATFORM_ID, APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, ApplicationInitStatus, DebugElement, DebugNode, asNativeElements, getDebugNode, Testability, TestabilityRegistry, setTestabilityGetter, TRANSLATIONS, TRANSLATIONS_FORMAT, LOCALE_ID, MissingTranslationStrategy, ApplicationModule, wtfCreateScope, wtfLeave, wtfStartTimeRange, wtfEndTimeRange, Type, EventEmitter, ErrorHandler, Sanitizer, SecurityContext, ANALYZE_FOR_ENTRY_COMPONENTS, Attribute, ContentChild, ContentChildren, Query, ViewChild, ViewChildren, Component, Directive, HostBinding, HostListener, Input, Output, Pipe, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule, ViewEncapsulation, Version, VERSION, forwardRef, resolveForwardRef, Injectable, inject, INJECTOR, Injector, ReflectiveInjector, createInjector, ResolvedReflectiveFactory, ReflectiveKey, InjectionToken, Inject, Optional, Self, SkipSelf, Host, defineInjectable, defineInjector, NgZone, RenderComponentType, Renderer, Renderer2, RendererFactory2, RendererStyleFlags2, RootRenderer, COMPILER_OPTIONS, Compiler, CompilerFactory, ModuleWithComponentFactories, ComponentFactory, ComponentRef, ComponentFactoryResolver, ElementRef, NgModuleFactory, NgModuleRef, NgModuleFactoryLoader, getModuleFactory, QueryList, SystemJsNgModuleLoader, SystemJsNgModuleLoaderConfig, TemplateRef, ViewContainerRef, EmbeddedViewRef, ViewRef, ChangeDetectionStrategy, ChangeDetectorRef, DefaultIterableDiffer, IterableDiffers, KeyValueDiffers, SimpleChange, WrappedValue, platformCore, ɵALLOW_MULTIPLE_PLATFORMS, ɵAPP_ID_RANDOM_PROVIDER, ɵdefaultIterableDiffers, ɵdevModeEqual, ɵisListLikeIterable, ɵChangeDetectorStatus, ɵisDefaultChangeDetectionStrategy, ɵConsole, ɵinject, ɵsetCurrentInjector, ɵAPP_ROOT, ɵComponentFactory, ɵCodegenComponentFactoryResolver, ɵReflectionCapabilities, ɵRenderDebugInfo, ɵ_sanitizeHtml, ɵ_sanitizeStyle, ɵ_sanitizeUrl, ɵglobal, ɵlooseIdentical, ɵstringify, ɵmakeDecorator, ɵisObservable, ɵisPromise, ɵclearOverrides, ɵoverrideComponentView, ɵoverrideProvider, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR, ɵdefineComponent, ɵdefineDirective, ɵdefinePipe, ɵdetectChanges, ɵrenderComponent, ɵdirectiveInject, ɵinjectTemplateRef, ɵinjectViewContainerRef, ɵinjectChangeDetectorRef, ɵinjectAttribute, ɵPublicFeature, ɵNgOnChangesFeature, ɵmarkDirty, ɵNC, ɵC, ɵE, ɵL, ɵT, ɵV, ɵQ, ɵd, ɵP, ɵb, ɵi1, ɵi2, ɵi3, ɵi4, ɵi5, ɵi6, ɵi7, ɵi8, ɵiV, ɵpb1, ɵpb2, ɵpb3, ɵpb4, ɵpbV, ɵf0, ɵf1, ɵf2, ɵf3, ɵf4, ɵf5, ɵf6, ɵf7, ɵf8, ɵfV, ɵcR, ɵcr, ɵqR, ɵe, ɵp, ɵpD, ɵa, ɵs, ɵsn, ɵk, ɵkn, ɵt, ɵv, ɵst, ɵld, ɵPp, ɵwhenRendered, ɵbypassSanitizationTrustHtml, ɵbypassSanitizationTrustStyle, ɵbypassSanitizationTrustScript, ɵbypassSanitizationTrustUrl, ɵbypassSanitizationTrustResourceUrl, ɵsanitizeHtml, ɵsanitizeStyle, ɵsanitizeUrl, ɵsanitizeResourceUrl, ɵregisterModuleFactory, ɵEMPTY_ARRAY, ɵEMPTY_MAP, ɵand, ɵccf, ɵcmf, ɵcrt, ɵdid, ɵeld, ɵelementEventFullName, ɵgetComponentViewDefinitionFactory, ɵinlineInterpolate, ɵinterpolate, ɵmod, ɵmpd, ɵncd, ɵnov, ɵpid, ɵprd, ɵpad, ɵpod, ɵppd, ɵqud, ɵted, ɵunv, ɵvid */
+/*! exports provided: ɵangular_packages_core_core_j, ɵangular_packages_core_core_k, ɵangular_packages_core_core_l, ɵangular_packages_core_core_f, ɵangular_packages_core_core_g, ɵangular_packages_core_core_h, ɵangular_packages_core_core_i, ɵangular_packages_core_core_c, ɵangular_packages_core_core_d, ɵangular_packages_core_core_e, ɵangular_packages_core_core_m, ɵangular_packages_core_core_o, ɵangular_packages_core_core_n, ɵangular_packages_core_core_r, ɵangular_packages_core_core_p, ɵangular_packages_core_core_q, ɵangular_packages_core_core_v, ɵangular_packages_core_core_x, ɵangular_packages_core_core_w, ɵangular_packages_core_core_u, ɵangular_packages_core_core_y, ɵangular_packages_core_core_bb, ɵangular_packages_core_core_bd, ɵangular_packages_core_core_be, ɵangular_packages_core_core_bc, ɵangular_packages_core_core_ba, ɵangular_packages_core_core_z, ɵangular_packages_core_core_a, ɵangular_packages_core_core_b, ɵangular_packages_core_core_s, ɵangular_packages_core_core_t, createPlatform, assertPlatform, destroyPlatform, getPlatform, PlatformRef, ApplicationRef, enableProdMode, isDevMode, createPlatformFactory, NgProbeToken, APP_ID, PACKAGE_ROOT_URL, PLATFORM_INITIALIZER, PLATFORM_ID, APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, ApplicationInitStatus, DebugElement, DebugNode, asNativeElements, getDebugNode, Testability, TestabilityRegistry, setTestabilityGetter, TRANSLATIONS, TRANSLATIONS_FORMAT, LOCALE_ID, MissingTranslationStrategy, ApplicationModule, wtfCreateScope, wtfLeave, wtfStartTimeRange, wtfEndTimeRange, Type, EventEmitter, ErrorHandler, Sanitizer, SecurityContext, ANALYZE_FOR_ENTRY_COMPONENTS, Attribute, ContentChild, ContentChildren, Query, ViewChild, ViewChildren, Component, Directive, HostBinding, HostListener, Input, Output, Pipe, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule, ViewEncapsulation, Version, VERSION, defineInjectable, defineInjector, forwardRef, resolveForwardRef, Injectable, inject, INJECTOR, Injector, ReflectiveInjector, createInjector, ResolvedReflectiveFactory, ReflectiveKey, InjectionToken, Inject, Optional, Self, SkipSelf, Host, NgZone, RenderComponentType, Renderer, Renderer2, RendererFactory2, RendererStyleFlags2, RootRenderer, COMPILER_OPTIONS, Compiler, CompilerFactory, ModuleWithComponentFactories, ComponentFactory, ComponentRef, ComponentFactoryResolver, ElementRef, NgModuleFactory, NgModuleRef, NgModuleFactoryLoader, getModuleFactory, QueryList, SystemJsNgModuleLoader, SystemJsNgModuleLoaderConfig, TemplateRef, ViewContainerRef, EmbeddedViewRef, ViewRef, ChangeDetectionStrategy, ChangeDetectorRef, DefaultIterableDiffer, IterableDiffers, KeyValueDiffers, SimpleChange, WrappedValue, platformCore, ɵALLOW_MULTIPLE_PLATFORMS, ɵAPP_ID_RANDOM_PROVIDER, ɵdefaultIterableDiffers, ɵdevModeEqual, ɵisListLikeIterable, ɵChangeDetectorStatus, ɵisDefaultChangeDetectionStrategy, ɵConsole, ɵinject, ɵsetCurrentInjector, ɵAPP_ROOT, ɵComponentFactory, ɵCodegenComponentFactoryResolver, ɵReflectionCapabilities, ɵRenderDebugInfo, ɵ_sanitizeHtml, ɵ_sanitizeStyle, ɵ_sanitizeUrl, ɵglobal, ɵlooseIdentical, ɵstringify, ɵmakeDecorator, ɵisObservable, ɵisPromise, ɵclearOverrides, ɵoverrideComponentView, ɵoverrideProvider, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR, ɵdefineComponent, ɵdefineDirective, ɵdefinePipe, ɵdetectChanges, ɵrenderComponent, ɵdirectiveInject, ɵinjectTemplateRef, ɵinjectViewContainerRef, ɵinjectChangeDetectorRef, ɵinjectAttribute, ɵPublicFeature, ɵNgOnChangesFeature, ɵmarkDirty, ɵNC, ɵC, ɵE, ɵL, ɵT, ɵV, ɵQ, ɵd, ɵP, ɵb, ɵi1, ɵi2, ɵi3, ɵi4, ɵi5, ɵi6, ɵi7, ɵi8, ɵiV, ɵpb1, ɵpb2, ɵpb3, ɵpb4, ɵpbV, ɵf0, ɵf1, ɵf2, ɵf3, ɵf4, ɵf5, ɵf6, ɵf7, ɵf8, ɵfV, ɵcR, ɵcr, ɵqR, ɵe, ɵp, ɵpD, ɵa, ɵs, ɵsn, ɵk, ɵkn, ɵt, ɵv, ɵst, ɵld, ɵPp, ɵwhenRendered, ɵbypassSanitizationTrustHtml, ɵbypassSanitizationTrustStyle, ɵbypassSanitizationTrustScript, ɵbypassSanitizationTrustUrl, ɵbypassSanitizationTrustResourceUrl, ɵsanitizeHtml, ɵsanitizeStyle, ɵsanitizeUrl, ɵsanitizeResourceUrl, ɵregisterModuleFactory, ɵEMPTY_ARRAY, ɵEMPTY_MAP, ɵand, ɵccf, ɵcmf, ɵcrt, ɵdid, ɵeld, ɵelementEventFullName, ɵgetComponentViewDefinitionFactory, ɵinlineInterpolate, ɵinterpolate, ɵmod, ɵmpd, ɵncd, ɵnov, ɵpid, ɵprd, ɵpad, ɵpod, ɵppd, ɵqud, ɵted, ɵunv, ɵvid */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29545,6 +29536,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewEncapsulation", function() { return ViewEncapsulation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Version", function() { return Version; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defineInjectable", function() { return defineInjectable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defineInjector", function() { return defineInjector; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forwardRef", function() { return forwardRef; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resolveForwardRef", function() { return resolveForwardRef; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Injectable", function() { return Injectable; });
@@ -29561,8 +29554,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Self", function() { return Self; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkipSelf", function() { return SkipSelf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Host", function() { return Host; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defineInjectable", function() { return defineInjectable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defineInjector", function() { return defineInjector; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgZone", function() { return NgZone; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderComponentType", function() { return RenderComponentType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Renderer", function() { return Renderer; });
@@ -29728,7 +29719,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /**
- * @license Angular v6.0.0-rc.5
+ * @license Angular v6.0.0
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -29762,9 +29753,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 function defineInjectable(opts) {
     return {
-        providedIn: opts.providedIn || null,
-        factory: opts.factory,
-        value: undefined,
+        providedIn: opts.providedIn || null, factory: opts.factory, value: undefined,
     };
 }
 /**
@@ -29789,9 +29778,7 @@ function defineInjectable(opts) {
  */
 function defineInjector(options) {
     return {
-        factory: options.factory,
-        providers: options.providers || [],
-        imports: options.imports || [],
+        factory: options.factory, providers: options.providers || [], imports: options.imports || [],
     };
 }
 
@@ -31303,7 +31290,7 @@ var Version = /** @class */ (function () {
 /**
  *
  */
-var VERSION = new Version('6.0.0-rc.5');
+var VERSION = new Version('6.0.0');
 
 /**
  * @license
@@ -38919,7 +38906,10 @@ function initNgModule(data) {
     for (var i = 0; i < def.providers.length; i++) {
         var provDef = def.providers[i];
         if (!(provDef.flags & 4096 /* LazyProvider */)) {
-            providers[i] = _createProviderInstance$1(data, provDef);
+            // Make sure the provider has not been already initialized outside this loop.
+            if (providers[i] === undefined) {
+                providers[i] = _createProviderInstance$1(data, provDef);
+            }
         }
     }
 }
@@ -47480,7 +47470,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /**
- * @license Angular v6.0.0-rc.5
+ * @license Angular v6.0.0
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -53580,7 +53570,7 @@ var FormBuilder = /** @class */ (function () {
 /**
  *
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.0.0-rc.5');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.0.0');
 
 /**
  * @license
@@ -53777,7 +53767,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /**
- * @license Angular v6.0.0-rc.5
+ * @license Angular v6.0.0
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -54209,7 +54199,7 @@ var CachedResourceLoader = /** @class */ (function (_super) {
 /**
  *
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.0.0-rc.5');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.0.0');
 
 /**
  * @license
@@ -54316,7 +54306,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /**
- * @license Angular v6.0.0-rc.5
+ * @license Angular v6.0.0
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -56843,7 +56833,7 @@ var By = /** @class */ (function () {
 /**
  *
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.0.0-rc.5');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.0.0');
 
 /**
  * @license
@@ -56957,7 +56947,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /**
- * @license Angular v6.0.0-rc.5
+ * @license Angular v6.0.0
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -59206,15 +59196,18 @@ function createNode(routeReuseStrategy, curr, prevState) {
         return new TreeNode(value, children);
         // retrieve an activated route that is used to be displayed, but is not currently displayed
     }
-    else if (routeReuseStrategy.retrieve(curr.value)) {
-        var tree = routeReuseStrategy.retrieve(curr.value).route;
-        setFutureSnapshotsOfActivatedRoutes(curr, tree);
-        return tree;
-    }
     else {
-        var value = createActivatedRoute(curr.value);
-        var children = curr.children.map(function (c) { return createNode(routeReuseStrategy, c); });
-        return new TreeNode(value, children);
+        var detachedRouteHandle = routeReuseStrategy.retrieve(curr.value);
+        if (detachedRouteHandle) {
+            var tree = detachedRouteHandle.route;
+            setFutureSnapshotsOfActivatedRoutes(curr, tree);
+            return tree;
+        }
+        else {
+            var value = createActivatedRoute(curr.value);
+            var children = curr.children.map(function (c) { return createNode(routeReuseStrategy, c); });
+            return new TreeNode(value, children);
+        }
     }
 }
 function setFutureSnapshotsOfActivatedRoutes(curr, result) {
@@ -62491,7 +62484,7 @@ function provideRouterInitializer() {
 /**
  *
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.0.0-rc.5');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.0.0');
 
 /**
  * @license
@@ -63440,9 +63433,9 @@ var IonRouterOutlet = /** @class */ (function () {
     };
     IonRouterOutlet.prototype.activateWith = function (activatedRoute, resolver) {
         return __awaiter(this, void 0, void 0, function () {
-            var enteringView, snapshot, component, factory, childContexts, injector, cmp, direction;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            var enteringView, snapshot, component, factory, childContexts, injector, cmp, _a, direction, animated;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0:
                         if (this.isActivated) {
                             throw new Error('Cannot activate an already activated outlet');
@@ -63466,10 +63459,10 @@ var IonRouterOutlet = /** @class */ (function () {
                             this.changeDetector.markForCheck();
                             enteringView = this.stackCtrl.createView(this.activated, activatedRoute);
                         }
-                        direction = this.navCtrl.consumeDirection();
-                        return [4 /*yield*/, this.stackCtrl.setActive(enteringView, direction)];
+                        _a = this.navCtrl.consumeTransition(), direction = _a.direction, animated = _a.animated;
+                        return [4 /*yield*/, this.stackCtrl.setActive(enteringView, direction, animated)];
                     case 1:
-                        _a.sent();
+                        _b.sent();
                         this.activateEvents.emit(this.activated.instance);
                         emitEvent(this.elementRef.nativeElement);
                         return [2 /*return*/];
@@ -63784,17 +63777,15 @@ var StackController = /** @class */ (function () {
     StackController.prototype.canGoBack = function (deep) {
         return this.views.length > deep;
     };
-    StackController.prototype.setActive = function (enteringView, direction) {
+    StackController.prototype.setActive = function (enteringView, direction, animated) {
         return __awaiter(this, void 0, void 0, function () {
-            var leavingView, forcedGoBack, reused;
+            var leavingView;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         leavingView = this.getActive();
-                        forcedGoBack = direction === -1;
-                        reused = this.insertView(enteringView, forcedGoBack);
-                        direction = direction != null ? direction : (reused ? -1 : 1);
-                        return [4 /*yield*/, this.transition(enteringView, leavingView, direction, this.canGoBack(1))];
+                        this.insertView(enteringView, direction);
+                        return [4 /*yield*/, this.transition(enteringView, leavingView, direction, animated, this.canGoBack(1))];
                     case 1:
                         _a.sent();
                         this.cleanup();
@@ -63807,26 +63798,29 @@ var StackController = /** @class */ (function () {
         var view = this.views[this.views.length - deep - 1];
         this.navCtrl.goBack(view.url);
     };
-    StackController.prototype.insertView = function (enteringView, forcedGoBack) {
-        if (this.stack) {
-            var index = this.views.indexOf(enteringView);
-            if (index >= 0) {
-                this.views = this.views.slice(0, index + 1);
-                return true;
-            }
-            else {
-                if (forcedGoBack) {
-                    this.views = [enteringView];
-                }
-                else {
-                    this.views.push(enteringView);
-                }
-                return false;
-            }
+    StackController.prototype.insertView = function (enteringView, direction) {
+        // no stack
+        if (!this.stack) {
+            this.views = [enteringView];
+            return;
+        }
+        // stack setRoot
+        if (direction === 0) {
+            this.views = [enteringView];
+            return;
+        }
+        // stack
+        var index = this.views.indexOf(enteringView);
+        if (index >= 0) {
+            this.views = this.views.slice(0, index + 1);
         }
         else {
-            this.views = [enteringView];
-            return false;
+            if (direction === 1) {
+                this.views.push(enteringView);
+            }
+            else {
+                this.views = [enteringView];
+            }
         }
     };
     StackController.prototype.cleanup = function () {
@@ -63842,7 +63836,7 @@ var StackController = /** @class */ (function () {
     StackController.prototype.getActive = function () {
         return this.views.length > 0 ? this.views[this.views.length - 1] : null;
     };
-    StackController.prototype.transition = function (enteringView, leavingView, direction, showGoBack) {
+    StackController.prototype.transition = function (enteringView, leavingView, direction, animated, showGoBack) {
         return __awaiter(this, void 0, void 0, function () {
             var enteringEl, leavingEl, containerEl;
             return __generator(this, function (_a) {
@@ -63858,8 +63852,8 @@ var StackController = /** @class */ (function () {
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, containerEl.commit(enteringEl, leavingEl, {
-                                duration: direction === 0 ? 0 : undefined,
-                                direction: direction === -1 ? "back" /* Back */ : "forward" /* Forward */,
+                                duration: !animated ? 0 : undefined,
+                                direction: direction === 1 ? "forward" /* Forward */ : "back" /* Back */,
                                 deepWait: true,
                                 showGoBack: showGoBack
                             })];
@@ -64199,14 +64193,16 @@ function methods(instance, ref, methods) {
     methods.forEach(function (methodName) {
         Object.defineProperty(instance, methodName, {
             get: function () {
-                var args = arguments;
-                return el.componentOnReady()
-                    .then(function (el) { return el[methodName].apply(el, args); });
+                return function () {
+                    var args = arguments;
+                    return el.componentOnReady()
+                        .then(function (el) { return el[methodName].apply(el, args); });
+                };
             }
         });
     });
 }
-var accept = 'accept', activated = 'activated', active = 'active', addRipple = 'addRipple', allowEmptySelection = 'allowEmptySelection', animated = 'animated', autoHide = 'autoHide', autocapitalize = 'autocapitalize', autocomplete = 'autocomplete', autocorrect = 'autocorrect', autofocus = 'autofocus', badge = 'badge', badgeStyle = 'badgeStyle', btnId = 'btnId', button = 'button', buttonType = 'buttonType', canGoBack = 'canGoBack', cancel = 'cancel', cancelButtonText = 'cancelButtonText', cancelText = 'cancelText', checked = 'checked', clearInput = 'clearInput', clearOnEdit = 'clearOnEdit', close = 'close', closeDuration = 'closeDuration', closeOpened = 'closeOpened', closeSlidingItems = 'closeSlidingItems', color = 'color', cols = 'cols', complete = 'complete', component = 'component', componentProps = 'componentProps', contentId = 'contentId', dayNames = 'dayNames', dayShortNames = 'dayShortNames', dayValues = 'dayValues', debounce = 'debounce', defaultHref = 'defaultHref', delegate = 'delegate', detail = 'detail', disabled = 'disabled', displayFormat = 'displayFormat', doneText = 'doneText', dualKnobs = 'dualKnobs', duration = 'duration', edge = 'edge', expand = 'expand', expandable = 'expandable', fill = 'fill', fireSwipeEvent = 'fireSwipeEvent', forceOverscroll = 'forceOverscroll', fullscreen = 'fullscreen', getActive = 'getActive', getActiveIndex = 'getActiveIndex', getByIndex = 'getByIndex', getOpenAmount = 'getOpenAmount', getOpenItem = 'getOpenItem', getPrevious = 'getPrevious', getPreviousIndex = 'getPreviousIndex', getProgress = 'getProgress', getRouteId = 'getRouteId', getSelected = 'getSelected', getSlidingRatio = 'getSlidingRatio', getTab = 'getTab', getTabId = 'getTabId', getText = 'getText', header = 'header', horizontal = 'horizontal', hourValues = 'hourValues', href = 'href', icon = 'icon', inputmode = 'inputmode', insert = 'insert', insertPages = 'insertPages', interfaceOptions = 'interfaceOptions', ionBlur = 'ionBlur', ionCancel = 'ionCancel', ionChange = 'ionChange', ionClear = 'ionClear', ionClick = 'ionClick', ionClose = 'ionClose', ionDrag = 'ionDrag', ionFocus = 'ionFocus', ionInfinite = 'ionInfinite', ionInput = 'ionInput', ionInputDidLoad = 'ionInputDidLoad', ionInputDidUnload = 'ionInputDidUnload', ionMenuChange = 'ionMenuChange', ionNavDidChange = 'ionNavDidChange', ionNavWillChange = 'ionNavWillChange', ionOpen = 'ionOpen', ionPull = 'ionPull', ionRadioDidLoad = 'ionRadioDidLoad', ionRadioDidUnload = 'ionRadioDidUnload', ionRefresh = 'ionRefresh', ionScroll = 'ionScroll', ionScrollEnd = 'ionScrollEnd', ionScrollStart = 'ionScrollStart', ionSelect = 'ionSelect', ionSelectOptionDidLoad = 'ionSelectOptionDidLoad', ionSelectOptionDidUnload = 'ionSelectOptionDidUnload', ionSlideDidChange = 'ionSlideDidChange', ionSlideDrag = 'ionSlideDrag', ionSlideNextEnd = 'ionSlideNextEnd', ionSlideNextStart = 'ionSlideNextStart', ionSlidePrevEnd = 'ionSlidePrevEnd', ionSlidePrevStart = 'ionSlidePrevStart', ionSlideReachEnd = 'ionSlideReachEnd', ionSlideReachStart = 'ionSlideReachStart', ionSlideTouchEnd = 'ionSlideTouchEnd', ionSlideTouchStart = 'ionSlideTouchStart', ionSlideTransitionEnd = 'ionSlideTransitionEnd', ionSlideTransitionStart = 'ionSlideTransitionStart', ionSlideWillChange = 'ionSlideWillChange', ionSplitPaneVisible = 'ionSplitPaneVisible', ionStart = 'ionStart', ionStyle = 'ionStyle', ionSwipe = 'ionSwipe', isActive = 'isActive', isBeginning = 'isBeginning', isEnd = 'isEnd', isOpen = 'isOpen', isPane = 'isPane', isRightSide = 'isRightSide', isVisible = 'isVisible', label = 'label', length = 'length', loadingSpinner = 'loadingSpinner', loadingText = 'loadingText', lockSwipeToNext = 'lockSwipeToNext', lockSwipeToPrev = 'lockSwipeToPrev', lockSwipes = 'lockSwipes', max = 'max', maxEdgeStart = 'maxEdgeStart', maxlength = 'maxlength', mediaQuery = 'mediaQuery', menu = 'menu', menuId = 'menuId', message = 'message', min = 'min', minlength = 'minlength', minuteValues = 'minuteValues', mode = 'mode', monthNames = 'monthNames', monthShortNames = 'monthShortNames', monthValues = 'monthValues', multiple = 'multiple', name = 'name', okText = 'okText', open = 'open', options = 'options', or = 'or', orientation = 'orientation', pager = 'pager', pattern = 'pattern', paused = 'paused', persistent = 'persistent', pickerFormat = 'pickerFormat', pickerOptions = 'pickerOptions', pin = 'pin', placeholder = 'placeholder', platform = 'platform', pop = 'pop', popTo = 'popTo', popToRoot = 'popToRoot', position = 'position', pullMax = 'pullMax', pullMin = 'pullMin', pullingIcon = 'pullingIcon', pullingText = 'pullingText', push = 'push', ratio = 'ratio', ratioUpper = 'ratioUpper', readonly = 'readonly', refreshingSpinner = 'refreshingSpinner', refreshingText = 'refreshingText', removeIndex = 'removeIndex', required = 'required', results = 'results', root = 'root', rootParams = 'rootParams', round = 'round', routerDirection = 'routerDirection', rows = 'rows', scrollByPoint = 'scrollByPoint', scrollEnabled = 'scrollEnabled', scrollEvents = 'scrollEvents', scrollToBottom = 'scrollToBottom', scrollToPoint = 'scrollToPoint', scrollToTop = 'scrollToTop', scrollable = 'scrollable', select = 'select', selected = 'selected', selectedText = 'selectedText', setActive = 'setActive', setOpen = 'setOpen', setOpenItem = 'setOpenItem', setPages = 'setPages', setRoot = 'setRoot', setRouteId = 'setRouteId', show = 'show', showCancelButton = 'showCancelButton', side = 'side', size = 'size', slideNext = 'slideNext', slidePrev = 'slidePrev', slideTo = 'slideTo', snapbackDuration = 'snapbackDuration', snaps = 'snaps', spellcheck = 'spellcheck', startAutoplay = 'startAutoplay', step = 'step', stopAutoplay = 'stopAutoplay', strong = 'strong', subHeader = 'subHeader', swipeBackEnabled = 'swipeBackEnabled', swipeEnabled = 'swipeEnabled', tabbarHidden = 'tabbarHidden', tabbarHighlight = 'tabbarHighlight', tabbarLayout = 'tabbarLayout', tabbarPlacement = 'tabbarPlacement', tabsHideOnSubPages = 'tabsHideOnSubPages', tapClick = 'tapClick', text = 'text', threshold = 'threshold', toggle = 'toggle', translucent = 'translucent', type = 'type', update = 'update', url = 'url', useRouter = 'useRouter', value = 'value', vertical = 'vertical', waitFor = 'waitFor', when = 'when', width = 'width', wrap = 'wrap', yearValues = 'yearValues';
+var accept = 'accept', activated = 'activated', active = 'active', addRipple = 'addRipple', allowEmptySelection = 'allowEmptySelection', animated = 'animated', autoHide = 'autoHide', autocapitalize = 'autocapitalize', autocomplete = 'autocomplete', autocorrect = 'autocorrect', autofocus = 'autofocus', badge = 'badge', badgeStyle = 'badgeStyle', btnId = 'btnId', button = 'button', buttonType = 'buttonType', canGoBack = 'canGoBack', cancel = 'cancel', cancelButtonText = 'cancelButtonText', cancelText = 'cancelText', checked = 'checked', clearInput = 'clearInput', clearOnEdit = 'clearOnEdit', close = 'close', closeDuration = 'closeDuration', closeOpened = 'closeOpened', closeSlidingItems = 'closeSlidingItems', color = 'color', cols = 'cols', complete = 'complete', component = 'component', componentProps = 'componentProps', contentId = 'contentId', dayNames = 'dayNames', dayShortNames = 'dayShortNames', dayValues = 'dayValues', debounce = 'debounce', defaultHref = 'defaultHref', delegate = 'delegate', detail = 'detail', disabled = 'disabled', displayFormat = 'displayFormat', doneText = 'doneText', dualKnobs = 'dualKnobs', duration = 'duration', edge = 'edge', expand = 'expand', expandable = 'expandable', fill = 'fill', fireSwipeEvent = 'fireSwipeEvent', forceOverscroll = 'forceOverscroll', fullscreen = 'fullscreen', getActive = 'getActive', getActiveIndex = 'getActiveIndex', getByIndex = 'getByIndex', getOpenAmount = 'getOpenAmount', getOpenItem = 'getOpenItem', getPrevious = 'getPrevious', getPreviousIndex = 'getPreviousIndex', getProgress = 'getProgress', getRouteId = 'getRouteId', getSelected = 'getSelected', getSlidingRatio = 'getSlidingRatio', getTab = 'getTab', getTabId = 'getTabId', getText = 'getText', header = 'header', horizontal = 'horizontal', hourValues = 'hourValues', href = 'href', icon = 'icon', inputmode = 'inputmode', insert = 'insert', insertPages = 'insertPages', interfaceOptions = 'interfaceOptions', ionBlur = 'ionBlur', ionCancel = 'ionCancel', ionChange = 'ionChange', ionClear = 'ionClear', ionClose = 'ionClose', ionDrag = 'ionDrag', ionFocus = 'ionFocus', ionInfinite = 'ionInfinite', ionInput = 'ionInput', ionInputDidLoad = 'ionInputDidLoad', ionInputDidUnload = 'ionInputDidUnload', ionMenuChange = 'ionMenuChange', ionNavDidChange = 'ionNavDidChange', ionNavWillChange = 'ionNavWillChange', ionOpen = 'ionOpen', ionPull = 'ionPull', ionRadioDidLoad = 'ionRadioDidLoad', ionRadioDidUnload = 'ionRadioDidUnload', ionRefresh = 'ionRefresh', ionScroll = 'ionScroll', ionScrollEnd = 'ionScrollEnd', ionScrollStart = 'ionScrollStart', ionSelect = 'ionSelect', ionSelectOptionDidLoad = 'ionSelectOptionDidLoad', ionSelectOptionDidUnload = 'ionSelectOptionDidUnload', ionSlideDidChange = 'ionSlideDidChange', ionSlideDrag = 'ionSlideDrag', ionSlideNextEnd = 'ionSlideNextEnd', ionSlideNextStart = 'ionSlideNextStart', ionSlidePrevEnd = 'ionSlidePrevEnd', ionSlidePrevStart = 'ionSlidePrevStart', ionSlideReachEnd = 'ionSlideReachEnd', ionSlideReachStart = 'ionSlideReachStart', ionSlideTouchEnd = 'ionSlideTouchEnd', ionSlideTouchStart = 'ionSlideTouchStart', ionSlideTransitionEnd = 'ionSlideTransitionEnd', ionSlideTransitionStart = 'ionSlideTransitionStart', ionSlideWillChange = 'ionSlideWillChange', ionSplitPaneVisible = 'ionSplitPaneVisible', ionStart = 'ionStart', ionStyle = 'ionStyle', ionSwipe = 'ionSwipe', isActive = 'isActive', isBeginning = 'isBeginning', isEnd = 'isEnd', isOpen = 'isOpen', isPane = 'isPane', isRightSide = 'isRightSide', isVisible = 'isVisible', label = 'label', length = 'length', loadingSpinner = 'loadingSpinner', loadingText = 'loadingText', lockSwipeToNext = 'lockSwipeToNext', lockSwipeToPrev = 'lockSwipeToPrev', lockSwipes = 'lockSwipes', max = 'max', maxEdgeStart = 'maxEdgeStart', maxlength = 'maxlength', mediaQuery = 'mediaQuery', menu = 'menu', menuId = 'menuId', message = 'message', min = 'min', minlength = 'minlength', minuteValues = 'minuteValues', mode = 'mode', monthNames = 'monthNames', monthShortNames = 'monthShortNames', monthValues = 'monthValues', multiple = 'multiple', name = 'name', okText = 'okText', open = 'open', options = 'options', or = 'or', orientation = 'orientation', pager = 'pager', pattern = 'pattern', paused = 'paused', persistent = 'persistent', pickerFormat = 'pickerFormat', pickerOptions = 'pickerOptions', pin = 'pin', placeholder = 'placeholder', platform = 'platform', pop = 'pop', popTo = 'popTo', popToRoot = 'popToRoot', position = 'position', pullMax = 'pullMax', pullMin = 'pullMin', pullingIcon = 'pullingIcon', pullingText = 'pullingText', push = 'push', ratio = 'ratio', ratioUpper = 'ratioUpper', readonly = 'readonly', refreshingSpinner = 'refreshingSpinner', refreshingText = 'refreshingText', removeIndex = 'removeIndex', required = 'required', results = 'results', root = 'root', rootParams = 'rootParams', round = 'round', routerDirection = 'routerDirection', rows = 'rows', scrollByPoint = 'scrollByPoint', scrollEnabled = 'scrollEnabled', scrollEvents = 'scrollEvents', scrollToBottom = 'scrollToBottom', scrollToPoint = 'scrollToPoint', scrollToTop = 'scrollToTop', scrollable = 'scrollable', select = 'select', selected = 'selected', selectedText = 'selectedText', setActive = 'setActive', setOpen = 'setOpen', setOpenItem = 'setOpenItem', setPages = 'setPages', setRoot = 'setRoot', setRouteId = 'setRouteId', show = 'show', showCancelButton = 'showCancelButton', side = 'side', size = 'size', slideNext = 'slideNext', slidePrev = 'slidePrev', slideTo = 'slideTo', snapbackDuration = 'snapbackDuration', snaps = 'snaps', spellcheck = 'spellcheck', startAutoplay = 'startAutoplay', step = 'step', stopAutoplay = 'stopAutoplay', strong = 'strong', subHeader = 'subHeader', swipeBackEnabled = 'swipeBackEnabled', swipeEnabled = 'swipeEnabled', tabbarHidden = 'tabbarHidden', tabbarHighlight = 'tabbarHighlight', tabbarLayout = 'tabbarLayout', tabbarPlacement = 'tabbarPlacement', tabsHideOnSubPages = 'tabsHideOnSubPages', tapClick = 'tapClick', text = 'text', threshold = 'threshold', toggle = 'toggle', translucent = 'translucent', type = 'type', update = 'update', useRouter = 'useRouter', value = 'value', vertical = 'vertical', waitFor = 'waitFor', when = 'when', width = 'width', wrap = 'wrap', yearValues = 'yearValues';
 var App = /** @class */ (function () {
     function App() {
     }
@@ -64511,10 +64507,10 @@ var Header = /** @class */ (function () {
 
 var HideWhen = /** @class */ (function () {
     function HideWhen(r) {
-        inputs(this, r, [orientation, mediaQuery, size, mode, platform, or]);
+        inputs(this, r, [orientation, mediaQuery, size, platform, or]);
     }
     HideWhen.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-hide-when', inputs: [orientation, mediaQuery, size, mode, platform, or] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-hide-when', inputs: [orientation, mediaQuery, size, platform, or] },] },
     ];
     /** @nocollapse */
     HideWhen.ctorParameters = function () { return [
@@ -64555,11 +64551,11 @@ var InfiniteScrollContent = /** @class */ (function () {
 
 var Input = /** @class */ (function () {
     function Input(r) {
-        inputs(this, r, [accept, autocapitalize, autocomplete, autocorrect, autofocus, checked, clearInput, clearOnEdit, debounce, disabled, inputmode, max, maxlength, min, minlength, multiple, name, pattern, placeholder, readonly, required, results, spellcheck, step, size, type, value]);
-        outputs(this, [ionInput, ionStyle, ionBlur, ionFocus, ionInputDidLoad, ionInputDidUnload]);
+        inputs(this, r, [accept, autocapitalize, autocomplete, autocorrect, autofocus, clearInput, clearOnEdit, debounce, disabled, inputmode, max, maxlength, min, minlength, multiple, name, pattern, placeholder, readonly, required, results, spellcheck, step, size, type, value]);
+        outputs(this, [ionInput, ionChange, ionStyle, ionBlur, ionFocus, ionInputDidLoad, ionInputDidUnload]);
     }
     Input.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-input', inputs: [accept, autocapitalize, autocomplete, autocorrect, autofocus, checked, clearInput, clearOnEdit, debounce, disabled, inputmode, max, maxlength, min, minlength, multiple, name, pattern, placeholder, readonly, required, results, spellcheck, step, size, type, value], outputs: [ionInput, ionStyle, ionBlur, ionFocus, ionInputDidLoad, ionInputDidUnload] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-input', inputs: [accept, autocapitalize, autocomplete, autocorrect, autofocus, clearInput, clearOnEdit, debounce, disabled, inputmode, max, maxlength, min, minlength, multiple, name, pattern, placeholder, readonly, required, results, spellcheck, step, size, type, value], outputs: [ionInput, ionChange, ionStyle, ionBlur, ionFocus, ionInputDidLoad, ionInputDidUnload] },] },
     ];
     /** @nocollapse */
     Input.ctorParameters = function () { return [
@@ -64570,10 +64566,10 @@ var Input = /** @class */ (function () {
 
 var Item = /** @class */ (function () {
     function Item(r) {
-        inputs(this, r, [color, mode, detail, disabled, href, button, routerDirection]);
+        inputs(this, r, [color, mode, button, detail, disabled, href, routerDirection]);
     }
     Item.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-item', inputs: [color, mode, detail, disabled, href, button, routerDirection] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-item', inputs: [color, mode, button, detail, disabled, href, routerDirection] },] },
     ];
     /** @nocollapse */
     Item.ctorParameters = function () { return [
@@ -64765,10 +64761,10 @@ var NavPop = /** @class */ (function () {
 
 var NavPush = /** @class */ (function () {
     function NavPush(r) {
-        inputs(this, r, [component, componentProps, url]);
+        inputs(this, r, [component, componentProps]);
     }
     NavPush.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-nav-push', inputs: [component, componentProps, url] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-nav-push', inputs: [component, componentProps] },] },
     ];
     /** @nocollapse */
     NavPush.ctorParameters = function () { return [
@@ -64779,10 +64775,10 @@ var NavPush = /** @class */ (function () {
 
 var NavSetRoot = /** @class */ (function () {
     function NavSetRoot(r) {
-        inputs(this, r, [component, componentProps, url]);
+        inputs(this, r, [component, componentProps]);
     }
     NavSetRoot.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-nav-set-root', inputs: [component, componentProps, url] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-nav-set-root', inputs: [component, componentProps] },] },
     ];
     /** @nocollapse */
     NavSetRoot.ctorParameters = function () { return [
@@ -64822,11 +64818,11 @@ var Radio = /** @class */ (function () {
 
 var RadioGroup = /** @class */ (function () {
     function RadioGroup(r) {
-        inputs(this, r, [allowEmptySelection, disabled, name, value]);
+        inputs(this, r, [allowEmptySelection, name, disabled, value]);
         outputs(this, [ionChange]);
     }
     RadioGroup.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-radio-group', inputs: [allowEmptySelection, disabled, name, value], outputs: [ionChange] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-radio-group', inputs: [allowEmptySelection, name, disabled, value], outputs: [ionChange] },] },
     ];
     /** @nocollapse */
     RadioGroup.ctorParameters = function () { return [
@@ -64838,11 +64834,11 @@ var RadioGroup = /** @class */ (function () {
 var Range = /** @class */ (function () {
     function Range(r) {
         methods(this, r, [ratio, ratioUpper]);
-        inputs(this, r, [color, mode, debounce, disabled, dualKnobs, max, min, pin, snaps, step, value]);
+        inputs(this, r, [color, mode, debounce, name, dualKnobs, max, min, pin, snaps, step, disabled, value]);
         outputs(this, [ionChange, ionStyle, ionFocus, ionBlur]);
     }
     Range.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-range', inputs: [color, mode, debounce, disabled, dualKnobs, max, min, pin, snaps, step, value], outputs: [ionChange, ionStyle, ionFocus, ionBlur] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-range', inputs: [color, mode, debounce, name, dualKnobs, max, min, pin, snaps, step, disabled, value], outputs: [ionChange, ionStyle, ionFocus, ionBlur] },] },
     ];
     /** @nocollapse */
     Range.ctorParameters = function () { return [
@@ -64947,10 +64943,10 @@ var Scroll = /** @class */ (function () {
 var Searchbar = /** @class */ (function () {
     function Searchbar(r) {
         inputs(this, r, [color, mode, animated, autocomplete, autocorrect, cancelButtonText, debounce, placeholder, showCancelButton, spellcheck, type, value]);
-        outputs(this, [ionInput, ionCancel, ionClear, ionBlur, ionFocus]);
+        outputs(this, [ionInput, ionChange, ionCancel, ionClear, ionBlur, ionFocus]);
     }
     Searchbar.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-searchbar', inputs: [color, mode, animated, autocomplete, autocorrect, cancelButtonText, debounce, placeholder, showCancelButton, spellcheck, type, value], outputs: [ionInput, ionCancel, ionClear, ionBlur, ionFocus] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-searchbar', inputs: [color, mode, animated, autocomplete, autocorrect, cancelButtonText, debounce, placeholder, showCancelButton, spellcheck, type, value], outputs: [ionInput, ionChange, ionCancel, ionClear, ionBlur, ionFocus] },] },
     ];
     /** @nocollapse */
     Searchbar.ctorParameters = function () { return [
@@ -64977,10 +64973,10 @@ var Segment = /** @class */ (function () {
 var SegmentButton = /** @class */ (function () {
     function SegmentButton(r) {
         inputs(this, r, [activated, color, mode, checked, disabled, href, value]);
-        outputs(this, [ionClick]);
+        outputs(this, [ionSelect]);
     }
     SegmentButton.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-segment-button', inputs: [activated, color, mode, checked, disabled, href, value], outputs: [ionClick] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-segment-button', inputs: [activated, color, mode, checked, disabled, href, value], outputs: [ionSelect] },] },
     ];
     /** @nocollapse */
     SegmentButton.ctorParameters = function () { return [
@@ -65035,10 +65031,10 @@ var SelectPopover = /** @class */ (function () {
 
 var ShowWhen = /** @class */ (function () {
     function ShowWhen(r) {
-        inputs(this, r, [orientation, mediaQuery, size, mode, platform, or]);
+        inputs(this, r, [orientation, mediaQuery, size, platform, or]);
     }
     ShowWhen.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-show-when', inputs: [orientation, mediaQuery, size, mode, platform, or] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-show-when', inputs: [orientation, mediaQuery, size, platform, or] },] },
     ];
     /** @nocollapse */
     ShowWhen.ctorParameters = function () { return [
@@ -65165,10 +65161,10 @@ var Text = /** @class */ (function () {
 var Textarea = /** @class */ (function () {
     function Textarea(r) {
         inputs(this, r, [autocapitalize, autocomplete, autofocus, clearOnEdit, debounce, disabled, maxlength, minlength, name, placeholder, readonly, required, spellcheck, cols, rows, wrap, value]);
-        outputs(this, [ionInput, ionStyle, ionBlur, ionFocus]);
+        outputs(this, [ionChange, ionInput, ionStyle, ionBlur, ionFocus]);
     }
     Textarea.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-textarea', inputs: [autocapitalize, autocomplete, autofocus, clearOnEdit, debounce, disabled, maxlength, minlength, name, placeholder, readonly, required, spellcheck, cols, rows, wrap, value], outputs: [ionInput, ionStyle, ionBlur, ionFocus] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-textarea', inputs: [autocapitalize, autocomplete, autofocus, clearOnEdit, debounce, disabled, maxlength, minlength, name, placeholder, readonly, required, spellcheck, cols, rows, wrap, value], outputs: [ionChange, ionInput, ionStyle, ionBlur, ionFocus] },] },
     ];
     /** @nocollapse */
     Textarea.ctorParameters = function () { return [
@@ -65454,7 +65450,7 @@ var VirtualContext = /** @class */ (function () {
 /*!***************************************************!*\
   !*** ./node_modules/@ionic/angular/dist/index.js ***!
   \***************************************************/
-/*! exports provided: IonicModule, App, Avatar, BackButton, Badge, Button, Buttons, Card, CardContent, CardHeader, CardSubtitle, CardTitle, Checkbox, Chip, ChipButton, Col, Content, Datetime, Fab, FabButton, FabList, Footer, Grid, Header, HideWhen, InfiniteScroll, InfiniteScrollContent, Input, Item, ItemDivider, ItemGroup, ItemOption, ItemOptions, ItemSliding, Label, List, ListHeader, Menu, MenuButton, MenuToggle, Nav, NavPop, NavPush, NavSetRoot, Note, Radio, RadioGroup, Range, Refresher, RefresherContent, Reorder, ReorderGroup, RippleEffect, Row, Scroll, Searchbar, Segment, SegmentButton, Select, SelectOption, SelectPopover, ShowWhen, SkeletonText, Slide, Slides, Spinner, SplitPane, Tab, Tabs, Text, Textarea, Thumbnail, Toggle, Toolbar, ToolbarTitle, BooleanValueAccessor, NumericValueAccessor, RadioValueAccessor, SelectValueAccessor, TextValueAccessor, RouterDirection, IonBackButton, NavDelegate, TabDelegate, TabsDelegate, IonRouterOutlet, HrefDelegate, NavParams, Icon, VirtualScroll, VirtualItem, VirtualHeader, VirtualFooter, AngularDelegate, ActionSheetController, AlertController, Events, LoadingController, MenuController, PickerController, ModalController, Platform, PopoverController, ToastController, NavController, DomController, IonicRouteStrategy */
+/*! exports provided: IonicModule, App, Avatar, BackButton, Badge, Button, Buttons, Card, CardContent, CardHeader, CardSubtitle, CardTitle, Checkbox, Chip, ChipButton, Col, Content, Datetime, Fab, FabButton, FabList, Footer, Grid, Header, HideWhen, InfiniteScroll, InfiniteScrollContent, Input, Item, ItemDivider, ItemGroup, ItemOption, ItemOptions, ItemSliding, Label, List, ListHeader, Menu, MenuButton, MenuToggle, Nav, NavPop, NavPush, NavSetRoot, Note, Radio, RadioGroup, Range, Refresher, RefresherContent, Reorder, ReorderGroup, RippleEffect, Row, Scroll, Searchbar, Segment, SegmentButton, Select, SelectOption, SelectPopover, ShowWhen, SkeletonText, Slide, Slides, Spinner, SplitPane, Tab, Tabs, Text, Textarea, Thumbnail, Toggle, Toolbar, ToolbarTitle, BooleanValueAccessor, NumericValueAccessor, RadioValueAccessor, SelectValueAccessor, TextValueAccessor, RouterDirection, IonBackButton, NavDelegate, TabDelegate, TabsDelegate, IonRouterOutlet, HrefDelegate, NavParams, Icon, VirtualScroll, VirtualItem, VirtualHeader, VirtualFooter, AngularDelegate, ActionSheetController, AlertController, Events, LoadingController, MenuController, PickerController, ModalController, Platform, PopoverController, ToastController, NavController, DomController, Config, IonicRouteStrategy */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65675,6 +65671,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DomController", function() { return _providers__WEBPACK_IMPORTED_MODULE_3__["DomController"]; });
 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Config", function() { return _providers__WEBPACK_IMPORTED_MODULE_3__["Config"]; });
+
 /* harmony import */ var _util_ionic_router_reuse_strategy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util/ionic-router-reuse-strategy */ "./node_modules/@ionic/angular/dist/util/ionic-router-reuse-strategy.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "IonicRouteStrategy", function() { return _util_ionic_router_reuse_strategy__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]; });
 
@@ -65744,7 +65742,7 @@ if (Ionic) {
  * (C) Ionic http://ionicframework.com - MIT License
  * Built with http://stenciljs.com
  */
-!function(e,o,i,n,t,s,l,a,r,d,c,m,p,u,b){for((c=e.Ionic=e.Ionic||{}).components=r,(p=r.filter(function(e){return e[2]}).map(function(e){return e[0]})).length&&((m=o.createElement("style")).innerHTML=p.join()+"{visibility:hidden}.hydrated{visibility:inherit}",m.setAttribute("data-styles",""),o.head.insertBefore(m,o.head.firstChild)),c.$r=[],b=d.componentOnReady,d.componentOnReady=function(o){const i=this;function n(e){c.$r?c.$r.push([i,e]):c.componentOnReady(i,e)}return b&&b.call(i),o?n(o):e.Promise?new Promise(n):{then:n}},m=(p=o.querySelectorAll("script")).length-1;m>=0&&!(u=p[m]).src&&!u.hasAttribute("data-resources-url");m--);(p=u.getAttribute("data-resources-url"))&&(t=p),!t&&u.src&&(t=(p=u.src.split("/").slice(0,-1)).join("/")+(p.length?"/":"")+"ionic/"),m=o.createElement("script"),function(e,o,i,n){return!(o.search.indexOf("core=esm")>0)&&(!(!(o.search.indexOf("core=es5")>0||"file:"===o.protocol)&&e.customElements&&e.customElements.define&&e.fetch&&e.CSS&&e.CSS.supports&&e.CSS.supports("color","var(--c)")&&"noModule"in i)||function(e){try{return new Function('import("")'),!1}catch(e){}return!0}())}(e,e.location,m)?m.src=t+"ionic.6dkgpg69.js":(m.src=t+"ionic.9wjwcxzt.js",m.setAttribute("type","module"),m.setAttribute("crossorigin",!0)),m.setAttribute("data-resources-url",t),m.setAttribute("data-namespace","ionic"),o.head.appendChild(m)}(window,document,0,0,0,0,0,0,[["ion-action-sheet",{ios:"5vnig1ps",md:"yrqmxefs"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["header",1,0,1,2],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["subHeader",1,0,"sub-header",2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"],["ionActionSheetWillDismiss","dispatchCancelHandler"]]],["ion-action-sheet-controller",{ios:"5vnig1ps",md:"yrqmxefs"},0,[["create",6],["dismiss",6],["getTop",6]],0,[["body:ionActionSheetWillPresent","actionSheetWillPresent"],["body:ionActionSheetWillDismiss","actionSheetWillDismiss"],["body:ionActionSheetDidUnload","actionSheetWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-alert",{ios:"rqedpdpx",md:"zpimwq5z"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["header",1,0,1,2],["inputs",2],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["message",1,0,1,2],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["subHeader",1,0,"sub-header",2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"],["ionAlertWillDismiss","dispatchCancelHandler"]]],["ion-alert-controller",{ios:"rqedpdpx",md:"zpimwq5z"},0,[["create",6],["dismiss",6],["getTop",6]],0,[["body:ionAlertWillPresent","alertWillPresent"],["body:ionAlertWillDismiss","alertWillDismiss"],["body:ionAlertDidUnload","alertWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-anchor","uk48bcyp",0,[["href",1,0,1,2],["routerDirection",1,0,"router-direction",2]]],["ion-animation-controller","h7hla8uh",0,[["create",6]]],["ion-app",{ios:"nipuzrpd",md:"i0feqxss"},1,[["config",3,0,0,0,"config"],["el",7]]],["ion-avatar",{ios:"r1bocw4w",md:"tapajnfv"},1],["ion-back-button",{ios:"7okrijvt",md:"hutjmhsn"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["defaultHref",1,0,"default-href",2],["el",7],["icon",1,0,1,2],["mode",1,0,1,2],["text",1,0,1,2]]],["ion-backdrop",{ios:"eip2ngpw",md:"crrjyduq"},1,[["stopPropagation",1,0,"stop-propagation",3],["tappable",1,0,1,3],["visible",1,0,1,3]],0,[["touchstart","onTouchStart",0,0,1],["mousedown","onMouseDown",0,0,1]]],["ion-badge",{ios:"r1bocw4w",md:"tapajnfv"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-button",{ios:"anjhvirj",md:"sb7ktl9a"},1,[["buttonType",2,0,"button-type",2],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["expand",1,0,1,2],["fill",1,0,1,2],["href",1,0,1,2],["keyFocus",5],["mode",1,0,1,2],["round",1,0,1,3],["routerDirection",1,0,"router-direction",2],["size",1,0,1,2],["strong",1,0,1,3],["type",1,0,1,2]]],["ion-buttons","1duv9bkw"],["ion-card",{ios:"hdaynwjk",md:"2ywa2upj"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-content",{ios:"hdaynwjk",md:"2ywa2upj"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-header",{ios:"hdaynwjk",md:"2ywa2upj"},1,[["color",1,0,1,2],["mode",1,0,1,2],["translucent",1,0,1,3]]],["ion-card-subtitle",{ios:"hdaynwjk",md:"2ywa2upj"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-title",{ios:"hdaynwjk",md:"2ywa2upj"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-checkbox",{ios:"eiscjzz5",md:"500j8gni"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",2,0,1,2],["value",1,0,1,2]]],["ion-chip",{ios:"tdvqcpjn",md:"05sk5cch"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-chip-button",{ios:"tdvqcpjn",md:"05sk5cch"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["fill",1,0,1,2],["href",1,0,1,2],["mode",1,0,1,2]]],["ion-col",{ios:"hlfan8ma",md:"1p6hiyxe"}],["ion-content",{ios:"nipuzrpd",md:"i0feqxss"},1,[["config",3,0,0,0,"config"],["el",7],["forceOverscroll",1,0,"force-overscroll",3],["fullscreen",1,0,1,3],["queue",3,0,0,0,"queue"],["scrollByPoint",6],["scrollEnabled",1,0,"scroll-enabled",3],["scrollEvents",1,0,"scroll-events",3],["scrollToBottom",6],["scrollToPoint",6],["scrollToTop",6]],0,[["body:ionNavDidChange","onNavChanged"]]],["ion-cordova-platform","lpfgymov",0,[["exitCordovaApp",6],["ready",6]],0,[["document:deviceready","deviceReadyHandler"],["body:exitApp","exitCordovaApp"]]],["ion-datetime",{ios:"k5gwsye8",md:"ptcuhrtb"},1,[["cancelText",1,0,"cancel-text",2],["dayNames",1,0,"day-names",2],["dayShortNames",1,0,"day-short-names",2],["dayValues",1,0,"day-values",2],["disabled",1,0,1,3],["displayFormat",1,0,"display-format",2],["doneText",1,0,"done-text",2],["hourValues",1,0,"hour-values",2],["max",2,0,1,2],["min",2,0,1,2],["minuteValues",1,0,"minute-values",2],["monthNames",1,0,"month-names",2],["monthShortNames",1,0,"month-short-names",2],["monthValues",1,0,"month-values",2],["pickerCtrl",4,0,0,0,"ion-picker-controller"],["pickerFormat",1,0,"picker-format",2],["pickerOptions",1],["placeholder",1,0,1,2],["text",5],["value",2,0,1,2],["yearValues",1,0,"year-values",2]]],["ion-fab",{ios:"lzdcfgi8",md:"y4xvtxz3"},1,[["activated",2,0,1,3],["close",6],["edge",1,0,1,3],["el",7],["horizontal",1,0,1,2],["vertical",1,0,1,2]],0,[["click","onClick"]]],["ion-fab-button",{ios:"lzdcfgi8",md:"y4xvtxz3"},1,[["activated",1,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["show",1,0,1,3],["translucent",1,0,1,3]]],["ion-fab-list",{ios:"lzdcfgi8",md:"y4xvtxz3"},1,[["activated",1,0,1,3],["el",7],["side",1,0,1,2]]],["ion-footer",{ios:"nipuzrpd",md:"i0feqxss"},1,[["translucent",1,0,1,3]]],["ion-gesture","tsfnfeq5",0,[["attachTo",1,0,"attach-to",2],["autoBlockAll",1,0,"auto-block-all",3],["canStart",1],["direction",1,0,1,2],["disableScroll",1,0,"disable-scroll",3],["disabled",1,0,1,3],["enableListener",3,0,0,0,"enableListener"],["gestureCtrl",4,0,0,0,"ion-gesture-controller"],["gestureName",1,0,"gesture-name",2],["gesturePriority",1,0,"gesture-priority",4],["maxAngle",1,0,"max-angle",4],["notCaptured",1],["onEnd",1],["onMove",1],["onPress",1],["onStart",1],["onWillStart",1],["passive",1,0,1,3],["queue",3,0,0,0,"queue"],["threshold",1,0,1,4],["type",1,0,1,2]],0,[["touchstart","onTouchStart",1,1],["mousedown","onMouseDown",1,1],["touchmove","onTouchMove",1,1],["document:mousemove","onMoveMove",1,1],["touchcancel","onTouchCancel",1,1],["touchend","onTouchCancel",1,1],["document:mouseup","onMouseUp",1,1]]],["ion-gesture-controller","tsfnfeq5",0,[["create",6],["createBlocker",6]]],["ion-grid",{ios:"hlfan8ma",md:"1p6hiyxe"},1],["ion-header",{ios:"nipuzrpd",md:"i0feqxss"},1,[["translucent",1,0,1,3]]],["ion-hide-when","ocwni7t1",1,[["calculatedPlatforms",3,0,0,0,"platforms"],["config",3,0,0,0,"config"],["element",7],["mediaQuery",1,0,"media-query",2],["mode",1,0,1,2],["or",1,0,1,3],["orientation",1,0,1,2],["passesTest",5],["platform",1,0,1,2],["size",1,0,1,2]],0,[["window:resize","componentWillLoad",0,1]]],["ion-icon","kbsihpqb",1,[["ariaLabel",1,0,1,2],["color",1,0,1,2],["ios",1,0,1,2],["isServer",3,0,0,0,"isServer"],["md",1,0,1,2],["mode",3,0,0,0,"mode"],["name",1,0,1,2],["publicPath",3,0,0,0,"publicPath"],["size",1,0,1,2],["svgContent",5]]],["ion-infinite-scroll",{ios:"opu2inx3",md:"fq2lqub4"},1,[["complete",6],["disabled",1,0,1,3],["el",7],["enableListener",3,0,0,0,"enableListener"],["isLoading",5],["position",1,0,1,2],["queue",3,0,0,0,"queue"],["threshold",1,0,1,2],["waitFor",6]],0,[["scroll","onScroll",1,1]]],["ion-infinite-scroll-content",{ios:"opu2inx3",md:"fq2lqub4"},1,[["config",3,0,0,0,"config"],["loadingSpinner",2,0,"loading-spinner",2],["loadingText",1,0,"loading-text",2]]],["ion-input",{ios:"q6q59u9a",md:"zzfpj1vu"},1,[["accept",1,0,1,2],["autocapitalize",1,0,1,2],["autocomplete",1,0,1,2],["autocorrect",1,0,1,2],["autofocus",1,0,1,3],["checked",1,0,1,3],["clearInput",1,0,"clear-input",3],["clearOnEdit",2,0,"clear-on-edit",3],["debounce",1,0,1,4],["disabled",1,0,1,3],["el",7],["inputmode",1,0,1,2],["max",1,0,1,2],["maxlength",1,0,1,4],["min",1,0,1,2],["minlength",1,0,1,4],["multiple",1,0,1,3],["name",1,0,1,2],["pattern",1,0,1,2],["placeholder",1,0,1,2],["readonly",1,0,1,3],["required",1,0,1,3],["results",1,0,1,4],["size",1,0,1,4],["spellcheck",1,0,1,3],["step",1,0,1,2],["type",1,0,1,2],["value",2,0,1,2]]],["ion-input-shims","si5bu5eb",0,[["config",3,0,0,0,"config"]],0,[["body:ionInputDidLoad","onInputDidLoad"],["body:ionInputDidUnload","onInputDidUnload"]]],["ion-item",{ios:"20xmt7ue",md:"nateq86y"},1,[["button",1,0,1,3],["color",1,0,1,2],["detail",1,0,1,3],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["routerDirection",1,0,"router-direction",2]],0,[["ionStyle","itemStyle"]]],["ion-item-divider",{ios:"20xmt7ue",md:"nateq86y"},1,[["color",1,0,1,2],["el",7],["mode",1,0,1,2]]],["ion-item-group",{ios:"20xmt7ue",md:"nateq86y"},1],["ion-item-option",{ios:"mvinsjbv",md:"mwppwnj3"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["expandable",1,0,1,3],["href",1,0,1,2],["mode",1,0,1,2]]],["ion-item-options",{ios:"mvinsjbv",md:"mwppwnj3"},1,[["el",7],["fireSwipeEvent",6],["isRightSide",6],["side",1,0,1,2],["width",6]]],["ion-item-sliding",{ios:"mvinsjbv",md:"mwppwnj3"},1,[["close",6],["closeOpened",6],["el",7],["getOpenAmount",6],["getSlidingRatio",6],["state",5]]],["ion-label",{ios:"20xmt7ue",md:"nateq86y"},1,[["color",1,0,1,2],["el",7],["getText",6],["mode",1,0,1,2],["position",1,0,1,2]]],["ion-list",{ios:"20xmt7ue",md:"nateq86y"},1,[["closeSlidingItems",6],["getOpenItem",6],["setOpenItem",6]]],["ion-list-header",{ios:"20xmt7ue",md:"nateq86y"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-loading",{ios:"oewbjsut",md:"iwdopilj"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["config",3,0,0,0,"config"],["content",1,0,1,2],["cssClass",1,0,"css-class",2],["dismiss",6],["dismissOnPageChange",1,0,"dismiss-on-page-change",3],["duration",1,0,1,4],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["spinner",1,0,1,2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"]]],["ion-loading-controller",{ios:"oewbjsut",md:"iwdopilj"},0,[["create",6],["dismiss",6],["getTop",6]],0,[["body:ionLoadingWillPresent","loadingWillPresent"],["body:ionLoadingWillDismiss","loadingWillDismiss"],["body:ionLoadingDidUnload","loadingWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-menu",{ios:"ssxmbjhp",md:"qkooat5f"},1,[["close",6],["config",3,0,0,0,"config"],["contentId",1,0,"content-id",2],["disabled",2,0,1,3],["el",7],["enableListener",3,0,0,0,"enableListener"],["isActive",6],["isOpen",6],["isRightSide",5],["isServer",3,0,0,0,"isServer"],["lazyMenuCtrl",4,0,0,0,"ion-menu-controller"],["maxEdgeStart",1,0,"max-edge-start",4],["menuId",1,0,"menu-id",2],["open",6],["persistent",1,0,1,3],["setOpen",6],["side",1,0,1,2],["swipeEnabled",1,0,"swipe-enabled",3],["toggle",6],["type",2,0,1,2]],0,[["body:ionSplitPaneVisible","splitPaneChanged"],["body:click","onBackdropClick",1,0,1]]],["ion-menu-button",{ios:"ssxmbjhp",md:"qkooat5f"},1,[["autoHide",1,0,"auto-hide",3],["config",3,0,0,0,"config"],["el",7],["menu",1,0,1,2]]],["ion-menu-controller",{ios:"ssxmbjhp",md:"qkooat5f"},0,[["_register",6],["_setActiveMenu",6],["_setOpen",6],["_unregister",6],["animationCtrl",4,0,0,0,"ion-animation-controller"],["close",6],["createAnimation",6],["enable",6],["get",6],["getMenus",6],["getOpen",6],["isAnimating",6],["isEnabled",6],["isOpen",6],["open",6],["registerAnimation",6],["swipeEnable",6],["toggle",6]]],["ion-menu-toggle",{ios:"ssxmbjhp",md:"qkooat5f"},1,[["autoHide",1,0,"auto-hide",3],["menu",1,0,1,2],["visible",5]],0,[["child:click","onClick"],["body:ionMenuChange","updateVisibility"],["body:ionSplitPaneVisible","updateVisibility"]]],["ion-modal",{ios:"ejr5uetb",md:"ihqfl2ep"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["color",1,0,1,2],["component",1,0,1,2],["componentProps",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["delegate",1],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"],["ionBackdropTap","onBackdropTap"],["ionModalDidPresent","lifecycle"],["ionModalWillPresent","lifecycle"],["ionModalWillDismiss","lifecycle"],["ionModalDidDismiss","lifecycle"]]],["ion-modal-controller",{ios:"ejr5uetb",md:"ihqfl2ep"},0,[["create",6],["dismiss",6],["getTop",6]],0,[["body:ionModalWillPresent","modalWillPresent"],["body:ionModalWillDismiss","modalWillDismiss"],["body:ionModalDidUnload","modalWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-nav","y9gygmgs",0,[["animated",2,0,1,3],["animationCtrl",4,0,0,0,"ion-animation-controller"],["canGoBack",6],["config",3,0,0,0,"config"],["delegate",1],["el",7],["getActive",6],["getByIndex",6],["getPrevious",6],["getRouteId",6],["insert",6],["insertPages",6],["length",6],["pop",6],["popTo",6],["popToRoot",6],["push",6],["queue",3,0,0,0,"queue"],["removeIndex",6],["root",1,0,1,2],["rootParams",1],["setPages",6],["setRoot",6],["setRouteId",6],["swipeBackEnabled",2,0,"swipe-back-enabled",3],["win",3,0,0,0,"window"]]],["ion-nav-pop","nzjvoog0",0,[["el",7]],0,[["child:click","pop"]]],["ion-nav-push","dxuprlqs",0,[["component",1,0,1,2],["componentProps",1],["el",7],["url",1,0,1,2]],0,[["child:click","push"]]],["ion-nav-set-root","6dug2jdb",0,[["component",1,0,1,2],["componentProps",1],["el",7],["url",1,0,1,2]],0,[["child:click","push"]]],["ion-note",{ios:"fccmbelk",md:"nh4hjssz"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-picker",{ios:"k5gwsye8",md:"ptcuhrtb"},1,[["addButton",6],["addColumn",6],["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["columns",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["duration",1,0,1,4],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["getColumn",6],["getColumns",6],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["showSpinner",5],["spinner",5],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"]]],["ion-picker-column",{ios:"k5gwsye8",md:"ptcuhrtb"},0,[["col",1],["el",7],["queue",3,0,0,0,"queue"]]],["ion-picker-controller",{ios:"k5gwsye8",md:"ptcuhrtb"},0,[["create",6],["dismiss",6],["getTop",6]],0,[["body:ionPickerWillPresent","pickerWillPresent"],["body:ionPickerWillDismiss","pickerWillDismiss"],["body:ionPickerDidUnload","pickerWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-platform","lpfgymov",0,[["_platforms",3,0,0,0,"platforms"],["el",7],["getQueryParam",6],["is",6],["isLandscape",6],["isPortrait",6],["platforms",6],["readQueryParam",3,0,0,0,"readQueryParam"],["ready",6],["versions",6]]],["ion-popover",{ios:"rd4hgggc",md:"e38j9iwa"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["color",1,0,1,2],["component",1,0,1,2],["componentProps",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["delegate",1],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["ev",1,0,1,1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"],["ionBackdropTap","onBackdropTap"],["ionPopoverDidPresent","lifecycle"],["ionPopoverWillPresent","lifecycle"],["ionPopoverWillDismiss","lifecycle"],["ionPopoverDidDismiss","lifecycle"]]],["ion-popover-controller",{ios:"rd4hgggc",md:"e38j9iwa"},0,[["create",6],["dismiss",6],["getTop",6]],0,[["body:ionPopoverWillPresent","popoverWillPresent"],["body:ionPopoverWillDismiss","popoverWillDismiss"],["body:ionPopoverDidUnload","popoverWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-radio",{ios:"19xzoseg",md:"dlful6u8"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",2,0,1,2]]],["ion-radio-group",{ios:"19xzoseg",md:"dlful6u8"},0,[["allowEmptySelection",1,0,"allow-empty-selection",3],["disabled",1,0,1,3],["el",7],["labelId",5],["name",2,0,1,2],["value",2,0,1,2]],0,[["ionRadioDidLoad","onRadioDidLoad"],["ionRadioDidUnload","onRadioDidUnload"],["ionSelect","onRadioSelect"]]],["ion-range",{ios:"ycycymvi",md:"wkgtqq2q"},1,[["activeB",5],["barL",5],["barR",5],["color",1,0,1,2],["debounce",1,0,1,4],["disabled",1,0,1,3],["dualKnobs",1,0,"dual-knobs",3],["el",7],["max",1,0,1,4],["min",1,0,1,4],["mode",1,0,1,2],["pin",1,0,1,3],["pressed",5],["pressedA",5],["pressedB",5],["ratio",6],["ratioA",5],["ratioB",5],["ratioUpper",6],["rect",5],["snaps",1,0,1,3],["step",1,0,1,4],["ticks",5],["valA",5],["valB",5],["value",2,0,1,1]],0,[["ionIncrease","keyChng"],["ionDecrease","keyChng"]]],["ion-range-knob",{ios:"ycycymvi",md:"wkgtqq2q"},0,[["disabled",1,0,1,3],["knob",1,0,1,2],["labelId",1,0,"label-id",2],["max",1,0,1,4],["min",1,0,1,4],["pin",1,0,1,3],["pressed",1,0,1,3],["ratio",1,0,1,4],["val",1,0,1,4]],0,[["keydown","handleKeyBoard"]]],["ion-refresher",{ios:"wfbnouhb",md:"bb0jq00y"},1,[["cancel",6],["closeDuration",1,0,"close-duration",2],["complete",6],["disabled",1,0,1,3],["el",7],["getProgress",6],["pullMax",1,0,"pull-max",4],["pullMin",1,0,"pull-min",4],["queue",3,0,0,0,"queue"],["snapbackDuration",1,0,"snapback-duration",2],["state",5]]],["ion-refresher-content",{ios:"wfbnouhb",md:"bb0jq00y"},0,[["config",3,0,0,0,"config"],["pullingIcon",2,0,"pulling-icon",2],["pullingText",1,0,"pulling-text",2],["refreshingSpinner",2,0,"refreshing-spinner",2],["refreshingText",1,0,"refreshing-text",2]]],["ion-reorder",{ios:"jnqj1nny",md:"zrwrqkmq"},1,[["el",7]]],["ion-reorder-group",{ios:"jnqj1nny",md:"zrwrqkmq"},1,[["activated",5],["disabled",1,0,1,3],["el",7],["enabled",5],["iconVisible",5],["queue",3,0,0,0,"queue"]]],["ion-ripple-effect","vdnx9agp",1,[["addRipple",6],["el",7],["enableListener",3,0,0,0,"enableListener"],["queue",3,0,0,0,"queue"],["tapClick",1,0,"tap-click",3]],0,[["parent:ionActivated","ionActivated",1],["touchstart","touchStart",1,1],["mousedown","mouseDown",1,1]]],["ion-route","qhjpqa5e",0,[["component",1,0,1,2],["componentProps",1],["url",1,0,1,2]]],["ion-route-redirect","qhjpqa5e",0,[["from",1,0,1,2],["to",1,0,1,2]]],["ion-router","qhjpqa5e",0,[["base",1,0,1,2],["config",3,0,0,0,"config"],["el",7],["navChanged",6],["push",6],["queue",3,0,0,0,"queue"],["useHash",1,0,"use-hash",3]],0,[["ionRouteRedirectChanged","onRedirectChanged"],["ionRouteDataChanged","onRoutesChanged"],["window:popstate","onPopState"]]],["ion-router-outlet","f34exkj2",0,[["animated",2,0,1,3],["animationBuilder",1],["animationCtrl",4,0,0,0,"ion-animation-controller"],["commit",6],["config",3,0,0,0,"config"],["delegate",1],["el",7],["getRouteId",6],["setRoot",6],["setRouteId",6],["window",3,0,0,0,"window"]]],["ion-row",{ios:"hlfan8ma",md:"1p6hiyxe"}],["ion-scroll",{ios:"nipuzrpd",md:"i0feqxss"},1,[["config",3,0,0,0,"config"],["el",7],["forceOverscroll",2,0,"force-overscroll",3],["mode",1,0,1,2],["queue",3,0,0,0,"queue"],["scrollByPoint",6],["scrollEvents",1,0,"scroll-events",3],["scrollToBottom",6],["scrollToPoint",6],["scrollToTop",6]],0,[["scroll","onScroll",0,1]]],["ion-searchbar",{ios:"vsf6ssvm",md:"csds5ien"},1,[["activated",5],["animated",1,0,1,3],["autocomplete",1,0,1,2],["autocorrect",1,0,1,2],["cancelButtonText",1,0,"cancel-button-text",2],["color",1,0,1,2],["debounce",1,0,1,4],["el",7],["focused",5],["mode",1,0,1,2],["placeholder",1,0,1,2],["showCancelButton",1,0,"show-cancel-button",3],["spellcheck",1,0,1,3],["type",1,0,1,2],["value",2,0,1,2]]],["ion-segment",{ios:"jp44mxcl",md:"fh80iqgs"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["mode",1,0,1,2],["value",2,0,1,2]],0,[["ionClick","segmentClick"]]],["ion-segment-button",{ios:"jp44mxcl",md:"fh80iqgs"},1,[["activated",2,0,1,3],["checked",1,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["value",2,0,1,2]]],["ion-select",{ios:"91fzmvgy",md:"wgm3zo86"},1,[["actionSheetCtrl",4,0,0,0,"ion-action-sheet-controller"],["alertCtrl",4,0,0,0,"ion-alert-controller"],["cancelText",1,0,"cancel-text",2],["disabled",1,0,1,3],["el",7],["interface",1,0,1,2],["interfaceOptions",1,0,"interface-options",1],["isExpanded",5],["keyFocus",5],["multiple",1,0,1,3],["name",2,0,1,2],["okText",1,0,"ok-text",2],["placeholder",1,0,1,2],["popoverCtrl",4,0,0,0,"ion-popover-controller"],["selectedText",1,0,"selected-text",2],["text",5],["value",2,0,1,2]],0,[["ionSelectOptionDidLoad","optLoad"],["ionSelectOptionDidUnload","optUnload"],["ionSelect","onSelect"]]],["ion-select-option",{ios:"91fzmvgy",md:"wgm3zo86"},0,[["disabled",1,0,1,3],["el",7],["selected",2,0,1,3],["value",2,0,1,2]]],["ion-select-popover",{ios:"91fzmvgy",md:"wgm3zo86"},0,[["header",1,0,1,2],["message",1,0,1,2],["options",1],["subHeader",1,0,"sub-header",2]],0,[["ionSelect","onSelect"]]],["ion-show-when","ocwni7t1",1,[["calculatedPlatforms",3,0,0,0,"platforms"],["config",3,0,0,0,"config"],["element",7],["mediaQuery",1,0,"media-query",2],["mode",1,0,1,2],["or",1,0,1,3],["orientation",1,0,1,2],["passesTest",5],["platform",1,0,1,2],["size",1,0,1,2]],0,[["window:resize","componentWillLoad",0,1]]],["ion-skeleton-text",{ios:"20xmt7ue",md:"nateq86y"},1,[["width",1,0,1,2]]],["ion-slide",{ios:"wp4ov8c1",md:"on0vweat"},1],["ion-slides",{ios:"wp4ov8c1",md:"on0vweat"},1,[["el",7],["getActiveIndex",6],["getPreviousIndex",6],["isBeginning",6],["isEnd",6],["length",6],["lockSwipeToNext",6],["lockSwipeToPrev",6],["lockSwipes",6],["options",1,0,1,1],["pager",1,0,1,3],["slideNext",6],["slidePrev",6],["slideTo",6],["startAutoplay",6],["stopAutoplay",6],["update",6]]],["ion-spinner",{ios:"lulthoux",md:"sko0vzyv"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["duration",1,0,1,4],["mode",1,0,1,2],["name",1,0,1,2],["paused",1,0,1,3]]],["ion-split-pane",{ios:"lzcw2nvj",md:"tzjjlmvl"},1,[["disabled",1,0,1,3],["el",7],["isPane",6],["isServer",3,0,0,0,"isServer"],["isVisible",6],["visible",5],["when",1,0,1,2]]],["ion-status-tap","jlnjift8",0,[["duration",1,0,1,4],["queue",3,0,0,0,"queue"]],0,[["window:statusTap","onStatusTap"]]],["ion-tab",{ios:"emackhy2",md:"cbvrjgq3"},0,[["active",2,0,1,3],["badge",1,0,1,2],["badgeStyle",1,0,"badge-style",2],["btnId",1,0,"btn-id",2],["component",1,0,1,2],["delegate",1],["disabled",1,0,1,3],["el",7],["getTabId",6],["href",1,0,1,2],["icon",1,0,1,2],["label",1,0,1,2],["name",1,0,1,2],["selected",2,0,1,3],["setActive",6],["show",1,0,1,3],["tabsHideOnSubPages",1,0,"tabs-hide-on-sub-pages",3]]],["ion-tab-button",{ios:"emackhy2",md:"cbvrjgq3"},1,[["el",7],["keyFocus",5],["selected",1,0,1,3],["tab",1]],0,[["click","onClick"]]],["ion-tabbar",{ios:"emackhy2",md:"cbvrjgq3"},1,[["canScrollLeft",5],["canScrollRight",5],["el",7],["hidden",5],["highlight",1,0,1,3],["layout",1,0,1,2],["placement",1,0,1,2],["queue",3,0,0,0,"queue"],["scrollable",1,0,1,3],["selectedTab",1],["tabs",1],["translucent",1,0,1,3]],0,[["body:keyboardWillHide","onKeyboardWillHide"],["body:keyboardWillShow","onKeyboardWillShow"],["window:resize","onResize",0,1],["ionTabButtonDidLoad","onTabButtonLoad"],["ionTabButtonDidUnload","onTabButtonLoad"]]],["ion-tabs",{ios:"emackhy2",md:"cbvrjgq3"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["el",7],["getRouteId",6],["getSelected",6],["getTab",6],["name",1,0,1,2],["scrollable",1,0,1,3],["select",6],["selectedTab",5],["setRouteId",6],["tabbarHidden",1,0,"tabbar-hidden",3],["tabbarHighlight",2,0,"tabbar-highlight",3],["tabbarLayout",2,0,"tabbar-layout",2],["tabbarPlacement",2,0,"tabbar-placement",2],["tabs",5],["translucent",1,0,1,3],["useRouter",2,0,"use-router",3]],0,[["ionTabbarClick","tabChange"]]],["ion-tap-click",{ios:"nipuzrpd",md:"i0feqxss"},0,[["el",7],["enableListener",3,0,0,0,"enableListener"],["isServer",3,0,0,0,"isServer"]],0,[["body:click","onBodyClick",0,0,1],["document:touchstart","onTouchStart",0,1,1],["document:touchcancel","onTouchEnd",0,0,1],["document:touchend","onTouchEnd",0,0,1],["document:mousedown","onMouseDown",0,1,1],["document:mouseup","onMouseUp",0,0,1],["body:ionScrollStart","cancelActive"],["body:ionGestureCaptured","cancelActive"]]],["ion-text",{ios:"ppliw44q",md:"nxgxomj5"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-textarea",{ios:"g1v6du1c",md:"cwjlirip"},1,[["autocapitalize",1,0,1,2],["autocomplete",1,0,1,2],["autofocus",1,0,1,3],["clearOnEdit",2,0,"clear-on-edit",3],["cols",1,0,1,4],["debounce",1,0,1,4],["disabled",1,0,1,3],["el",7],["maxlength",1,0,1,4],["minlength",1,0,1,4],["name",1,0,1,2],["placeholder",1,0,1,2],["readonly",1,0,1,3],["required",1,0,1,3],["rows",1,0,1,4],["spellcheck",1,0,1,3],["value",2,0,1,2],["wrap",1,0,1,2]]],["ion-thumbnail",{ios:"r1bocw4w",md:"tapajnfv"},1],["ion-title",{ios:"nipuzrpd",md:"i0feqxss"},1],["ion-toast",{ios:"kydclqkc",md:"jxywrugl"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["closeButtonText",1,0,"close-button-text",2],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["dismissOnPageChange",1,0,"dismiss-on-page-change",3],["duration",1,0,1,4],["el",7],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["message",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["position",1,0,1,2],["present",6],["showCloseButton",1,0,"show-close-button",3],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"]]],["ion-toast-controller",{ios:"kydclqkc",md:"jxywrugl"},0,[["create",6],["dismiss",6],["getTop",6]],0,[["body:ionToastWillPresent","toastWillPresent"],["body:ionToastWillDismiss","toastWillDismiss"],["body:ionToastDidUnload","toastWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-toggle",{ios:"meutkwqd",md:"u6nkmfqt"},1,[["activated",5],["checked",2,0,1,3],["color",1,0,1,2],["disabled",2,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",2,0,1,2],["value",1,0,1,2]]],["ion-toolbar",{ios:"nipuzrpd",md:"i0feqxss"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["mode",1,0,1,2],["translucent",1,0,1,3]]],["ion-virtual-scroll","vkpvqdfe",1,[["approxFooterHeight",1,0,"approx-footer-height",4],["approxHeaderHeight",1,0,"approx-header-height",4],["approxItemHeight",1,0,"approx-item-height",4],["domRender",1],["el",7],["enableListener",3,0,0,0,"enableListener"],["footerFn",1],["headerFn",1],["itemHeight",1],["itemRender",1],["items",1],["markDirty",6],["markDirtyTail",6],["nodeHeight",1],["positionForItem",6],["queue",3,0,0,0,"queue"],["renderer",1]],0,[["scroll","onScroll",1],["window:resize","onResize",0,1]]]],HTMLElement.prototype);
+!function(e,o,i,n,t,s,l,a,d,r,c,m,u,p,b){for((c=e.Ionic=e.Ionic||{}).components=d,(u=d.filter(function(e){return e[2]}).map(function(e){return e[0]})).length&&((m=o.createElement("style")).innerHTML=u.join()+"{visibility:hidden}.hydrated{visibility:inherit}",m.setAttribute("data-styles",""),o.head.insertBefore(m,o.head.firstChild)),c.$r=[],b=r.componentOnReady,r.componentOnReady=function(o){const i=this;function n(e){c.$r?c.$r.push([i,e]):c.componentOnReady(i,e)}return b&&b.call(i),o?n(o):e.Promise?new Promise(n):{then:n}},m=(u=o.querySelectorAll("script")).length-1;m>=0&&!(p=u[m]).src&&!p.hasAttribute("data-resources-url");m--);(u=p.getAttribute("data-resources-url"))&&(t=u),!t&&p.src&&(t=(u=p.src.split("/").slice(0,-1)).join("/")+(u.length?"/":"")+"ionic/"),m=o.createElement("script"),function(e,o,i,n){return!(o.search.indexOf("core=esm")>0)&&(!(!(o.search.indexOf("core=es5")>0||"file:"===o.protocol)&&e.customElements&&e.customElements.define&&e.fetch&&e.CSS&&e.CSS.supports&&e.CSS.supports("color","var(--c)")&&"noModule"in i)||function(e){try{return new Function('import("")'),!1}catch(e){}return!0}())}(e,e.location,m)?m.src=t+"ionic.ubarihrw.js":(m.src=t+"ionic.hckpwxgi.js",m.setAttribute("type","module"),m.setAttribute("crossorigin",!0)),m.setAttribute("data-resources-url",t),m.setAttribute("data-namespace","ionic"),o.head.appendChild(m)}(window,document,0,0,0,0,0,0,[["ion-action-sheet",{ios:"oubq5tia",md:"u0fofdwu"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["header",1,0,1,2],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["subHeader",1,0,"sub-header",2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"],["ionActionSheetWillDismiss","dispatchCancelHandler"]]],["ion-action-sheet-controller",{ios:"oubq5tia",md:"u0fofdwu"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionActionSheetWillPresent","actionSheetWillPresent"],["body:ionActionSheetWillDismiss","actionSheetWillDismiss"],["body:ionActionSheetDidUnload","actionSheetWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-alert",{ios:"v8kjk6bp",md:"lntks6lz"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["header",1,0,1,2],["inputs",2],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["message",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["subHeader",1,0,"sub-header",2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"],["ionAlertWillDismiss","dispatchCancelHandler"]]],["ion-alert-controller",{ios:"v8kjk6bp",md:"lntks6lz"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionAlertWillPresent","alertWillPresent"],["body:ionAlertWillDismiss","alertWillDismiss"],["body:ionAlertDidUnload","alertWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-anchor","l6fxo45j",0,[["href",1,0,1,2],["routerDirection",1,0,"router-direction",2],["win",3,0,0,0,"window"]]],["ion-animation-controller","h7hla8uh",0,[["create",6]]],["ion-app",{ios:"7wbyktrg",md:"70hihgiy"},1,[["config",3,0,0,0,"config"],["el",7],["win",3,0,0,0,"window"]]],["ion-avatar",{ios:"r1bocw4w",md:"tapajnfv"},1],["ion-back-button",{ios:"s7jbv69a",md:"t18wihpq"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["defaultHref",1,0,"default-href",2],["el",7],["icon",1,0,1,2],["mode",1,0,1,2],["text",1,0,1,2],["win",3,0,0,0,"window"]]],["ion-backdrop",{ios:"9odfdsfd",md:"c2r9nj7j"},1,[["doc",3,0,0,0,"document"],["stopPropagation",1,0,"stop-propagation",3],["tappable",1,0,1,3],["visible",1,0,1,3]],0,[["touchstart","onTouchStart",0,0,1],["mousedown","onMouseDown",0,0,1]]],["ion-badge",{ios:"r1bocw4w",md:"tapajnfv"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-button",{ios:"ojczz4li",md:"qvbh74ji"},1,[["buttonType",2,0,"button-type",2],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["expand",1,0,1,2],["fill",1,0,1,2],["href",1,0,1,2],["keyFocus",5],["mode",1,0,1,2],["round",1,0,1,3],["routerDirection",1,0,"router-direction",2],["size",1,0,1,2],["strong",1,0,1,3],["type",1,0,1,2],["win",3,0,0,0,"window"]]],["ion-buttons","1duv9bkw"],["ion-card",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-content",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-header",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2],["translucent",1,0,1,3]]],["ion-card-subtitle",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-title",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-checkbox",{ios:"oizwtk13",md:"mq2egzv0"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",1,0,1,2]]],["ion-chip",{ios:"jrmlgawb",md:"1tflupil"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-chip-button",{ios:"jrmlgawb",md:"1tflupil"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["fill",1,0,1,2],["href",1,0,1,2],["mode",1,0,1,2]]],["ion-col",{ios:"hlfan8ma",md:"1p6hiyxe"}],["ion-content",{ios:"7wbyktrg",md:"70hihgiy"},1,[["config",3,0,0,0,"config"],["el",7],["forceOverscroll",1,0,"force-overscroll",3],["fullscreen",1,0,1,3],["queue",3,0,0,0,"queue"],["scrollByPoint",6],["scrollEnabled",1,0,"scroll-enabled",3],["scrollEvents",1,0,"scroll-events",3],["scrollToBottom",6],["scrollToPoint",6],["scrollToTop",6]],0,[["body:ionNavDidChange","onNavChanged"]]],["ion-datetime",{ios:"v8mwaxuc",md:"avhv6nzq"},1,[["cancelText",1,0,"cancel-text",2],["dayNames",1,0,"day-names",2],["dayShortNames",1,0,"day-short-names",2],["dayValues",1,0,"day-values",2],["disabled",1,0,1,3],["displayFormat",1,0,"display-format",2],["doneText",1,0,"done-text",2],["hourValues",1,0,"hour-values",2],["max",2,0,1,2],["min",2,0,1,2],["minuteValues",1,0,"minute-values",2],["monthNames",1,0,"month-names",2],["monthShortNames",1,0,"month-short-names",2],["monthValues",1,0,"month-values",2],["pickerCtrl",4,0,0,0,"ion-picker-controller"],["pickerFormat",1,0,"picker-format",2],["pickerOptions",1],["placeholder",1,0,1,2],["text",5],["value",2,0,1,2],["yearValues",1,0,"year-values",2]]],["ion-fab",{ios:"arslimt2",md:"pbdfjonk"},1,[["activated",2,0,1,3],["close",6],["edge",1,0,1,3],["el",7],["horizontal",1,0,1,2],["vertical",1,0,1,2]],0,[["click","onClick"]]],["ion-fab-button",{ios:"arslimt2",md:"pbdfjonk"},1,[["activated",1,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["show",1,0,1,3],["translucent",1,0,1,3]]],["ion-fab-list",{ios:"arslimt2",md:"pbdfjonk"},1,[["activated",1,0,1,3],["el",7],["side",1,0,1,2]]],["ion-footer",{ios:"7wbyktrg",md:"70hihgiy"},1,[["translucent",1,0,1,3]]],["ion-gesture","baxxb4cz",0,[["attachTo",1,0,"attach-to",2],["autoBlockAll",1,0,"auto-block-all",3],["canStart",1],["direction",1,0,1,2],["disableScroll",1,0,"disable-scroll",3],["disabled",1,0,1,3],["enableListener",3,0,0,0,"enableListener"],["gestureCtrl",4,0,0,0,"ion-gesture-controller"],["gestureName",1,0,"gesture-name",2],["gesturePriority",1,0,"gesture-priority",4],["maxAngle",1,0,"max-angle",4],["notCaptured",1],["onEnd",1],["onMove",1],["onStart",1],["onWillStart",1],["passive",1,0,1,3],["queue",3,0,0,0,"queue"],["threshold",1,0,1,4]],0,[["touchstart","onTouchStart",1,1],["mousedown","onMouseDown",1,1],["touchmove","onTouchMove",1,1],["document:mousemove","onMoveMove",1,1],["touchcancel","onTouchCancel",1,1],["touchend","onTouchCancel",1,1],["document:mouseup","onMouseUp",1,1]]],["ion-gesture-controller","baxxb4cz",0,[["create",6],["createBlocker",6]]],["ion-grid",{ios:"hlfan8ma",md:"1p6hiyxe"},1],["ion-header",{ios:"7wbyktrg",md:"70hihgiy"},1,[["translucent",1,0,1,3]]],["ion-hide-when","wst3tvtu",1,[["config",3,0,0,0,"config"],["element",7],["mediaQuery",1,0,"media-query",2],["or",1,0,1,3],["orientation",1,0,1,2],["passesTest",5],["platform",1,0,1,2],["size",1,0,1,2],["win",3,0,0,0,"window"]],0,[["window:resize","onResize",0,1]]],["ion-icon","kbsihpqb",1,[["ariaLabel",1,0,"aria-label",2],["color",1,0,1,2],["ios",1,0,1,2],["isServer",3,0,0,0,"isServer"],["md",1,0,1,2],["mode",3,0,0,0,"mode"],["name",1,0,1,2],["publicPath",3,0,0,0,"publicPath"],["size",1,0,1,2],["svgContent",5]]],["ion-infinite-scroll",{ios:"qulsebje",md:"tkbkkmaa"},1,[["complete",6],["disabled",1,0,1,3],["el",7],["enableListener",3,0,0,0,"enableListener"],["isLoading",5],["position",1,0,1,2],["queue",3,0,0,0,"queue"],["threshold",1,0,1,2],["waitFor",6]],0,[["scroll","onScroll",1,1]]],["ion-infinite-scroll-content",{ios:"qulsebje",md:"tkbkkmaa"},1,[["config",3,0,0,0,"config"],["loadingSpinner",2,0,"loading-spinner",2],["loadingText",1,0,"loading-text",2]]],["ion-input",{ios:"ay3li3ri",md:"doq3deyg"},1,[["accept",1,0,1,2],["autocapitalize",1,0,1,2],["autocomplete",1,0,1,2],["autocorrect",1,0,1,2],["autofocus",1,0,1,3],["clearInput",1,0,"clear-input",3],["clearOnEdit",2,0,"clear-on-edit",3],["debounce",1,0,1,4],["disabled",1,0,1,3],["el",7],["inputmode",1,0,1,2],["max",1,0,1,2],["maxlength",1,0,1,4],["min",1,0,1,2],["minlength",1,0,1,4],["multiple",1,0,1,3],["name",1,0,1,2],["pattern",1,0,1,2],["placeholder",1,0,1,2],["readonly",1,0,1,3],["required",1,0,1,3],["results",1,0,1,4],["size",1,0,1,4],["spellcheck",1,0,1,3],["step",1,0,1,2],["type",1,0,1,2],["value",2,0,1,2]]],["ion-input-shims","6rgsypmp",0,[["config",3,0,0,0,"config"],["doc",3,0,0,0,"document"]],0,[["body:ionInputDidLoad","onInputDidLoad"],["body:ionInputDidUnload","onInputDidUnload"]]],["ion-item",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["button",1,0,1,3],["color",1,0,1,2],["detail",1,0,1,3],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["routerDirection",1,0,"router-direction",2],["win",3,0,0,0,"window"]],0,[["ionStyle","itemStyle"]]],["ion-item-divider",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["color",1,0,1,2],["el",7],["mode",1,0,1,2]]],["ion-item-group",{ios:"i0buxs1i",md:"q6bw90oi"},1],["ion-item-option",{ios:"ssvjeeiq",md:"umrrir55"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["expandable",1,0,1,3],["href",1,0,1,2],["mode",1,0,1,2]]],["ion-item-options",{ios:"ssvjeeiq",md:"umrrir55"},1,[["el",7],["fireSwipeEvent",6],["isRightSide",6],["side",1,0,1,2],["width",6],["win",3,0,0,0,"window"]]],["ion-item-sliding",{ios:"ssvjeeiq",md:"umrrir55"},1,[["close",6],["closeOpened",6],["el",7],["getOpenAmount",6],["getSlidingRatio",6],["state",5]]],["ion-label",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["color",1,0,1,2],["el",7],["getText",6],["mode",1,0,1,2],["position",1,0,1,2]]],["ion-list",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["closeSlidingItems",6],["getOpenItem",6],["setOpenItem",6]]],["ion-list-header",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-loading",{ios:"knasvvba",md:"2pfx1zet"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["config",3,0,0,0,"config"],["content",1,0,1,2],["cssClass",1,0,"css-class",2],["dismiss",6],["dismissOnPageChange",1,0,"dismiss-on-page-change",3],["duration",1,0,1,4],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["spinner",1,0,1,2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"]]],["ion-loading-controller",{ios:"knasvvba",md:"2pfx1zet"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionLoadingWillPresent","loadingWillPresent"],["body:ionLoadingWillDismiss","loadingWillDismiss"],["body:ionLoadingDidUnload","loadingWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-menu",{ios:"bnx1dfz2",md:"mlmu4mem"},1,[["close",6],["config",3,0,0,0,"config"],["contentId",1,0,"content-id",2],["disabled",2,0,1,3],["el",7],["enableListener",3,0,0,0,"enableListener"],["isActive",6],["isOpen",6],["isRightSide",5],["isServer",3,0,0,0,"isServer"],["lazyMenuCtrl",4,0,0,0,"ion-menu-controller"],["maxEdgeStart",1,0,"max-edge-start",4],["menuId",1,0,"menu-id",2],["open",6],["persistent",1,0,1,3],["setOpen",6],["side",1,0,1,2],["swipeEnabled",1,0,"swipe-enabled",3],["toggle",6],["type",2,0,1,2],["win",3,0,0,0,"window"]],0,[["body:ionSplitPaneVisible","splitPaneChanged"],["body:click","onBackdropClick",1,0,1]]],["ion-menu-button",{ios:"bnx1dfz2",md:"mlmu4mem"},1,[["autoHide",1,0,"auto-hide",3],["config",3,0,0,0,"config"],["el",7],["menu",1,0,1,2]]],["ion-menu-controller",{ios:"bnx1dfz2",md:"mlmu4mem"},0,[["_register",6],["_setActiveMenu",6],["_setOpen",6],["_unregister",6],["animationCtrl",4,0,0,0,"ion-animation-controller"],["close",6],["createAnimation",6],["enable",6],["get",6],["getMenus",6],["getOpen",6],["isAnimating",6],["isEnabled",6],["isOpen",6],["open",6],["registerAnimation",6],["swipeEnable",6],["toggle",6]]],["ion-menu-toggle",{ios:"bnx1dfz2",md:"mlmu4mem"},1,[["autoHide",1,0,"auto-hide",3],["doc",3,0,0,0,"document"],["menu",1,0,1,2],["visible",5]],0,[["child:click","onClick"],["body:ionMenuChange","updateVisibility"],["body:ionSplitPaneVisible","updateVisibility"]]],["ion-modal",{ios:"lhbnhwji",md:"sxz49quc"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["color",1,0,1,2],["component",1,0,1,2],["componentProps",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["delegate",1],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"],["ionBackdropTap","onBackdropTap"],["ionModalDidPresent","lifecycle"],["ionModalWillPresent","lifecycle"],["ionModalWillDismiss","lifecycle"],["ionModalDidDismiss","lifecycle"]]],["ion-modal-controller",{ios:"lhbnhwji",md:"sxz49quc"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionModalWillPresent","modalWillPresent"],["body:ionModalWillDismiss","modalWillDismiss"],["body:ionModalDidUnload","modalWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-nav","2v8izsxr",0,[["animated",2,0,1,3],["animationCtrl",4,0,0,0,"ion-animation-controller"],["canGoBack",6],["config",3,0,0,0,"config"],["delegate",1],["el",7],["getActive",6],["getByIndex",6],["getPrevious",6],["getRouteId",6],["insert",6],["insertPages",6],["length",6],["pop",6],["popTo",6],["popToRoot",6],["push",6],["queue",3,0,0,0,"queue"],["removeIndex",6],["root",1,0,1,2],["rootParams",1],["setPages",6],["setRoot",6],["setRouteId",6],["swipeBackEnabled",2,0,"swipe-back-enabled",3],["win",3,0,0,0,"window"]]],["ion-nav-pop","nzjvoog0",0,[["el",7]],0,[["child:click","pop"]]],["ion-nav-push","nud8lxwe",0,[["component",1,0,1,2],["componentProps",1],["el",7]],0,[["child:click","push"]]],["ion-nav-set-root","m1wtxzu9",0,[["component",1,0,1,2],["componentProps",1],["el",7]],0,[["child:click","push"]]],["ion-note",{ios:"fccmbelk",md:"nh4hjssz"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-picker",{ios:"v8mwaxuc",md:"avhv6nzq"},1,[["addButton",6],["addColumn",6],["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["columns",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["duration",1,0,1,4],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["getColumn",6],["getColumns",6],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["showSpinner",5],["spinner",5],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"]]],["ion-picker-column",{ios:"v8mwaxuc",md:"avhv6nzq"},0,[["col",1],["el",7],["queue",3,0,0,0,"queue"]]],["ion-picker-controller",{ios:"v8mwaxuc",md:"avhv6nzq"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionPickerWillPresent","pickerWillPresent"],["body:ionPickerWillDismiss","pickerWillDismiss"],["body:ionPickerDidUnload","pickerWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-popover",{ios:"cprhttaj",md:"ngcdrzy6"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["color",1,0,1,2],["component",1,0,1,2],["componentProps",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["delegate",1],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["ev",1,0,1,1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"],["ionBackdropTap","onBackdropTap"],["ionPopoverDidPresent","lifecycle"],["ionPopoverWillPresent","lifecycle"],["ionPopoverWillDismiss","lifecycle"],["ionPopoverDidDismiss","lifecycle"]]],["ion-popover-controller",{ios:"cprhttaj",md:"ngcdrzy6"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionPopoverWillPresent","popoverWillPresent"],["body:ionPopoverWillDismiss","popoverWillDismiss"],["body:ionPopoverDidUnload","popoverWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-radio",{ios:"0y1isdw0",md:"cgffoave"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",2,0,1,2]]],["ion-radio-group",{ios:"0y1isdw0",md:"cgffoave"},0,[["allowEmptySelection",1,0,"allow-empty-selection",3],["disabled",1,0,1,3],["el",7],["name",1,0,1,2],["value",2,0,1,2]],0,[["ionRadioDidLoad","onRadioDidLoad"],["ionRadioDidUnload","onRadioDidUnload"],["ionSelect","onRadioSelect"]]],["ion-range",{ios:"ktrvdb9i",md:"vwfzkjgd"},1,[["activeB",5],["barL",5],["barR",5],["color",1,0,1,2],["debounce",1,0,1,4],["disabled",1,0,1,3],["dualKnobs",1,0,"dual-knobs",3],["el",7],["max",1,0,1,4],["min",1,0,1,4],["mode",1,0,1,2],["name",1,0,1,2],["pin",1,0,1,3],["pressed",5],["pressedA",5],["pressedB",5],["ratio",6],["ratioA",5],["ratioB",5],["ratioUpper",6],["rect",5],["snaps",1,0,1,3],["step",1,0,1,4],["ticks",5],["valA",5],["valB",5],["value",2,0,1,1]],0,[["ionIncrease","keyChng"],["ionDecrease","keyChng"]]],["ion-range-knob",{ios:"ktrvdb9i",md:"vwfzkjgd"},0,[["disabled",1,0,1,3],["knob",1,0,1,2],["labelId",1,0,"label-id",2],["max",1,0,1,4],["min",1,0,1,4],["pin",1,0,1,3],["pressed",1,0,1,3],["ratio",1,0,1,4],["val",1,0,1,4]],0,[["keydown","handleKeyBoard"]]],["ion-refresher",{ios:"gxumexji",md:"yucxnc5v"},1,[["cancel",6],["closeDuration",1,0,"close-duration",2],["complete",6],["disabled",1,0,1,3],["el",7],["getProgress",6],["pullMax",1,0,"pull-max",4],["pullMin",1,0,"pull-min",4],["queue",3,0,0,0,"queue"],["snapbackDuration",1,0,"snapback-duration",2],["state",5]]],["ion-refresher-content",{ios:"gxumexji",md:"yucxnc5v"},0,[["config",3,0,0,0,"config"],["pullingIcon",2,0,"pulling-icon",2],["pullingText",1,0,"pulling-text",2],["refreshingSpinner",2,0,"refreshing-spinner",2],["refreshingText",1,0,"refreshing-text",2]]],["ion-reorder",{ios:"kbizmh9d",md:"gz7bqlor"},1,[["el",7]]],["ion-reorder-group",{ios:"kbizmh9d",md:"gz7bqlor"},1,[["activated",5],["disabled",1,0,1,3],["el",7],["enabled",5],["iconVisible",5],["queue",3,0,0,0,"queue"]]],["ion-ripple-effect","yq1yeptl",1,[["addRipple",6],["doc",3,0,0,0,"document"],["el",7],["enableListener",3,0,0,0,"enableListener"],["queue",3,0,0,0,"queue"],["tapClick",1,0,"tap-click",3]],0,[["parent:ionActivated","ionActivated",1],["touchstart","touchStart",1,1],["mousedown","mouseDown",1,1]]],["ion-route","dmwmem15",0,[["component",1,0,1,2],["componentProps",1],["url",1,0,1,2]]],["ion-route-redirect","dmwmem15",0,[["from",1,0,1,2],["to",1,0,1,2]]],["ion-router","dmwmem15",0,[["base",1,0,1,2],["config",3,0,0,0,"config"],["el",7],["navChanged",6],["push",6],["queue",3,0,0,0,"queue"],["useHash",1,0,"use-hash",3],["win",3,0,0,0,"window"]],0,[["ionRouteRedirectChanged","onRedirectChanged"],["ionRouteDataChanged","onRoutesChanged"],["window:popstate","onPopState"]]],["ion-router-outlet","l2rdlodc",0,[["animated",2,0,1,3],["animationBuilder",1],["animationCtrl",4,0,0,0,"ion-animation-controller"],["commit",6],["config",3,0,0,0,"config"],["delegate",1],["el",7],["getRouteId",6],["setRoot",6],["setRouteId",6],["win",3,0,0,0,"window"]]],["ion-row",{ios:"hlfan8ma",md:"1p6hiyxe"}],["ion-scroll",{ios:"7wbyktrg",md:"70hihgiy"},1,[["config",3,0,0,0,"config"],["el",7],["forceOverscroll",2,0,"force-overscroll",3],["mode",1,0,1,2],["queue",3,0,0,0,"queue"],["scrollByPoint",6],["scrollEvents",1,0,"scroll-events",3],["scrollToBottom",6],["scrollToPoint",6],["scrollToTop",6],["win",3,0,0,0,"window"]],0,[["scroll","onScroll",0,1]]],["ion-searchbar",{ios:"evxmyqcz",md:"t16t0anm"},1,[["activated",5],["animated",1,0,1,3],["autocomplete",1,0,1,2],["autocorrect",1,0,1,2],["cancelButtonText",1,0,"cancel-button-text",2],["color",1,0,1,2],["debounce",1,0,1,4],["doc",3,0,0,0,"document"],["el",7],["focused",5],["mode",1,0,1,2],["placeholder",1,0,1,2],["showCancelButton",1,0,"show-cancel-button",3],["spellcheck",1,0,1,3],["type",1,0,1,2],["value",2,0,1,2]]],["ion-segment",{ios:"nbfozjwy",md:"esslvunz"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["mode",1,0,1,2],["value",2,0,1,2]],0,[["ionSelect","segmentClick"]]],["ion-segment-button",{ios:"nbfozjwy",md:"esslvunz"},1,[["activated",2,0,1,3],["checked",1,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["value",1,0,1,2]]],["ion-select",{ios:"0vpthk59",md:"rzqpddw9"},1,[["actionSheetCtrl",4,0,0,0,"ion-action-sheet-controller"],["alertCtrl",4,0,0,0,"ion-alert-controller"],["cancelText",1,0,"cancel-text",2],["disabled",1,0,1,3],["el",7],["interface",1,0,1,2],["interfaceOptions",1,0,"interface-options",1],["isExpanded",5],["keyFocus",5],["multiple",1,0,1,3],["name",2,0,1,2],["okText",1,0,"ok-text",2],["placeholder",1,0,1,2],["popoverCtrl",4,0,0,0,"ion-popover-controller"],["selectedText",1,0,"selected-text",2],["text",5],["value",2,0,1,2]],0,[["ionSelectOptionDidLoad","optLoad"],["ionSelectOptionDidUnload","optUnload"],["ionSelect","onSelect"]]],["ion-select-option",{ios:"0vpthk59",md:"rzqpddw9"},0,[["disabled",1,0,1,3],["el",7],["selected",1,0,1,3],["value",2,0,1,2]]],["ion-select-popover",{ios:"0vpthk59",md:"rzqpddw9"},0,[["header",1,0,1,2],["message",1,0,1,2],["options",1],["subHeader",1,0,"sub-header",2]],0,[["ionSelect","onSelect"]]],["ion-show-when","wst3tvtu",1,[["calculatedPlatforms",3,0,0,0,"platforms"],["config",3,0,0,0,"config"],["element",7],["mediaQuery",1,0,"media-query",2],["or",1,0,1,3],["orientation",1,0,1,2],["passesTest",5],["platform",1,0,1,2],["size",1,0,1,2],["win",3,0,0,0,"window"]],0,[["window:resize","onResize",0,1]]],["ion-skeleton-text",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["width",1,0,1,2]]],["ion-slide",{ios:"odbes8za",md:"m5xbwivb"},1],["ion-slides",{ios:"odbes8za",md:"m5xbwivb"},1,[["el",7],["getActiveIndex",6],["getPreviousIndex",6],["isBeginning",6],["isEnd",6],["length",6],["lockSwipeToNext",6],["lockSwipeToPrev",6],["lockSwipes",6],["options",1,0,1,1],["pager",1,0,1,3],["slideNext",6],["slidePrev",6],["slideTo",6],["startAutoplay",6],["stopAutoplay",6],["update",6]]],["ion-spinner",{ios:"yf4yeuao",md:"7nz4yktb"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["duration",1,0,1,4],["mode",1,0,1,2],["name",1,0,1,2],["paused",1,0,1,3]]],["ion-split-pane",{ios:"pczdkfru",md:"ltziabhu"},1,[["disabled",1,0,1,3],["el",7],["isPane",6],["isServer",3,0,0,0,"isServer"],["isVisible",6],["visible",5],["when",1,0,1,2],["win",3,0,0,0,"window"]]],["ion-status-tap","ggtoqmf3",0,[["duration",1,0,1,4],["queue",3,0,0,0,"queue"],["win",3,0,0,0,"window"]],0,[["window:statusTap","onStatusTap"]]],["ion-tab",{ios:"slesl8ba",md:"viihjkhh"},0,[["active",2,0,1,3],["badge",1,0,1,2],["badgeStyle",1,0,"badge-style",2],["btnId",1,0,"btn-id",2],["component",1,0,1,2],["delegate",1],["disabled",1,0,1,3],["el",7],["getTabId",6],["href",1,0,1,2],["icon",1,0,1,2],["label",1,0,1,2],["name",1,0,1,2],["selected",2,0,1,3],["setActive",6],["show",1,0,1,3],["tabsHideOnSubPages",1,0,"tabs-hide-on-sub-pages",3]]],["ion-tab-button",{ios:"slesl8ba",md:"viihjkhh"},1,[["el",7],["keyFocus",5],["selected",1,0,1,3],["tab",1]],0,[["click","onClick"]]],["ion-tabbar",{ios:"slesl8ba",md:"viihjkhh"},1,[["canScrollLeft",5],["canScrollRight",5],["doc",3,0,0,0,"document"],["el",7],["hidden",5],["highlight",1,0,1,3],["layout",1,0,1,2],["placement",1,0,1,2],["queue",3,0,0,0,"queue"],["scrollable",1,0,1,3],["selectedTab",1],["tabs",1],["translucent",1,0,1,3]],0,[["body:keyboardWillHide","onKeyboardWillHide"],["body:keyboardWillShow","onKeyboardWillShow"],["window:resize","onResize",0,1],["ionTabButtonDidLoad","onTabButtonLoad"],["ionTabButtonDidUnload","onTabButtonLoad"]]],["ion-tabs",{ios:"slesl8ba",md:"viihjkhh"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["doc",3,0,0,0,"document"],["el",7],["getRouteId",6],["getSelected",6],["getTab",6],["name",1,0,1,2],["scrollable",1,0,1,3],["select",6],["selectedTab",5],["setRouteId",6],["tabbarHidden",1,0,"tabbar-hidden",3],["tabbarHighlight",2,0,"tabbar-highlight",3],["tabbarLayout",2,0,"tabbar-layout",2],["tabbarPlacement",2,0,"tabbar-placement",2],["tabs",5],["translucent",1,0,1,3],["useRouter",2,0,"use-router",3]],0,[["ionTabbarClick","tabChange"]]],["ion-tap-click",{ios:"7wbyktrg",md:"70hihgiy"},0,[["el",7],["enableListener",3,0,0,0,"enableListener"],["isServer",3,0,0,0,"isServer"]],0,[["body:click","onBodyClick",0,0,1],["document:touchstart","onTouchStart",0,1,1],["document:touchcancel","onTouchEnd",0,0,1],["document:touchend","onTouchEnd",0,0,1],["document:mousedown","onMouseDown",0,1,1],["document:mouseup","onMouseUp",0,0,1],["body:ionScrollStart","cancelActive"],["body:ionGestureCaptured","cancelActive"]]],["ion-text",{ios:"ppliw44q",md:"nxgxomj5"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-textarea",{ios:"htowk7zj",md:"6nhxtfji"},1,[["autocapitalize",1,0,1,2],["autocomplete",1,0,1,2],["autofocus",1,0,1,3],["clearOnEdit",2,0,"clear-on-edit",3],["cols",1,0,1,4],["debounce",1,0,1,4],["disabled",1,0,1,3],["el",7],["maxlength",1,0,1,4],["minlength",1,0,1,4],["name",1,0,1,2],["placeholder",1,0,1,2],["readonly",1,0,1,3],["required",1,0,1,3],["rows",1,0,1,4],["spellcheck",1,0,1,3],["value",2,0,1,2],["wrap",1,0,1,2]]],["ion-thumbnail",{ios:"r1bocw4w",md:"tapajnfv"},1],["ion-title",{ios:"7wbyktrg",md:"70hihgiy"},1],["ion-toast",{ios:"bzydfvng",md:"4ygneg9w"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["closeButtonText",1,0,"close-button-text",2],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["duration",1,0,1,4],["el",7],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["message",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["position",1,0,1,2],["present",6],["showCloseButton",1,0,"show-close-button",3],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"]]],["ion-toast-controller",{ios:"bzydfvng",md:"4ygneg9w"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionToastWillPresent","toastWillPresent"],["body:ionToastWillDismiss","toastWillDismiss"],["body:ionToastDidUnload","toastWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-toggle",{ios:"ku9tkfjm",md:"a9rczu0y"},1,[["activated",5],["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",1,0,1,2]]],["ion-toolbar",{ios:"7wbyktrg",md:"70hihgiy"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["mode",1,0,1,2],["translucent",1,0,1,3]]],["ion-virtual-scroll","waveypz7",1,[["approxFooterHeight",1,0,"approx-footer-height",4],["approxHeaderHeight",1,0,"approx-header-height",4],["approxItemHeight",1,0,"approx-item-height",4],["domRender",1],["el",7],["enableListener",3,0,0,0,"enableListener"],["footerFn",1],["headerFn",1],["itemHeight",1],["itemRender",1],["items",1],["markDirty",6],["markDirtyTail",6],["nodeHeight",1],["positionForItem",6],["queue",3,0,0,0,"queue"],["renderer",1],["win",3,0,0,0,"window"]],0,[["scroll","onScroll",1],["window:resize","onResize",0,1]]]],HTMLElement.prototype);
 
 /***/ }),
 
@@ -65752,12 +65750,14 @@ if (Ionic) {
 /*!****************************************************!*\
   !*** ./node_modules/@ionic/angular/dist/module.js ***!
   \****************************************************/
-/*! exports provided: IonicModule */
+/*! exports provided: IonicModule, ConfigToken, setupConfig */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonicModule", function() { return IonicModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigToken", function() { return ConfigToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupConfig", function() { return setupConfig; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _directives__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directives */ "./node_modules/@ionic/angular/dist/directives/index.js");
@@ -65876,15 +65876,19 @@ var PROVIDERS = [
     _providers__WEBPACK_IMPORTED_MODULE_4__["NavController"],
     _providers__WEBPACK_IMPORTED_MODULE_4__["Platform"],
     _providers__WEBPACK_IMPORTED_MODULE_4__["Events"],
-    _providers__WEBPACK_IMPORTED_MODULE_4__["DomController"]
+    _providers__WEBPACK_IMPORTED_MODULE_4__["DomController"],
 ];
 var IonicModule = /** @class */ (function () {
     function IonicModule() {
     }
-    IonicModule.forRoot = function () {
+    IonicModule.forRoot = function (config) {
         return {
             ngModule: IonicModule,
-            providers: PROVIDERS.slice()
+            providers: [
+                // Load config with defualt values
+                { provide: ConfigToken, useValue: config },
+                { provide: _providers__WEBPACK_IMPORTED_MODULE_4__["Config"], useFactory: setupConfig, deps: [ConfigToken] }
+            ].concat(PROVIDERS)
         };
     };
     IonicModule.decorators = [
@@ -65904,6 +65908,11 @@ var IonicModule = /** @class */ (function () {
     return IonicModule;
 }());
 
+var ConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('USERCONFIG');
+function setupConfig(userConfig) {
+    var config = new _providers__WEBPACK_IMPORTED_MODULE_4__["Config"](userConfig);
+    return config;
+}
 
 
 /***/ }),
@@ -66117,6 +66126,59 @@ function provideNavParamsInjectable(params) {
 
 /***/ }),
 
+/***/ "./node_modules/@ionic/angular/dist/providers/config.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@ionic/angular/dist/providers/config.js ***!
+  \**************************************************************/
+/*! exports provided: Config */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Config", function() { return Config; });
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var Config = /** @class */ (function () {
+    function Config(defaultConfig) {
+        var Ionic = window.Ionic;
+        if (Ionic.config && Ionic.config.constructor.name !== 'Object') {
+            console.error('ionic config was already initialized');
+            return;
+        }
+        Ionic.config = __assign({}, Ionic.config, defaultConfig);
+    }
+    Config.prototype.get = function (key, fallback) {
+        return getConfig().get(key, fallback);
+    };
+    Config.prototype.getBoolean = function (key, fallback) {
+        return getConfig().getBoolean(key, fallback);
+    };
+    Config.prototype.getNumber = function (key, fallback) {
+        return getConfig().getNumber(key, fallback);
+    };
+    Config.prototype.set = function (key, value) {
+        getConfig().set(key, value);
+    };
+    return Config;
+}());
+
+function getConfig() {
+    var Ionic = window.Ionic;
+    if (Ionic && Ionic.config) {
+        return Ionic.config;
+    }
+    return null;
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/@ionic/angular/dist/providers/dom-controller.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@ionic/angular/dist/providers/dom-controller.js ***!
@@ -66315,7 +66377,7 @@ function setupProvideEvents() {
 /*!*************************************************************!*\
   !*** ./node_modules/@ionic/angular/dist/providers/index.js ***!
   \*************************************************************/
-/*! exports provided: AngularDelegate, ActionSheetController, AlertController, Events, LoadingController, MenuController, PickerController, ModalController, Platform, PopoverController, ToastController, NavController, DomController */
+/*! exports provided: AngularDelegate, ActionSheetController, AlertController, Events, LoadingController, MenuController, PickerController, ModalController, Platform, PopoverController, ToastController, NavController, DomController, Config */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66358,6 +66420,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _dom_controller__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./dom-controller */ "./node_modules/@ionic/angular/dist/providers/dom-controller.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DomController", function() { return _dom_controller__WEBPACK_IMPORTED_MODULE_12__["DomController"]; });
+
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./config */ "./node_modules/@ionic/angular/dist/providers/config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Config", function() { return _config__WEBPACK_IMPORTED_MODULE_13__["Config"]; });
+
 
 
 
@@ -66722,41 +66788,58 @@ __webpack_require__.r(__webpack_exports__);
 var NavController = /** @class */ (function () {
     function NavController(router) {
         this.router = router;
-        this.direction = 0;
         this.intent = 0 /* Auto */;
+        this.animated = true;
         this.stack = [];
     }
-    NavController.prototype.goForward = function (url, extras) {
-        this.intent = 1 /* Forward */;
+    NavController.prototype.goForward = function (url, animated, extras) {
+        this.setIntent(1 /* Forward */, animated);
         return this.router.navigateByUrl(url, extras);
     };
-    NavController.prototype.goBack = function (url, extras) {
-        this.intent = 2 /* Back */;
+    NavController.prototype.goBack = function (url, animated, extras) {
+        this.setIntent(2 /* Back */, animated);
         return this.router.navigateByUrl(url, extras);
     };
-    NavController.prototype.goRoot = function (url, extras) {
-        this.intent = 3 /* Root */;
+    NavController.prototype.goRoot = function (url, animated, extras) {
+        this.setIntent(3 /* Root */, animated);
         return this.router.navigateByUrl(url, extras);
     };
-    NavController.prototype.setIntent = function (intent) {
+    NavController.prototype.setIntent = function (intent, animated) {
         this.intent = intent;
+        this.animated = (animated === undefined)
+            ? intent !== 3 /* Root */
+            : animated;
     };
-    NavController.prototype.consumeDirection = function () {
-        if (this.direction === 0) {
-            var index = this.stack.indexOf(document.location.href);
-            if (index === -1) {
-                this.stack.push(document.location.href);
-                this.direction = 1;
-            }
-            else if (index < this.stack.length - 1) {
-                this.stack = this.stack.slice(0, index + 1);
-                this.direction = -1;
-            }
+    NavController.prototype.consumeTransition = function () {
+        var guessDirection = this.guessDirection();
+        var direction = 0;
+        var animated = false;
+        if (this.intent === 0 /* Auto */) {
+            direction = guessDirection;
+            animated = direction !== 0;
         }
-        var direction = directionForIntent(this.intent, this.direction);
+        else {
+            animated = this.animated;
+            direction = intentToDirection(this.intent);
+        }
         this.intent = 0 /* Auto */;
-        this.direction = 0;
-        return direction;
+        this.animated = true;
+        return {
+            direction: direction,
+            animated: animated
+        };
+    };
+    NavController.prototype.guessDirection = function () {
+        var index = this.stack.indexOf(document.location.href);
+        if (index === -1) {
+            this.stack.push(document.location.href);
+            return 1;
+        }
+        else if (index < this.stack.length - 1) {
+            this.stack = this.stack.slice(0, index + 1);
+            return -1;
+        }
+        return 0;
     };
     NavController.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] },
@@ -66768,11 +66851,12 @@ var NavController = /** @class */ (function () {
     return NavController;
 }());
 
-function directionForIntent(intent, nav) {
-    if (intent === 0 /* Auto */) {
-        return nav;
+function intentToDirection(intent) {
+    switch (intent) {
+        case 1 /* Forward */: return 1;
+        case 2 /* Back */: return -1;
+        default: return 0;
     }
-    return intent === 2 /* Back */ ? -1 : 1;
 }
 
 
@@ -66823,149 +66907,313 @@ var PickerController = /** @class */ (function (_super) {
 /*!****************************************************************!*\
   !*** ./node_modules/@ionic/angular/dist/providers/platform.js ***!
   \****************************************************************/
-/*! exports provided: Platform, isImpl, isAsyncImpl, platformsImpl, platformsAsyncImpl, versionsImpl, versionsAsyncImpl, readyImpl, getQueryParamImpl, getQueryParamAsyncImpl, initialize, getHydratedPlatform */
+/*! exports provided: Platform */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Platform", function() { return Platform; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isImpl", function() { return isImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAsyncImpl", function() { return isAsyncImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platformsImpl", function() { return platformsImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platformsAsyncImpl", function() { return platformsAsyncImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "versionsImpl", function() { return versionsImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "versionsAsyncImpl", function() { return versionsAsyncImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "readyImpl", function() { return readyImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getQueryParamImpl", function() { return getQueryParamImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getQueryParamAsyncImpl", function() { return getQueryParamAsyncImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialize", function() { return initialize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHydratedPlatform", function() { return getHydratedPlatform; });
-var dir = 'ltr';
-var isRtl = false;
-var lang = '';
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _util_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/util */ "./node_modules/@ionic/angular/dist/util/util.js");
+
+
 var Platform = /** @class */ (function () {
     function Platform() {
-        initialize(this);
+        this._platforms = [];
+        /**
+           * @hidden
+           */
+        this.backButton = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /**
+           * The pause event emits when the native platform puts the application
+           * into the background, typically when the user switches to a different
+           * application. This event would emit when a Cordova app is put into
+           * the background, however, it would not fire on a standard web browser.
+           */
+        this.pause = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /**
+           * The resume event emits when the native platform pulls the application
+           * out from the background. This event would emit when a Cordova app comes
+           * out from the background, however, it would not fire on a standard web browser.
+           */
+        this.resume = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /**
+           * The resize event emits when the browser window has changed dimensions. This
+           * could be from a browser window being physically resized, or from a device
+           * changing orientation.
+           */
+        this.resize = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        Object(_util_util__WEBPACK_IMPORTED_MODULE_1__["proxyEvent"])(this.pause, document, 'pause');
+        Object(_util_util__WEBPACK_IMPORTED_MODULE_1__["proxyEvent"])(this.resume, document, 'resume');
+        Object(_util_util__WEBPACK_IMPORTED_MODULE_1__["proxyEvent"])(this.backButton, document, 'backbutton');
+        Object(_util_util__WEBPACK_IMPORTED_MODULE_1__["proxyEvent"])(this.resize, document, 'resize');
+        var readyResolve;
+        this._readyPromise = new Promise(function (res) { readyResolve = res; });
+        if (window['cordova']) {
+            window.addEventListener('deviceready', function () {
+                readyResolve();
+            });
+        }
+        else {
+            readyResolve();
+        }
     }
-    Platform.prototype.is = function (platformName) {
-        return isImpl(this, platformName);
+    /**
+     * @returns {boolean} returns true/false based on platform.
+     * @description
+     * Depending on the platform the user is on, `is(platformName)` will
+     * return `true` or `false`. Note that the same app can return `true`
+     * for more than one platform name. For example, an app running from
+     * an iPad would return `true` for the platform names: `mobile`,
+     * `ios`, `ipad`, and `tablet`. Additionally, if the app was running
+     * from Cordova then `cordova` would be true, and if it was running
+     * from a web browser on the iPad then `mobileweb` would be `true`.
+     *
+     * ```
+     * import { Platform } from 'ionic-angular';
+     *
+     * @Component({...})
+     * export MyPage {
+     *   constructor(public platform: Platform) {
+     *     if (this.platform.is('ios')) {
+     *       // This will only print when on iOS
+     *       console.log('I am an iOS device!');
+     *     }
+     *   }
+     * }
+     * ```
+     *
+     * | Platform Name   | Description                        |
+     * |-----------------|------------------------------------|
+     * | android         | on a device running Android.       |
+     * | cordova         | on a device running Cordova.       |
+     * | core            | on a desktop device.               |
+     * | ios             | on a device running iOS.           |
+     * | ipad            | on an iPad device.                 |
+     * | iphone          | on an iPhone device.               |
+     * | mobile          | on a mobile device.                |
+     * | mobileweb       | in a browser on a mobile device.   |
+     * | phablet         | on a phablet device.               |
+     * | tablet          | on a tablet device.                |
+     * | windows         | on a device running Windows.       |
+     * | electron        | in Electron on a desktop device.   |
+     *
+     * @param {string} platformName
+     */
+    /**
+       * @returns {boolean} returns true/false based on platform.
+       * @description
+       * Depending on the platform the user is on, `is(platformName)` will
+       * return `true` or `false`. Note that the same app can return `true`
+       * for more than one platform name. For example, an app running from
+       * an iPad would return `true` for the platform names: `mobile`,
+       * `ios`, `ipad`, and `tablet`. Additionally, if the app was running
+       * from Cordova then `cordova` would be true, and if it was running
+       * from a web browser on the iPad then `mobileweb` would be `true`.
+       *
+       * ```
+       * import { Platform } from 'ionic-angular';
+       *
+       * @Component({...})
+       * export MyPage {
+       *   constructor(public platform: Platform) {
+       *     if (this.platform.is('ios')) {
+       *       // This will only print when on iOS
+       *       console.log('I am an iOS device!');
+       *     }
+       *   }
+       * }
+       * ```
+       *
+       * | Platform Name   | Description                        |
+       * |-----------------|------------------------------------|
+       * | android         | on a device running Android.       |
+       * | cordova         | on a device running Cordova.       |
+       * | core            | on a desktop device.               |
+       * | ios             | on a device running iOS.           |
+       * | ipad            | on an iPad device.                 |
+       * | iphone          | on an iPhone device.               |
+       * | mobile          | on a mobile device.                |
+       * | mobileweb       | in a browser on a mobile device.   |
+       * | phablet         | on a phablet device.               |
+       * | tablet          | on a tablet device.                |
+       * | windows         | on a device running Windows.       |
+       * | electron        | in Electron on a desktop device.   |
+       *
+       * @param {string} platformName
+       */
+    Platform.prototype.is = /**
+       * @returns {boolean} returns true/false based on platform.
+       * @description
+       * Depending on the platform the user is on, `is(platformName)` will
+       * return `true` or `false`. Note that the same app can return `true`
+       * for more than one platform name. For example, an app running from
+       * an iPad would return `true` for the platform names: `mobile`,
+       * `ios`, `ipad`, and `tablet`. Additionally, if the app was running
+       * from Cordova then `cordova` would be true, and if it was running
+       * from a web browser on the iPad then `mobileweb` would be `true`.
+       *
+       * ```
+       * import { Platform } from 'ionic-angular';
+       *
+       * @Component({...})
+       * export MyPage {
+       *   constructor(public platform: Platform) {
+       *     if (this.platform.is('ios')) {
+       *       // This will only print when on iOS
+       *       console.log('I am an iOS device!');
+       *     }
+       *   }
+       * }
+       * ```
+       *
+       * | Platform Name   | Description                        |
+       * |-----------------|------------------------------------|
+       * | android         | on a device running Android.       |
+       * | cordova         | on a device running Cordova.       |
+       * | core            | on a desktop device.               |
+       * | ios             | on a device running iOS.           |
+       * | ipad            | on an iPad device.                 |
+       * | iphone          | on an iPhone device.               |
+       * | mobile          | on a mobile device.                |
+       * | mobileweb       | in a browser on a mobile device.   |
+       * | phablet         | on a phablet device.               |
+       * | tablet          | on a tablet device.                |
+       * | windows         | on a device running Windows.       |
+       * | electron        | in Electron on a desktop device.   |
+       *
+       * @param {string} platformName
+       */
+    function (platformName) {
+        return this._platforms.some(function (p) { return p.name === platformName; });
     };
-    Platform.prototype.isAsync = function (platformName) {
-        return isAsyncImpl(this, platformName);
+    /**
+     * @returns {array} the array of platforms
+     * @description
+     * Depending on what device you are on, `platforms` can return multiple values.
+     * Each possible value is a hierarchy of platforms. For example, on an iPhone,
+     * it would return `mobile`, `ios`, and `iphone`.
+     *
+     * ```
+     * import { Platform } from 'ionic-angular';
+     *
+     * @Component({...})
+     * export MyPage {
+     *   constructor(public platform: Platform) {
+     *     // This will print an array of the current platforms
+     *     console.log(this.platform.platforms());
+     *   }
+     * }
+     * ```
+     */
+    /**
+       * @returns {array} the array of platforms
+       * @description
+       * Depending on what device you are on, `platforms` can return multiple values.
+       * Each possible value is a hierarchy of platforms. For example, on an iPhone,
+       * it would return `mobile`, `ios`, and `iphone`.
+       *
+       * ```
+       * import { Platform } from 'ionic-angular';
+       *
+       * @Component({...})
+       * export MyPage {
+       *   constructor(public platform: Platform) {
+       *     // This will print an array of the current platforms
+       *     console.log(this.platform.platforms());
+       *   }
+       * }
+       * ```
+       */
+    Platform.prototype.platforms = /**
+       * @returns {array} the array of platforms
+       * @description
+       * Depending on what device you are on, `platforms` can return multiple values.
+       * Each possible value is a hierarchy of platforms. For example, on an iPhone,
+       * it would return `mobile`, `ios`, and `iphone`.
+       *
+       * ```
+       * import { Platform } from 'ionic-angular';
+       *
+       * @Component({...})
+       * export MyPage {
+       *   constructor(public platform: Platform) {
+       *     // This will print an array of the current platforms
+       *     console.log(this.platform.platforms());
+       *   }
+       * }
+       * ```
+       */
+    function () {
+        return this._platforms.map(function (platform) { return platform.name; });
     };
-    Platform.prototype.platforms = function () {
-        return platformsImpl(this);
-    };
-    Platform.prototype.platformsAsync = function () {
-        return platformsAsyncImpl(this);
-    };
-    Platform.prototype.versions = function () {
-        return versionsImpl(this);
-    };
-    Platform.prototype.versionsAsync = function () {
-        return versionsAsyncImpl(this);
+    /**
+     * Returns an object containing version information about all of the platforms.
+     *
+     * ```
+     * import { Platform } from 'ionic-angular';
+     *
+     * @Component({...})
+     * export MyPage {
+     *   constructor(public platform: Platform) {
+     *     // This will print an object containing
+     *     // all of the platforms and their versions
+     *     console.log(platform.versions());
+     *   }
+     * }
+     * ```
+     *
+     * @returns {object} An object containing all of the platforms and their versions.
+     */
+    /**
+       * Returns an object containing version information about all of the platforms.
+       *
+       * ```
+       * import { Platform } from 'ionic-angular';
+       *
+       * @Component({...})
+       * export MyPage {
+       *   constructor(public platform: Platform) {
+       *     // This will print an object containing
+       *     // all of the platforms and their versions
+       *     console.log(platform.versions());
+       *   }
+       * }
+       * ```
+       *
+       * @returns {object} An object containing all of the platforms and their versions.
+       */
+    Platform.prototype.versions = /**
+       * Returns an object containing version information about all of the platforms.
+       *
+       * ```
+       * import { Platform } from 'ionic-angular';
+       *
+       * @Component({...})
+       * export MyPage {
+       *   constructor(public platform: Platform) {
+       *     // This will print an object containing
+       *     // all of the platforms and their versions
+       *     console.log(platform.versions());
+       *   }
+       * }
+       * ```
+       *
+       * @returns {object} An object containing all of the platforms and their versions.
+       */
+    function () {
+        return this._platforms.slice();
     };
     Platform.prototype.ready = function () {
-        return readyImpl(this);
+        return this._readyPromise;
     };
     Object.defineProperty(Platform.prototype, "isRTL", {
         get: function () {
-            return isRtl;
+            return document.dir === 'rtl';
         },
         enumerable: true,
         configurable: true
     });
-    Platform.prototype.setDir = function (_dir, updateDocument) {
-        dir = _dir;
-        isRtl = dir === 'rtl';
-        if (updateDocument !== false) {
-            document.documentElement.setAttribute('dir', dir);
-        }
-    };
-    /**
-     * Returns app's language direction.
-     * We recommend the app's `index.html` file already has the correct `dir`
-     * attribute value set, such as `<html dir="ltr">` or `<html dir="rtl">`.
-     * [W3C: Structural markup and right-to-left text in HTML](http://www.w3.org/International/questions/qa-html-dir)
-     * @returns {DocumentDirection}
-     */
-    /**
-       * Returns app's language direction.
-       * We recommend the app's `index.html` file already has the correct `dir`
-       * attribute value set, such as `<html dir="ltr">` or `<html dir="rtl">`.
-       * [W3C: Structural markup and right-to-left text in HTML](http://www.w3.org/International/questions/qa-html-dir)
-       * @returns {DocumentDirection}
-       */
-    Platform.prototype.dir = /**
-       * Returns app's language direction.
-       * We recommend the app's `index.html` file already has the correct `dir`
-       * attribute value set, such as `<html dir="ltr">` or `<html dir="rtl">`.
-       * [W3C: Structural markup and right-to-left text in HTML](http://www.w3.org/International/questions/qa-html-dir)
-       * @returns {DocumentDirection}
-       */
-    function () {
-        return dir;
-    };
-    /**
-     * Set the app's language and optionally the country code, which will update
-     * the `lang` attribute on the app's root `<html>` element.
-     * We recommend the app's `index.html` file already has the correct `lang`
-     * attribute value set, such as `<html lang="en">`. This method is useful if
-     * the language needs to be dynamically changed per user/session.
-     * [W3C: Declaring language in HTML](http://www.w3.org/International/questions/qa-html-language-declarations)
-     * @param {string} language  Examples: `en-US`, `en-GB`, `ar`, `de`, `zh`, `es-MX`
-     * @param {boolean} updateDocument  Specifies whether the `lang` attribute of `<html>` should be updated
-     */
-    /**
-       * Set the app's language and optionally the country code, which will update
-       * the `lang` attribute on the app's root `<html>` element.
-       * We recommend the app's `index.html` file already has the correct `lang`
-       * attribute value set, such as `<html lang="en">`. This method is useful if
-       * the language needs to be dynamically changed per user/session.
-       * [W3C: Declaring language in HTML](http://www.w3.org/International/questions/qa-html-language-declarations)
-       * @param {string} language  Examples: `en-US`, `en-GB`, `ar`, `de`, `zh`, `es-MX`
-       * @param {boolean} updateDocument  Specifies whether the `lang` attribute of `<html>` should be updated
-       */
-    Platform.prototype.setLang = /**
-       * Set the app's language and optionally the country code, which will update
-       * the `lang` attribute on the app's root `<html>` element.
-       * We recommend the app's `index.html` file already has the correct `lang`
-       * attribute value set, such as `<html lang="en">`. This method is useful if
-       * the language needs to be dynamically changed per user/session.
-       * [W3C: Declaring language in HTML](http://www.w3.org/International/questions/qa-html-language-declarations)
-       * @param {string} language  Examples: `en-US`, `en-GB`, `ar`, `de`, `zh`, `es-MX`
-       * @param {boolean} updateDocument  Specifies whether the `lang` attribute of `<html>` should be updated
-       */
-    function (language, updateDocument) {
-        lang = language;
-        if (updateDocument !== false) {
-            document.documentElement.setAttribute('lang', language);
-        }
-    };
-    /**
-     * Returns app's language and optional country code.
-     * We recommend the app's `index.html` file already has the correct `lang`
-     * attribute value set, such as `<html lang="en">`.
-     * [W3C: Declaring language in HTML](http://www.w3.org/International/questions/qa-html-language-declarations)
-     * @returns {string}
-     */
-    /**
-       * Returns app's language and optional country code.
-       * We recommend the app's `index.html` file already has the correct `lang`
-       * attribute value set, such as `<html lang="en">`.
-       * [W3C: Declaring language in HTML](http://www.w3.org/International/questions/qa-html-language-declarations)
-       * @returns {string}
-       */
-    Platform.prototype.lang = /**
-       * Returns app's language and optional country code.
-       * We recommend the app's `index.html` file already has the correct `lang`
-       * attribute value set, such as `<html lang="en">`.
-       * [W3C: Declaring language in HTML](http://www.w3.org/International/questions/qa-html-language-declarations)
-       * @returns {string}
-       */
-    function () {
-        return lang;
-    };
     /**
      * Get the query string parameter
      */
@@ -66976,22 +67224,7 @@ var Platform = /** @class */ (function () {
        * Get the query string parameter
        */
     function (key) {
-        return getQueryParamImpl(this, key);
-    };
-    /**
-     * Get the query string parameter
-     */
-    /**
-       * Get the query string parameter
-       */
-    Platform.prototype.getQueryParamAsync = /**
-       * Get the query string parameter
-       */
-    function (key) {
-        return getQueryParamAsyncImpl(this, key);
-    };
-    Platform.prototype.height = function () {
-        return window.innerHeight;
+        return readQueryParam(window.location.href, key);
     };
     Platform.prototype.isLandscape = function () {
         return !this.isPortrait();
@@ -67008,87 +67241,22 @@ var Platform = /** @class */ (function () {
     Platform.prototype.width = function () {
         return window.innerWidth;
     };
+    Platform.prototype.height = function () {
+        return window.innerHeight;
+    };
+    Platform.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] },
+    ];
+    /** @nocollapse */
+    Platform.ctorParameters = function () { return []; };
     return Platform;
 }());
 
-function isImpl(platform, platformName) {
-    if (platform._element && platform._element.is) {
-        return platform._element.is(platformName);
-    }
-    return false;
-}
-function isAsyncImpl(platform, platformName) {
-    return getHydratedPlatform(platform).then(function () {
-        return platform._element.is(platformName);
-    });
-}
-function platformsImpl(platform) {
-    if (platform._element && platform._element.platforms) {
-        return platform._element.platforms();
-    }
-    return [];
-}
-function platformsAsyncImpl(platform) {
-    return getHydratedPlatform(platform).then(function () {
-        return platform._element.platforms();
-    });
-}
-function versionsImpl(platform) {
-    if (platform._element && platform._element.versions) {
-        return platform._element.versions();
-    }
-    return [];
-}
-function versionsAsyncImpl(platform) {
-    return getHydratedPlatform(platform).then(function () {
-        return platform._element.versions();
-    });
-}
-function readyImpl(platform) {
-    return getHydratedPlatform(platform).then(function () {
-        return platform._element.ready();
-    });
-}
-function getQueryParamImpl(platform, key) {
-    if (platform._element && platform._element.getQueryParam) {
-        return platform._element.getQueryParam(key);
-    }
-    return null;
-}
-function getQueryParamAsyncImpl(platform, key) {
-    return getHydratedPlatform(platform).then(function () {
-        return platform._element.getQueryParam(key);
-    });
-}
-function initialize(platform) {
-    // first see if there is an ion-app, if there is, platform will eventually show up
-    // if not, add platform to the document.body
-    var ionApp = document.querySelector('ion-app');
-    if (ionApp) {
-        return ionApp.componentOnReady(function () {
-            platform._element = ionApp.querySelector('ion-platform');
-        });
-    }
-    // okay, there isn't an ion-app, so add <ion-platform> to the document.body
-    var platformElement = document.querySelector('ion-platform');
-    if (!platformElement) {
-        platformElement = document.createElement('ion-platform');
-        document.body.appendChild(platformElement);
-    }
-    platform._element = platformElement;
-}
-function getHydratedPlatform(platform) {
-    if (!platform._element) {
-        var ionApp_1 = document.querySelector('ion-app');
-        return ionApp_1.componentOnReady(function () {
-            var platformEl = ionApp_1.querySelector('ion-platform');
-            return platformEl.componentOnReady().then(function () {
-                platform._element = platformEl;
-                return platformEl;
-            });
-        });
-    }
-    return platform._element.componentOnReady();
+function readQueryParam(url, key) {
+    key = key.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + key + '=([^&#]*)');
+    var results = regex.exec(url);
+    return results ? decodeURIComponent(results[1].replace(/\+/g, ' ')) : null;
 }
 
 
@@ -67278,12 +67446,13 @@ var OverlayBaseController = /** @class */ (function () {
 /*!*******************************************************!*\
   !*** ./node_modules/@ionic/angular/dist/util/util.js ***!
   \*******************************************************/
-/*! exports provided: inputs, proxyMethod, ensureElementInBody, objectValues, deepEqual */
+/*! exports provided: inputs, proxyEvent, proxyMethod, ensureElementInBody, objectValues, deepEqual */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "inputs", function() { return inputs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "proxyEvent", function() { return proxyEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "proxyMethod", function() { return proxyMethod; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ensureElementInBody", function() { return ensureElementInBody; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectValues", function() { return objectValues; });
@@ -67293,6 +67462,11 @@ function inputs(instance, el, props) {
         Object.defineProperty(instance, propName, {
             get: function () { return el.nativeElement[propName]; }, set: function (val) { return el.nativeElement[propName] = val; }
         });
+    });
+}
+function proxyEvent(emitter, el, eventName) {
+    el.addEventListener(eventName, function (ev) {
+        emitter.emit(ev);
     });
 }
 function proxyMethod(ctrlName, methodName) {
@@ -67343,7 +67517,7 @@ function deepEqual(x, y) {
 /*!******************************************!*\
   !*** ./node_modules/rxjs/_esm5/index.js ***!
   \******************************************/
-/*! exports provided: Observable, ConnectableObservable, GroupedObservable, observable, Subject, BehaviorSubject, ReplaySubject, AsyncSubject, asapScheduler, asyncScheduler, queueScheduler, animationFrameScheduler, VirtualTimeScheduler, VirtualAction, Scheduler, Subscription, Subscriber, Notification, pipe, noop, identity, ArgumentOutOfRangeError, EmptyError, ObjectUnsubscribedError, UnsubscriptionError, TimeoutError, bindCallback, bindNodeCallback, combineLatest, concat, defer, empty, forkJoin, from, fromEvent, fromEventPattern, generate, iif, interval, merge, never, of, onErrorResumeNext, pairs, race, range, throwError, timer, using, zip, EMPTY, NEVER, config */
+/*! exports provided: Observable, ConnectableObservable, GroupedObservable, observable, Subject, BehaviorSubject, ReplaySubject, AsyncSubject, asapScheduler, asyncScheduler, queueScheduler, animationFrameScheduler, VirtualTimeScheduler, VirtualAction, Scheduler, Subscription, Subscriber, Notification, pipe, noop, identity, isObservable, ArgumentOutOfRangeError, EmptyError, ObjectUnsubscribedError, UnsubscriptionError, TimeoutError, bindCallback, bindNodeCallback, combineLatest, concat, defer, empty, forkJoin, from, fromEvent, fromEventPattern, generate, iif, interval, merge, never, of, onErrorResumeNext, pairs, race, range, throwError, timer, using, zip, EMPTY, NEVER, config */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67410,99 +67584,102 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _internal_util_identity__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./internal/util/identity */ "./node_modules/rxjs/_esm5/internal/util/identity.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "identity", function() { return _internal_util_identity__WEBPACK_IMPORTED_MODULE_19__["identity"]; });
 
-/* harmony import */ var _internal_util_ArgumentOutOfRangeError__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./internal/util/ArgumentOutOfRangeError */ "./node_modules/rxjs/_esm5/internal/util/ArgumentOutOfRangeError.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ArgumentOutOfRangeError", function() { return _internal_util_ArgumentOutOfRangeError__WEBPACK_IMPORTED_MODULE_20__["ArgumentOutOfRangeError"]; });
+/* harmony import */ var _internal_util_isObservable__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./internal/util/isObservable */ "./node_modules/rxjs/_esm5/internal/util/isObservable.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isObservable", function() { return _internal_util_isObservable__WEBPACK_IMPORTED_MODULE_20__["isObservable"]; });
 
-/* harmony import */ var _internal_util_EmptyError__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./internal/util/EmptyError */ "./node_modules/rxjs/_esm5/internal/util/EmptyError.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EmptyError", function() { return _internal_util_EmptyError__WEBPACK_IMPORTED_MODULE_21__["EmptyError"]; });
+/* harmony import */ var _internal_util_ArgumentOutOfRangeError__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./internal/util/ArgumentOutOfRangeError */ "./node_modules/rxjs/_esm5/internal/util/ArgumentOutOfRangeError.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ArgumentOutOfRangeError", function() { return _internal_util_ArgumentOutOfRangeError__WEBPACK_IMPORTED_MODULE_21__["ArgumentOutOfRangeError"]; });
 
-/* harmony import */ var _internal_util_ObjectUnsubscribedError__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./internal/util/ObjectUnsubscribedError */ "./node_modules/rxjs/_esm5/internal/util/ObjectUnsubscribedError.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ObjectUnsubscribedError", function() { return _internal_util_ObjectUnsubscribedError__WEBPACK_IMPORTED_MODULE_22__["ObjectUnsubscribedError"]; });
+/* harmony import */ var _internal_util_EmptyError__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./internal/util/EmptyError */ "./node_modules/rxjs/_esm5/internal/util/EmptyError.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EmptyError", function() { return _internal_util_EmptyError__WEBPACK_IMPORTED_MODULE_22__["EmptyError"]; });
 
-/* harmony import */ var _internal_util_UnsubscriptionError__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./internal/util/UnsubscriptionError */ "./node_modules/rxjs/_esm5/internal/util/UnsubscriptionError.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UnsubscriptionError", function() { return _internal_util_UnsubscriptionError__WEBPACK_IMPORTED_MODULE_23__["UnsubscriptionError"]; });
+/* harmony import */ var _internal_util_ObjectUnsubscribedError__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./internal/util/ObjectUnsubscribedError */ "./node_modules/rxjs/_esm5/internal/util/ObjectUnsubscribedError.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ObjectUnsubscribedError", function() { return _internal_util_ObjectUnsubscribedError__WEBPACK_IMPORTED_MODULE_23__["ObjectUnsubscribedError"]; });
 
-/* harmony import */ var _internal_util_TimeoutError__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./internal/util/TimeoutError */ "./node_modules/rxjs/_esm5/internal/util/TimeoutError.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TimeoutError", function() { return _internal_util_TimeoutError__WEBPACK_IMPORTED_MODULE_24__["TimeoutError"]; });
+/* harmony import */ var _internal_util_UnsubscriptionError__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./internal/util/UnsubscriptionError */ "./node_modules/rxjs/_esm5/internal/util/UnsubscriptionError.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UnsubscriptionError", function() { return _internal_util_UnsubscriptionError__WEBPACK_IMPORTED_MODULE_24__["UnsubscriptionError"]; });
 
-/* harmony import */ var _internal_observable_bindCallback__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./internal/observable/bindCallback */ "./node_modules/rxjs/_esm5/internal/observable/bindCallback.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bindCallback", function() { return _internal_observable_bindCallback__WEBPACK_IMPORTED_MODULE_25__["bindCallback"]; });
+/* harmony import */ var _internal_util_TimeoutError__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./internal/util/TimeoutError */ "./node_modules/rxjs/_esm5/internal/util/TimeoutError.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TimeoutError", function() { return _internal_util_TimeoutError__WEBPACK_IMPORTED_MODULE_25__["TimeoutError"]; });
 
-/* harmony import */ var _internal_observable_bindNodeCallback__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./internal/observable/bindNodeCallback */ "./node_modules/rxjs/_esm5/internal/observable/bindNodeCallback.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bindNodeCallback", function() { return _internal_observable_bindNodeCallback__WEBPACK_IMPORTED_MODULE_26__["bindNodeCallback"]; });
+/* harmony import */ var _internal_observable_bindCallback__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./internal/observable/bindCallback */ "./node_modules/rxjs/_esm5/internal/observable/bindCallback.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bindCallback", function() { return _internal_observable_bindCallback__WEBPACK_IMPORTED_MODULE_26__["bindCallback"]; });
 
-/* harmony import */ var _internal_observable_combineLatest__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./internal/observable/combineLatest */ "./node_modules/rxjs/_esm5/internal/observable/combineLatest.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "combineLatest", function() { return _internal_observable_combineLatest__WEBPACK_IMPORTED_MODULE_27__["combineLatest"]; });
+/* harmony import */ var _internal_observable_bindNodeCallback__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./internal/observable/bindNodeCallback */ "./node_modules/rxjs/_esm5/internal/observable/bindNodeCallback.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bindNodeCallback", function() { return _internal_observable_bindNodeCallback__WEBPACK_IMPORTED_MODULE_27__["bindNodeCallback"]; });
 
-/* harmony import */ var _internal_observable_concat__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./internal/observable/concat */ "./node_modules/rxjs/_esm5/internal/observable/concat.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "concat", function() { return _internal_observable_concat__WEBPACK_IMPORTED_MODULE_28__["concat"]; });
+/* harmony import */ var _internal_observable_combineLatest__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./internal/observable/combineLatest */ "./node_modules/rxjs/_esm5/internal/observable/combineLatest.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "combineLatest", function() { return _internal_observable_combineLatest__WEBPACK_IMPORTED_MODULE_28__["combineLatest"]; });
 
-/* harmony import */ var _internal_observable_defer__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./internal/observable/defer */ "./node_modules/rxjs/_esm5/internal/observable/defer.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "defer", function() { return _internal_observable_defer__WEBPACK_IMPORTED_MODULE_29__["defer"]; });
+/* harmony import */ var _internal_observable_concat__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./internal/observable/concat */ "./node_modules/rxjs/_esm5/internal/observable/concat.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "concat", function() { return _internal_observable_concat__WEBPACK_IMPORTED_MODULE_29__["concat"]; });
 
-/* harmony import */ var _internal_observable_empty__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./internal/observable/empty */ "./node_modules/rxjs/_esm5/internal/observable/empty.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "empty", function() { return _internal_observable_empty__WEBPACK_IMPORTED_MODULE_30__["empty"]; });
+/* harmony import */ var _internal_observable_defer__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./internal/observable/defer */ "./node_modules/rxjs/_esm5/internal/observable/defer.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "defer", function() { return _internal_observable_defer__WEBPACK_IMPORTED_MODULE_30__["defer"]; });
 
-/* harmony import */ var _internal_observable_forkJoin__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./internal/observable/forkJoin */ "./node_modules/rxjs/_esm5/internal/observable/forkJoin.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "forkJoin", function() { return _internal_observable_forkJoin__WEBPACK_IMPORTED_MODULE_31__["forkJoin"]; });
+/* harmony import */ var _internal_observable_empty__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./internal/observable/empty */ "./node_modules/rxjs/_esm5/internal/observable/empty.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "empty", function() { return _internal_observable_empty__WEBPACK_IMPORTED_MODULE_31__["empty"]; });
 
-/* harmony import */ var _internal_observable_from__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./internal/observable/from */ "./node_modules/rxjs/_esm5/internal/observable/from.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "from", function() { return _internal_observable_from__WEBPACK_IMPORTED_MODULE_32__["from"]; });
+/* harmony import */ var _internal_observable_forkJoin__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./internal/observable/forkJoin */ "./node_modules/rxjs/_esm5/internal/observable/forkJoin.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "forkJoin", function() { return _internal_observable_forkJoin__WEBPACK_IMPORTED_MODULE_32__["forkJoin"]; });
 
-/* harmony import */ var _internal_observable_fromEvent__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./internal/observable/fromEvent */ "./node_modules/rxjs/_esm5/internal/observable/fromEvent.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fromEvent", function() { return _internal_observable_fromEvent__WEBPACK_IMPORTED_MODULE_33__["fromEvent"]; });
+/* harmony import */ var _internal_observable_from__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./internal/observable/from */ "./node_modules/rxjs/_esm5/internal/observable/from.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "from", function() { return _internal_observable_from__WEBPACK_IMPORTED_MODULE_33__["from"]; });
 
-/* harmony import */ var _internal_observable_fromEventPattern__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./internal/observable/fromEventPattern */ "./node_modules/rxjs/_esm5/internal/observable/fromEventPattern.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fromEventPattern", function() { return _internal_observable_fromEventPattern__WEBPACK_IMPORTED_MODULE_34__["fromEventPattern"]; });
+/* harmony import */ var _internal_observable_fromEvent__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./internal/observable/fromEvent */ "./node_modules/rxjs/_esm5/internal/observable/fromEvent.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fromEvent", function() { return _internal_observable_fromEvent__WEBPACK_IMPORTED_MODULE_34__["fromEvent"]; });
 
-/* harmony import */ var _internal_observable_generate__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./internal/observable/generate */ "./node_modules/rxjs/_esm5/internal/observable/generate.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "generate", function() { return _internal_observable_generate__WEBPACK_IMPORTED_MODULE_35__["generate"]; });
+/* harmony import */ var _internal_observable_fromEventPattern__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./internal/observable/fromEventPattern */ "./node_modules/rxjs/_esm5/internal/observable/fromEventPattern.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fromEventPattern", function() { return _internal_observable_fromEventPattern__WEBPACK_IMPORTED_MODULE_35__["fromEventPattern"]; });
 
-/* harmony import */ var _internal_observable_iif__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./internal/observable/iif */ "./node_modules/rxjs/_esm5/internal/observable/iif.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "iif", function() { return _internal_observable_iif__WEBPACK_IMPORTED_MODULE_36__["iif"]; });
+/* harmony import */ var _internal_observable_generate__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./internal/observable/generate */ "./node_modules/rxjs/_esm5/internal/observable/generate.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "generate", function() { return _internal_observable_generate__WEBPACK_IMPORTED_MODULE_36__["generate"]; });
 
-/* harmony import */ var _internal_observable_interval__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./internal/observable/interval */ "./node_modules/rxjs/_esm5/internal/observable/interval.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interval", function() { return _internal_observable_interval__WEBPACK_IMPORTED_MODULE_37__["interval"]; });
+/* harmony import */ var _internal_observable_iif__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./internal/observable/iif */ "./node_modules/rxjs/_esm5/internal/observable/iif.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "iif", function() { return _internal_observable_iif__WEBPACK_IMPORTED_MODULE_37__["iif"]; });
 
-/* harmony import */ var _internal_observable_merge__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./internal/observable/merge */ "./node_modules/rxjs/_esm5/internal/observable/merge.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "merge", function() { return _internal_observable_merge__WEBPACK_IMPORTED_MODULE_38__["merge"]; });
+/* harmony import */ var _internal_observable_interval__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./internal/observable/interval */ "./node_modules/rxjs/_esm5/internal/observable/interval.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interval", function() { return _internal_observable_interval__WEBPACK_IMPORTED_MODULE_38__["interval"]; });
 
-/* harmony import */ var _internal_observable_never__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./internal/observable/never */ "./node_modules/rxjs/_esm5/internal/observable/never.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "never", function() { return _internal_observable_never__WEBPACK_IMPORTED_MODULE_39__["never"]; });
+/* harmony import */ var _internal_observable_merge__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./internal/observable/merge */ "./node_modules/rxjs/_esm5/internal/observable/merge.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "merge", function() { return _internal_observable_merge__WEBPACK_IMPORTED_MODULE_39__["merge"]; });
 
-/* harmony import */ var _internal_observable_of__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./internal/observable/of */ "./node_modules/rxjs/_esm5/internal/observable/of.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "of", function() { return _internal_observable_of__WEBPACK_IMPORTED_MODULE_40__["of"]; });
+/* harmony import */ var _internal_observable_never__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./internal/observable/never */ "./node_modules/rxjs/_esm5/internal/observable/never.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "never", function() { return _internal_observable_never__WEBPACK_IMPORTED_MODULE_40__["never"]; });
 
-/* harmony import */ var _internal_observable_onErrorResumeNext__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./internal/observable/onErrorResumeNext */ "./node_modules/rxjs/_esm5/internal/observable/onErrorResumeNext.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "onErrorResumeNext", function() { return _internal_observable_onErrorResumeNext__WEBPACK_IMPORTED_MODULE_41__["onErrorResumeNext"]; });
+/* harmony import */ var _internal_observable_of__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./internal/observable/of */ "./node_modules/rxjs/_esm5/internal/observable/of.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "of", function() { return _internal_observable_of__WEBPACK_IMPORTED_MODULE_41__["of"]; });
 
-/* harmony import */ var _internal_observable_pairs__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./internal/observable/pairs */ "./node_modules/rxjs/_esm5/internal/observable/pairs.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pairs", function() { return _internal_observable_pairs__WEBPACK_IMPORTED_MODULE_42__["pairs"]; });
+/* harmony import */ var _internal_observable_onErrorResumeNext__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./internal/observable/onErrorResumeNext */ "./node_modules/rxjs/_esm5/internal/observable/onErrorResumeNext.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "onErrorResumeNext", function() { return _internal_observable_onErrorResumeNext__WEBPACK_IMPORTED_MODULE_42__["onErrorResumeNext"]; });
 
-/* harmony import */ var _internal_observable_race__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./internal/observable/race */ "./node_modules/rxjs/_esm5/internal/observable/race.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "race", function() { return _internal_observable_race__WEBPACK_IMPORTED_MODULE_43__["race"]; });
+/* harmony import */ var _internal_observable_pairs__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./internal/observable/pairs */ "./node_modules/rxjs/_esm5/internal/observable/pairs.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pairs", function() { return _internal_observable_pairs__WEBPACK_IMPORTED_MODULE_43__["pairs"]; });
 
-/* harmony import */ var _internal_observable_range__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./internal/observable/range */ "./node_modules/rxjs/_esm5/internal/observable/range.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "range", function() { return _internal_observable_range__WEBPACK_IMPORTED_MODULE_44__["range"]; });
+/* harmony import */ var _internal_observable_race__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./internal/observable/race */ "./node_modules/rxjs/_esm5/internal/observable/race.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "race", function() { return _internal_observable_race__WEBPACK_IMPORTED_MODULE_44__["race"]; });
 
-/* harmony import */ var _internal_observable_throwError__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./internal/observable/throwError */ "./node_modules/rxjs/_esm5/internal/observable/throwError.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "throwError", function() { return _internal_observable_throwError__WEBPACK_IMPORTED_MODULE_45__["throwError"]; });
+/* harmony import */ var _internal_observable_range__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./internal/observable/range */ "./node_modules/rxjs/_esm5/internal/observable/range.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "range", function() { return _internal_observable_range__WEBPACK_IMPORTED_MODULE_45__["range"]; });
 
-/* harmony import */ var _internal_observable_timer__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./internal/observable/timer */ "./node_modules/rxjs/_esm5/internal/observable/timer.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "timer", function() { return _internal_observable_timer__WEBPACK_IMPORTED_MODULE_46__["timer"]; });
+/* harmony import */ var _internal_observable_throwError__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./internal/observable/throwError */ "./node_modules/rxjs/_esm5/internal/observable/throwError.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "throwError", function() { return _internal_observable_throwError__WEBPACK_IMPORTED_MODULE_46__["throwError"]; });
 
-/* harmony import */ var _internal_observable_using__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./internal/observable/using */ "./node_modules/rxjs/_esm5/internal/observable/using.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "using", function() { return _internal_observable_using__WEBPACK_IMPORTED_MODULE_47__["using"]; });
+/* harmony import */ var _internal_observable_timer__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./internal/observable/timer */ "./node_modules/rxjs/_esm5/internal/observable/timer.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "timer", function() { return _internal_observable_timer__WEBPACK_IMPORTED_MODULE_47__["timer"]; });
 
-/* harmony import */ var _internal_observable_zip__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./internal/observable/zip */ "./node_modules/rxjs/_esm5/internal/observable/zip.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "zip", function() { return _internal_observable_zip__WEBPACK_IMPORTED_MODULE_48__["zip"]; });
+/* harmony import */ var _internal_observable_using__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./internal/observable/using */ "./node_modules/rxjs/_esm5/internal/observable/using.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "using", function() { return _internal_observable_using__WEBPACK_IMPORTED_MODULE_48__["using"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EMPTY", function() { return _internal_observable_empty__WEBPACK_IMPORTED_MODULE_30__["EMPTY"]; });
+/* harmony import */ var _internal_observable_zip__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./internal/observable/zip */ "./node_modules/rxjs/_esm5/internal/observable/zip.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "zip", function() { return _internal_observable_zip__WEBPACK_IMPORTED_MODULE_49__["zip"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NEVER", function() { return _internal_observable_never__WEBPACK_IMPORTED_MODULE_39__["NEVER"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EMPTY", function() { return _internal_observable_empty__WEBPACK_IMPORTED_MODULE_31__["EMPTY"]; });
 
-/* harmony import */ var _internal_config__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./internal/config */ "./node_modules/rxjs/_esm5/internal/config.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "config", function() { return _internal_config__WEBPACK_IMPORTED_MODULE_49__["config"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NEVER", function() { return _internal_observable_never__WEBPACK_IMPORTED_MODULE_40__["NEVER"]; });
+
+/* harmony import */ var _internal_config__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./internal/config */ "./node_modules/rxjs/_esm5/internal/config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "config", function() { return _internal_config__WEBPACK_IMPORTED_MODULE_50__["config"]; });
 
 /* Observable */
 /** PURE_IMPORTS_START  PURE_IMPORTS_END */
@@ -67528,6 +67705,7 @@ __webpack_require__.r(__webpack_exports__);
 /* Notification */
 
 /* Utils */
+
 
 
 
@@ -70811,14 +70989,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Observable */ "./node_modules/rxjs/_esm5/internal/Observable.js");
 /* harmony import */ var _util_isPromise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/isPromise */ "./node_modules/rxjs/_esm5/internal/util/isPromise.js");
 /* harmony import */ var _util_isArrayLike__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/isArrayLike */ "./node_modules/rxjs/_esm5/internal/util/isArrayLike.js");
-/* harmony import */ var _util_isObservable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/isObservable */ "./node_modules/rxjs/_esm5/internal/util/isObservable.js");
+/* harmony import */ var _util_isInteropObservable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/isInteropObservable */ "./node_modules/rxjs/_esm5/internal/util/isInteropObservable.js");
 /* harmony import */ var _util_isIterable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/isIterable */ "./node_modules/rxjs/_esm5/internal/util/isIterable.js");
 /* harmony import */ var _fromArray__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./fromArray */ "./node_modules/rxjs/_esm5/internal/observable/fromArray.js");
 /* harmony import */ var _fromPromise__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fromPromise */ "./node_modules/rxjs/_esm5/internal/observable/fromPromise.js");
 /* harmony import */ var _fromIterable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./fromIterable */ "./node_modules/rxjs/_esm5/internal/observable/fromIterable.js");
 /* harmony import */ var _fromObservable__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./fromObservable */ "./node_modules/rxjs/_esm5/internal/observable/fromObservable.js");
 /* harmony import */ var _util_subscribeTo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../util/subscribeTo */ "./node_modules/rxjs/_esm5/internal/util/subscribeTo.js");
-/** PURE_IMPORTS_START _Observable,_util_isPromise,_util_isArrayLike,_util_isObservable,_util_isIterable,_fromArray,_fromPromise,_fromIterable,_fromObservable,_util_subscribeTo PURE_IMPORTS_END */
+/** PURE_IMPORTS_START _Observable,_util_isPromise,_util_isArrayLike,_util_isInteropObservable,_util_isIterable,_fromArray,_fromPromise,_fromIterable,_fromObservable,_util_subscribeTo PURE_IMPORTS_END */
 
 
 
@@ -70837,7 +71015,7 @@ function from(input, scheduler) {
         return new _Observable__WEBPACK_IMPORTED_MODULE_0__["Observable"](Object(_util_subscribeTo__WEBPACK_IMPORTED_MODULE_9__["subscribeTo"])(input));
     }
     if (input != null) {
-        if (Object(_util_isObservable__WEBPACK_IMPORTED_MODULE_3__["isObservable"])(input)) {
+        if (Object(_util_isInteropObservable__WEBPACK_IMPORTED_MODULE_3__["isInteropObservable"])(input)) {
             return Object(_fromObservable__WEBPACK_IMPORTED_MODULE_8__["fromObservable"])(input, scheduler);
         }
         else if (Object(_util_isPromise__WEBPACK_IMPORTED_MODULE_1__["isPromise"])(input)) {
@@ -71057,12 +71235,7 @@ function fromEvent(target, eventName, options, resultSelector) {
 }
 function setupSubscription(sourceObj, eventName, handler, subscriber, options) {
     var unsubscribe;
-    if (sourceObj && sourceObj.length) {
-        for (var i = 0, len = sourceObj.length; i < len; i++) {
-            setupSubscription(sourceObj[i], eventName, handler, subscriber, options);
-        }
-    }
-    else if (isEventTarget(sourceObj)) {
+    if (isEventTarget(sourceObj)) {
         var source_1 = sourceObj;
         sourceObj.addEventListener(eventName, handler, options);
         unsubscribe = function () { return source_1.removeEventListener(eventName, handler, options); };
@@ -71076,6 +71249,11 @@ function setupSubscription(sourceObj, eventName, handler, subscriber, options) {
         var source_3 = sourceObj;
         sourceObj.addListener(eventName, handler);
         unsubscribe = function () { return source_3.removeListener(eventName, handler); };
+    }
+    else if (sourceObj && sourceObj.length) {
+        for (var i = 0, len = sourceObj.length; i < len; i++) {
+            setupSubscription(sourceObj[i], eventName, handler, subscriber, options);
+        }
     }
     else {
         throw new TypeError('Invalid event target');
@@ -72933,7 +73111,7 @@ var AuditSubscriber = /*@__PURE__*/ (function (_super) {
             }
             else {
                 var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_4__["subscribeToResult"])(this, duration);
-                if (innerSubscription.closed) {
+                if (!innerSubscription || innerSubscription.closed) {
                     this.clearThrottle();
                 }
                 else {
@@ -74848,6 +75026,7 @@ var DelaySubscriber = /*@__PURE__*/ (function (_super) {
             this.schedule(state, delay_1);
         }
         else {
+            this.unsubscribe();
             source.active = false;
         }
     };
@@ -81326,6 +81505,8 @@ __webpack_require__.r(__webpack_exports__);
  * internally by the optional `scheduler`.
  * @param {Scheduler} [scheduler=async] The {@link IScheduler} to use for
  * managing the timers that handle the throttling.
+ * @param {Object} config a configuration object to define `leading` and
+ * `trailing` behavior. Defaults to `{ leading: true, trailing: false }`.
  * @return {Observable<T>} An Observable that performs the throttle operation to
  * limit the rate of emissions from the source.
  * @method throttleTime
@@ -83313,13 +83494,24 @@ __webpack_require__.r(__webpack_exports__);
 
 var AsyncScheduler = /*@__PURE__*/ (function (_super) {
     tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](AsyncScheduler, _super);
-    function AsyncScheduler() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
+    function AsyncScheduler(SchedulerAction, now) {
+        if (now === void 0) {
+            now = _Scheduler__WEBPACK_IMPORTED_MODULE_1__["Scheduler"].now;
+        }
+        var _this = _super.call(this, SchedulerAction, function () {
+            if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _this) {
+                return AsyncScheduler.delegate.now();
+            }
+            else {
+                return now();
+            }
+        }) || this;
         _this.actions = [];
         /**
          * A flag to indicate whether the Scheduler is currently executing a batch of
          * queued actions.
          * @type {boolean}
+         * @deprecated internal use only
          */
         _this.active = false;
         /**
@@ -83327,10 +83519,22 @@ var AsyncScheduler = /*@__PURE__*/ (function (_super) {
          * coming from `setTimeout`, `setInterval`, `requestAnimationFrame`, and
          * others.
          * @type {any}
+         * @deprecated internal use only
          */
         _this.scheduled = undefined;
         return _this;
     }
+    AsyncScheduler.prototype.schedule = function (work, delay, state) {
+        if (delay === void 0) {
+            delay = 0;
+        }
+        if (AsyncScheduler.delegate && AsyncScheduler.delegate !== this) {
+            return AsyncScheduler.delegate.schedule(work, delay, state);
+        }
+        else {
+            return _super.prototype.schedule.call(this, work, delay, state);
+        }
+    };
     AsyncScheduler.prototype.flush = function (action) {
         var actions = this.actions;
         if (this.active) {
@@ -84005,7 +84209,7 @@ var EmptyError = /*@__PURE__*/ (function (_super) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Immediate", function() { return Immediate; });
 /** PURE_IMPORTS_START  PURE_IMPORTS_END */
-var nextHandle = 0;
+var nextHandle = 1;
 var tasksByHandle = {};
 function runIfPresent(handle) {
     var cb = tasksByHandle[handle];
@@ -84270,6 +84474,28 @@ function isFunction(x) {
 
 /***/ }),
 
+/***/ "./node_modules/rxjs/_esm5/internal/util/isInteropObservable.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/rxjs/_esm5/internal/util/isInteropObservable.js ***!
+  \**********************************************************************/
+/*! exports provided: isInteropObservable */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInteropObservable", function() { return isInteropObservable; });
+/* harmony import */ var _symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../symbol/observable */ "./node_modules/rxjs/_esm5/internal/symbol/observable.js");
+/** PURE_IMPORTS_START _symbol_observable PURE_IMPORTS_END */
+
+/** Identifies an input as being Observable (but not necessary an Rx Observable) */
+function isInteropObservable(input) {
+    return input && typeof input[_symbol_observable__WEBPACK_IMPORTED_MODULE_0__["observable"]] === 'function';
+}
+//# sourceMappingURL=isInteropObservable.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/internal/util/isIterable.js":
 /*!*************************************************************!*\
   !*** ./node_modules/rxjs/_esm5/internal/util/isIterable.js ***!
@@ -84346,12 +84572,15 @@ function isObject(x) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObservable", function() { return isObservable; });
-/* harmony import */ var _symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../symbol/observable */ "./node_modules/rxjs/_esm5/internal/symbol/observable.js");
-/** PURE_IMPORTS_START _symbol_observable PURE_IMPORTS_END */
+/* harmony import */ var _Observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Observable */ "./node_modules/rxjs/_esm5/internal/Observable.js");
+/** PURE_IMPORTS_START _Observable PURE_IMPORTS_END */
 
-/** Identifies an input as being Observable (but not necessary an Rx Observable) */
-function isObservable(input) {
-    return input && typeof input[_symbol_observable__WEBPACK_IMPORTED_MODULE_0__["observable"]] === 'function';
+/**
+ * Tests to see if the object is an RxJS {@link Observable}
+ * @param obj the object to test
+ */
+function isObservable(obj) {
+    return obj && obj instanceof _Observable__WEBPACK_IMPORTED_MODULE_0__["Observable"] || (typeof obj.lift === 'function' && typeof obj.subscribe === 'function');
 }
 //# sourceMappingURL=isObservable.js.map
 

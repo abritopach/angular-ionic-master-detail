@@ -51,9 +51,16 @@
 /******/ 	var installedModules = {};
 /******/
 /******/ 	// object to store loaded and loading chunks
+/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
 /******/ 		"runtime": 0
 /******/ 	};
+/******/
+/******/ 	// script path function
+/******/ 	function jsonpScriptSrc(chunkId) {
+/******/ 		return __webpack_require__.p + "" + ({"pages-detail-detail-module":"pages-detail-detail-module","pages-home-home-module":"pages-home-home-module"}[chunkId]||chunkId) + ".js"
+/******/ 	}
 /******/
 /******/ 	var deferredModules = [];
 /******/
@@ -112,7 +119,7 @@
 /******/ 				if (__webpack_require__.nc) {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
-/******/ 				script.src = __webpack_require__.p + "" + ({"pages-detail-detail-module":"pages-detail-detail-module","pages-home-home-module":"pages-home-home-module"}[chunkId]||chunkId) + ".js";
+/******/ 				script.src = jsonpScriptSrc(chunkId);
 /******/ 				var timeout = setTimeout(function(){
 /******/ 					onScriptComplete({ type: 'timeout', target: script });
 /******/ 				}, 120000);

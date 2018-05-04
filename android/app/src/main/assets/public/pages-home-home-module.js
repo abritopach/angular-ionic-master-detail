@@ -51,7 +51,7 @@ var HomeComponentRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header no-border>\n  <ion-toolbar color='primary'>\n      <ion-title>Master Detail Pattern Ionic 4 with Angular Routing</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content no-bounce>\n  <ion-list>\n    <ion-item *ngFor=\"let item of itemService.items\" detail=\"true\" tappable routerLink=\"/detail/{{ item.id }}\">\n      <ion-thumbnail slot=\"start\">\n        <img [src]=\"item.image\" alt=\"\">\n      </ion-thumbnail>\n      <ion-label>\n        <h2>{{ item.title }}</h2>\n        <h3>{{ item.description }}</h3>\n      </ion-label>\n      <!--\n      <ion-note slot=\"end\">\n      </ion-note>\n      -->    \n    </ion-item>\n  </ion-list>\n</ion-content>\n"
+module.exports = "<ion-header no-border>\n  <ion-toolbar color='primary'>\n      <ion-title>Master Detail Pattern Ionic 4 with Angular Routing</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content no-bounce>\n  <ion-list>\n    <ion-item *ngFor=\"let item of itemService.items\" detail=\"true\" tappable routerLink=\"/detail/{{ item.id }}\">\n      <ion-thumbnail slot=\"start\">\n        <img [src]=\"item.image\" alt=\"\">\n      </ion-thumbnail>\n      <ion-label>\n        <h2>{{ item.title }}</h2>\n        <h3>{{ item.description }}</h3>\n      </ion-label>\n      <!--\n      <ion-note slot=\"end\">\n      </ion-note>\n      -->    \n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<ion-footer>\n    <ion-toolbar color=\"primary\">\n        <ion-title>© {{ currentYear }} Adrián Brito Pacheco</ion-title>\n        <ion-buttons slot=\"end\">\n          <div class=\"github-button\"><iframe allowtransparency=\"true\" scrolling=\"no\" frameborder=\"0\" src=\"https://buttons.github.io/buttons.html#href=https%3A%2F%2Fgithub.com%2Fabritopach%2Fangular-ionic-master-detail&amp;title=&amp;aria-label=Star%20abritopach%2Fangular-ionic-master-detail%20on%20GitHub&amp;data-icon=octicon-star&amp;data-text=Star\" style=\"width: 50px; height: 20px; border: none;\"></iframe></div>\n          <div class=\"github-button\"><iframe allowtransparency=\"true\" scrolling=\"no\" frameborder=\"0\" src=\"https://buttons.github.io/buttons.html#href=https%3A%2F%2Fgithub.com%2Fabritopach&amp;title=&amp;aria-label=Follow%20%40abritopach%20on%20GitHub&amp;data-text=GitHub\" style=\"width: 67px; height: 20px; border: none;\"></iframe></div>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-footer>\n"
 
 /***/ }),
 
@@ -109,7 +109,7 @@ var HomeModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".github-button {\n  width: 49px;\n  height: 20px;\n  padding-right: 5px;\n  display: inline; }\n"
 
 /***/ }),
 
@@ -139,6 +139,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var HomeComponent = /** @class */ (function () {
     function HomeComponent(itemService) {
         this.itemService = itemService;
+        this.currentYear = new Date().getFullYear();
     }
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

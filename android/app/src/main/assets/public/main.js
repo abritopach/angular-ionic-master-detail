@@ -98,7 +98,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<ion-app>\n  <ion-router-outlet main animate=\"false\"></ion-router-outlet>\n</ion-app>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<ion-app>\n  <!-- App Header Component. -->\n  <!--<app-header title='Master Detail Pattern Ionic 4 with Angular Routing'></app-header>-->\n  <ion-router-outlet main animate=\"false\"></ion-router-outlet>\n  <!-- App Footer Component. -->\n  <!--<app-footer></app-footer>-->\n</ion-app>\n"
 
 /***/ }),
 
@@ -173,7 +173,7 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],

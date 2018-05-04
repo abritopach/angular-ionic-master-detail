@@ -10,6 +10,7 @@ import { ItemService, Item } from '../../providers/item-service';
 })
 export class DetailComponent {
 
+  currentYear: Number = new Date().getFullYear();
   item: Item;
 
   constructor(private route: ActivatedRoute, public itemService: ItemService) {
