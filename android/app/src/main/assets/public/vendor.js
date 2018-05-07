@@ -63853,7 +63853,7 @@ var StackController = /** @class */ (function () {
                         _a.sent();
                         return [4 /*yield*/, containerEl.commit(enteringEl, leavingEl, {
                                 duration: !animated ? 0 : undefined,
-                                direction: direction === 1 ? "forward" /* Forward */ : "back" /* Back */,
+                                direction: direction === 1 ? 'forward' : 'back',
                                 deepWait: true,
                                 showGoBack: showGoBack
                             })];
@@ -64202,7 +64202,7 @@ function methods(instance, ref, methods) {
         });
     });
 }
-var accept = 'accept', activated = 'activated', active = 'active', addRipple = 'addRipple', allowEmptySelection = 'allowEmptySelection', animated = 'animated', autoHide = 'autoHide', autocapitalize = 'autocapitalize', autocomplete = 'autocomplete', autocorrect = 'autocorrect', autofocus = 'autofocus', badge = 'badge', badgeStyle = 'badgeStyle', btnId = 'btnId', button = 'button', buttonType = 'buttonType', canGoBack = 'canGoBack', cancel = 'cancel', cancelButtonText = 'cancelButtonText', cancelText = 'cancelText', checked = 'checked', clearInput = 'clearInput', clearOnEdit = 'clearOnEdit', close = 'close', closeDuration = 'closeDuration', closeOpened = 'closeOpened', closeSlidingItems = 'closeSlidingItems', color = 'color', cols = 'cols', complete = 'complete', component = 'component', componentProps = 'componentProps', contentId = 'contentId', dayNames = 'dayNames', dayShortNames = 'dayShortNames', dayValues = 'dayValues', debounce = 'debounce', defaultHref = 'defaultHref', delegate = 'delegate', detail = 'detail', disabled = 'disabled', displayFormat = 'displayFormat', doneText = 'doneText', dualKnobs = 'dualKnobs', duration = 'duration', edge = 'edge', expand = 'expand', expandable = 'expandable', fill = 'fill', fireSwipeEvent = 'fireSwipeEvent', forceOverscroll = 'forceOverscroll', fullscreen = 'fullscreen', getActive = 'getActive', getActiveIndex = 'getActiveIndex', getByIndex = 'getByIndex', getOpenAmount = 'getOpenAmount', getOpenItem = 'getOpenItem', getPrevious = 'getPrevious', getPreviousIndex = 'getPreviousIndex', getProgress = 'getProgress', getRouteId = 'getRouteId', getSelected = 'getSelected', getSlidingRatio = 'getSlidingRatio', getTab = 'getTab', getTabId = 'getTabId', getText = 'getText', header = 'header', horizontal = 'horizontal', hourValues = 'hourValues', href = 'href', icon = 'icon', inputmode = 'inputmode', insert = 'insert', insertPages = 'insertPages', interfaceOptions = 'interfaceOptions', ionBlur = 'ionBlur', ionCancel = 'ionCancel', ionChange = 'ionChange', ionClear = 'ionClear', ionClose = 'ionClose', ionDrag = 'ionDrag', ionFocus = 'ionFocus', ionInfinite = 'ionInfinite', ionInput = 'ionInput', ionInputDidLoad = 'ionInputDidLoad', ionInputDidUnload = 'ionInputDidUnload', ionMenuChange = 'ionMenuChange', ionNavDidChange = 'ionNavDidChange', ionNavWillChange = 'ionNavWillChange', ionOpen = 'ionOpen', ionPull = 'ionPull', ionRadioDidLoad = 'ionRadioDidLoad', ionRadioDidUnload = 'ionRadioDidUnload', ionRefresh = 'ionRefresh', ionScroll = 'ionScroll', ionScrollEnd = 'ionScrollEnd', ionScrollStart = 'ionScrollStart', ionSelect = 'ionSelect', ionSelectOptionDidLoad = 'ionSelectOptionDidLoad', ionSelectOptionDidUnload = 'ionSelectOptionDidUnload', ionSlideDidChange = 'ionSlideDidChange', ionSlideDrag = 'ionSlideDrag', ionSlideNextEnd = 'ionSlideNextEnd', ionSlideNextStart = 'ionSlideNextStart', ionSlidePrevEnd = 'ionSlidePrevEnd', ionSlidePrevStart = 'ionSlidePrevStart', ionSlideReachEnd = 'ionSlideReachEnd', ionSlideReachStart = 'ionSlideReachStart', ionSlideTouchEnd = 'ionSlideTouchEnd', ionSlideTouchStart = 'ionSlideTouchStart', ionSlideTransitionEnd = 'ionSlideTransitionEnd', ionSlideTransitionStart = 'ionSlideTransitionStart', ionSlideWillChange = 'ionSlideWillChange', ionSplitPaneVisible = 'ionSplitPaneVisible', ionStart = 'ionStart', ionStyle = 'ionStyle', ionSwipe = 'ionSwipe', isActive = 'isActive', isBeginning = 'isBeginning', isEnd = 'isEnd', isOpen = 'isOpen', isPane = 'isPane', isRightSide = 'isRightSide', isVisible = 'isVisible', label = 'label', length = 'length', loadingSpinner = 'loadingSpinner', loadingText = 'loadingText', lockSwipeToNext = 'lockSwipeToNext', lockSwipeToPrev = 'lockSwipeToPrev', lockSwipes = 'lockSwipes', max = 'max', maxEdgeStart = 'maxEdgeStart', maxlength = 'maxlength', mediaQuery = 'mediaQuery', menu = 'menu', menuId = 'menuId', message = 'message', min = 'min', minlength = 'minlength', minuteValues = 'minuteValues', mode = 'mode', monthNames = 'monthNames', monthShortNames = 'monthShortNames', monthValues = 'monthValues', multiple = 'multiple', name = 'name', okText = 'okText', open = 'open', options = 'options', or = 'or', orientation = 'orientation', pager = 'pager', pattern = 'pattern', paused = 'paused', persistent = 'persistent', pickerFormat = 'pickerFormat', pickerOptions = 'pickerOptions', pin = 'pin', placeholder = 'placeholder', platform = 'platform', pop = 'pop', popTo = 'popTo', popToRoot = 'popToRoot', position = 'position', pullMax = 'pullMax', pullMin = 'pullMin', pullingIcon = 'pullingIcon', pullingText = 'pullingText', push = 'push', ratio = 'ratio', ratioUpper = 'ratioUpper', readonly = 'readonly', refreshingSpinner = 'refreshingSpinner', refreshingText = 'refreshingText', removeIndex = 'removeIndex', required = 'required', results = 'results', root = 'root', rootParams = 'rootParams', round = 'round', routerDirection = 'routerDirection', rows = 'rows', scrollByPoint = 'scrollByPoint', scrollEnabled = 'scrollEnabled', scrollEvents = 'scrollEvents', scrollToBottom = 'scrollToBottom', scrollToPoint = 'scrollToPoint', scrollToTop = 'scrollToTop', scrollable = 'scrollable', select = 'select', selected = 'selected', selectedText = 'selectedText', setActive = 'setActive', setOpen = 'setOpen', setOpenItem = 'setOpenItem', setPages = 'setPages', setRoot = 'setRoot', setRouteId = 'setRouteId', show = 'show', showCancelButton = 'showCancelButton', side = 'side', size = 'size', slideNext = 'slideNext', slidePrev = 'slidePrev', slideTo = 'slideTo', snapbackDuration = 'snapbackDuration', snaps = 'snaps', spellcheck = 'spellcheck', startAutoplay = 'startAutoplay', step = 'step', stopAutoplay = 'stopAutoplay', strong = 'strong', subHeader = 'subHeader', swipeBackEnabled = 'swipeBackEnabled', swipeEnabled = 'swipeEnabled', tabbarHidden = 'tabbarHidden', tabbarHighlight = 'tabbarHighlight', tabbarLayout = 'tabbarLayout', tabbarPlacement = 'tabbarPlacement', tabsHideOnSubPages = 'tabsHideOnSubPages', tapClick = 'tapClick', text = 'text', threshold = 'threshold', toggle = 'toggle', translucent = 'translucent', type = 'type', update = 'update', useRouter = 'useRouter', value = 'value', vertical = 'vertical', waitFor = 'waitFor', when = 'when', width = 'width', wrap = 'wrap', yearValues = 'yearValues';
+var accept = 'accept', activated = 'activated', active = 'active', addRipple = 'addRipple', allowEmptySelection = 'allowEmptySelection', animated = 'animated', autoHide = 'autoHide', autocapitalize = 'autocapitalize', autocomplete = 'autocomplete', autocorrect = 'autocorrect', autofocus = 'autofocus', badge = 'badge', badgeStyle = 'badgeStyle', btnId = 'btnId', button = 'button', buttonType = 'buttonType', canGoBack = 'canGoBack', cancel = 'cancel', cancelButtonText = 'cancelButtonText', cancelText = 'cancelText', checked = 'checked', clearInput = 'clearInput', clearOnEdit = 'clearOnEdit', close = 'close', closeDuration = 'closeDuration', closeOpened = 'closeOpened', closeSlidingItems = 'closeSlidingItems', color = 'color', cols = 'cols', complete = 'complete', component = 'component', componentProps = 'componentProps', contentId = 'contentId', dayNames = 'dayNames', dayShortNames = 'dayShortNames', dayValues = 'dayValues', debounce = 'debounce', defaultHref = 'defaultHref', delegate = 'delegate', detail = 'detail', disabled = 'disabled', displayFormat = 'displayFormat', doneText = 'doneText', dualKnobs = 'dualKnobs', duration = 'duration', edge = 'edge', expand = 'expand', expandable = 'expandable', fill = 'fill', fireSwipeEvent = 'fireSwipeEvent', forceOverscroll = 'forceOverscroll', fullscreen = 'fullscreen', getActive = 'getActive', getActiveIndex = 'getActiveIndex', getByIndex = 'getByIndex', getOpenAmount = 'getOpenAmount', getOpenItem = 'getOpenItem', getPrevious = 'getPrevious', getPreviousIndex = 'getPreviousIndex', getProgress = 'getProgress', getRouteId = 'getRouteId', getSelected = 'getSelected', getSlidingRatio = 'getSlidingRatio', getTab = 'getTab', getTabId = 'getTabId', getText = 'getText', header = 'header', horizontal = 'horizontal', hourValues = 'hourValues', href = 'href', icon = 'icon', inputmode = 'inputmode', insert = 'insert', insertPages = 'insertPages', interfaceOptions = 'interfaceOptions', ionBlur = 'ionBlur', ionCancel = 'ionCancel', ionChange = 'ionChange', ionClear = 'ionClear', ionClose = 'ionClose', ionDrag = 'ionDrag', ionFocus = 'ionFocus', ionInfinite = 'ionInfinite', ionInput = 'ionInput', ionInputDidLoad = 'ionInputDidLoad', ionInputDidUnload = 'ionInputDidUnload', ionMenuChange = 'ionMenuChange', ionNavDidChange = 'ionNavDidChange', ionNavWillChange = 'ionNavWillChange', ionNavWillLoad = 'ionNavWillLoad', ionOpen = 'ionOpen', ionPull = 'ionPull', ionRadioDidLoad = 'ionRadioDidLoad', ionRadioDidUnload = 'ionRadioDidUnload', ionRefresh = 'ionRefresh', ionScroll = 'ionScroll', ionScrollEnd = 'ionScrollEnd', ionScrollStart = 'ionScrollStart', ionSelect = 'ionSelect', ionSelectOptionDidLoad = 'ionSelectOptionDidLoad', ionSelectOptionDidUnload = 'ionSelectOptionDidUnload', ionSlideDidChange = 'ionSlideDidChange', ionSlideDrag = 'ionSlideDrag', ionSlideNextEnd = 'ionSlideNextEnd', ionSlideNextStart = 'ionSlideNextStart', ionSlidePrevEnd = 'ionSlidePrevEnd', ionSlidePrevStart = 'ionSlidePrevStart', ionSlideReachEnd = 'ionSlideReachEnd', ionSlideReachStart = 'ionSlideReachStart', ionSlideTouchEnd = 'ionSlideTouchEnd', ionSlideTouchStart = 'ionSlideTouchStart', ionSlideTransitionEnd = 'ionSlideTransitionEnd', ionSlideTransitionStart = 'ionSlideTransitionStart', ionSlideWillChange = 'ionSlideWillChange', ionSplitPaneVisible = 'ionSplitPaneVisible', ionStart = 'ionStart', ionStyle = 'ionStyle', ionSwipe = 'ionSwipe', isActive = 'isActive', isBeginning = 'isBeginning', isEnd = 'isEnd', isOpen = 'isOpen', isPane = 'isPane', isRightSide = 'isRightSide', isVisible = 'isVisible', label = 'label', length = 'length', loadingSpinner = 'loadingSpinner', loadingText = 'loadingText', lockSwipeToNext = 'lockSwipeToNext', lockSwipeToPrev = 'lockSwipeToPrev', lockSwipes = 'lockSwipes', max = 'max', maxEdgeStart = 'maxEdgeStart', maxlength = 'maxlength', mediaQuery = 'mediaQuery', menu = 'menu', menuId = 'menuId', message = 'message', min = 'min', minlength = 'minlength', minuteValues = 'minuteValues', mode = 'mode', monthNames = 'monthNames', monthShortNames = 'monthShortNames', monthValues = 'monthValues', multiple = 'multiple', name = 'name', okText = 'okText', open = 'open', options = 'options', or = 'or', orientation = 'orientation', pager = 'pager', pattern = 'pattern', paused = 'paused', persistent = 'persistent', pickerFormat = 'pickerFormat', pickerOptions = 'pickerOptions', pin = 'pin', placeholder = 'placeholder', platform = 'platform', pop = 'pop', popTo = 'popTo', popToRoot = 'popToRoot', position = 'position', pullMax = 'pullMax', pullMin = 'pullMin', pullingIcon = 'pullingIcon', pullingText = 'pullingText', push = 'push', ratio = 'ratio', ratioUpper = 'ratioUpper', readonly = 'readonly', refreshingSpinner = 'refreshingSpinner', refreshingText = 'refreshingText', removeIndex = 'removeIndex', required = 'required', results = 'results', root = 'root', rootParams = 'rootParams', round = 'round', routerDirection = 'routerDirection', rows = 'rows', scrollByPoint = 'scrollByPoint', scrollEnabled = 'scrollEnabled', scrollEvents = 'scrollEvents', scrollToBottom = 'scrollToBottom', scrollToPoint = 'scrollToPoint', scrollToTop = 'scrollToTop', scrollable = 'scrollable', select = 'select', selected = 'selected', selectedText = 'selectedText', setActive = 'setActive', setOpen = 'setOpen', setOpenItem = 'setOpenItem', setPages = 'setPages', setRoot = 'setRoot', setRouteId = 'setRouteId', show = 'show', showCancelButton = 'showCancelButton', side = 'side', size = 'size', slideNext = 'slideNext', slidePrev = 'slidePrev', slideTo = 'slideTo', snapbackDuration = 'snapbackDuration', snaps = 'snaps', spellcheck = 'spellcheck', startAutoplay = 'startAutoplay', step = 'step', stopAutoplay = 'stopAutoplay', strong = 'strong', subHeader = 'subHeader', swipeBackEnabled = 'swipeBackEnabled', swipeEnabled = 'swipeEnabled', tabbarHidden = 'tabbarHidden', tabbarHighlight = 'tabbarHighlight', tabbarLayout = 'tabbarLayout', tabbarPlacement = 'tabbarPlacement', tabsHideOnSubPages = 'tabsHideOnSubPages', tapClick = 'tapClick', text = 'text', threshold = 'threshold', toggle = 'toggle', translucent = 'translucent', type = 'type', update = 'update', useRouter = 'useRouter', value = 'value', vertical = 'vertical', waitFor = 'waitFor', when = 'when', width = 'width', wrap = 'wrap', yearValues = 'yearValues';
 var App = /** @class */ (function () {
     function App() {
     }
@@ -64738,10 +64738,10 @@ var Nav = /** @class */ (function () {
     function Nav(r) {
         methods(this, r, [push, insert, insertPages, pop, popTo, popToRoot, removeIndex, setRoot, setPages, setRouteId, getRouteId, canGoBack, getActive, getByIndex, getPrevious, length]);
         inputs(this, r, [swipeBackEnabled, animated, delegate, rootParams, root]);
-        outputs(this, [ionNavWillChange, ionNavDidChange]);
+        outputs(this, [ionNavWillLoad, ionNavWillChange, ionNavDidChange]);
     }
     Nav.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-nav', inputs: [swipeBackEnabled, animated, delegate, rootParams, root], outputs: [ionNavWillChange, ionNavDidChange] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-nav', inputs: [swipeBackEnabled, animated, delegate, rootParams, root], outputs: [ionNavWillLoad, ionNavWillChange, ionNavDidChange] },] },
     ];
     /** @nocollapse */
     Nav.ctorParameters = function () { return [
@@ -64972,11 +64972,11 @@ var Segment = /** @class */ (function () {
 
 var SegmentButton = /** @class */ (function () {
     function SegmentButton(r) {
-        inputs(this, r, [activated, color, mode, checked, disabled, href, value]);
+        inputs(this, r, [color, mode, checked, disabled, href, value]);
         outputs(this, [ionSelect]);
     }
     SegmentButton.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-segment-button', inputs: [activated, color, mode, checked, disabled, href, value], outputs: [ionSelect] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-segment-button', inputs: [color, mode, checked, disabled, href, value], outputs: [ionSelect] },] },
     ];
     /** @nocollapse */
     SegmentButton.ctorParameters = function () { return [
@@ -65132,10 +65132,10 @@ var Tabs = /** @class */ (function () {
     function Tabs(r) {
         methods(this, r, [select, setRouteId, getRouteId, getTab, getSelected]);
         inputs(this, r, [color, name, tabbarHidden, tabbarLayout, tabbarPlacement, tabbarHighlight, translucent, scrollable, useRouter]);
-        outputs(this, [ionChange, ionNavWillChange, ionNavDidChange]);
+        outputs(this, [ionChange, ionNavWillLoad, ionNavWillChange, ionNavDidChange]);
     }
     Tabs.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-tabs', inputs: [color, name, tabbarHidden, tabbarLayout, tabbarPlacement, tabbarHighlight, translucent, scrollable, useRouter], outputs: [ionChange, ionNavWillChange, ionNavDidChange] },] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: 'ion-tabs', inputs: [color, name, tabbarHidden, tabbarLayout, tabbarPlacement, tabbarHighlight, translucent, scrollable, useRouter], outputs: [ionChange, ionNavWillLoad, ionNavWillChange, ionNavDidChange] },] },
     ];
     /** @nocollapse */
     Tabs.ctorParameters = function () { return [
@@ -65742,7 +65742,7 @@ if (Ionic) {
  * (C) Ionic http://ionicframework.com - MIT License
  * Built with http://stenciljs.com
  */
-!function(e,o,i,n,t,s,l,a,d,r,c,m,u,p,b){for((c=e.Ionic=e.Ionic||{}).components=d,(u=d.filter(function(e){return e[2]}).map(function(e){return e[0]})).length&&((m=o.createElement("style")).innerHTML=u.join()+"{visibility:hidden}.hydrated{visibility:inherit}",m.setAttribute("data-styles",""),o.head.insertBefore(m,o.head.firstChild)),c.$r=[],b=r.componentOnReady,r.componentOnReady=function(o){const i=this;function n(e){c.$r?c.$r.push([i,e]):c.componentOnReady(i,e)}return b&&b.call(i),o?n(o):e.Promise?new Promise(n):{then:n}},m=(u=o.querySelectorAll("script")).length-1;m>=0&&!(p=u[m]).src&&!p.hasAttribute("data-resources-url");m--);(u=p.getAttribute("data-resources-url"))&&(t=u),!t&&p.src&&(t=(u=p.src.split("/").slice(0,-1)).join("/")+(u.length?"/":"")+"ionic/"),m=o.createElement("script"),function(e,o,i,n){return!(o.search.indexOf("core=esm")>0)&&(!(!(o.search.indexOf("core=es5")>0||"file:"===o.protocol)&&e.customElements&&e.customElements.define&&e.fetch&&e.CSS&&e.CSS.supports&&e.CSS.supports("color","var(--c)")&&"noModule"in i)||function(e){try{return new Function('import("")'),!1}catch(e){}return!0}())}(e,e.location,m)?m.src=t+"ionic.ubarihrw.js":(m.src=t+"ionic.hckpwxgi.js",m.setAttribute("type","module"),m.setAttribute("crossorigin",!0)),m.setAttribute("data-resources-url",t),m.setAttribute("data-namespace","ionic"),o.head.appendChild(m)}(window,document,0,0,0,0,0,0,[["ion-action-sheet",{ios:"oubq5tia",md:"u0fofdwu"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["header",1,0,1,2],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["subHeader",1,0,"sub-header",2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"],["ionActionSheetWillDismiss","dispatchCancelHandler"]]],["ion-action-sheet-controller",{ios:"oubq5tia",md:"u0fofdwu"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionActionSheetWillPresent","actionSheetWillPresent"],["body:ionActionSheetWillDismiss","actionSheetWillDismiss"],["body:ionActionSheetDidUnload","actionSheetWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-alert",{ios:"v8kjk6bp",md:"lntks6lz"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["header",1,0,1,2],["inputs",2],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["message",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["subHeader",1,0,"sub-header",2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"],["ionAlertWillDismiss","dispatchCancelHandler"]]],["ion-alert-controller",{ios:"v8kjk6bp",md:"lntks6lz"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionAlertWillPresent","alertWillPresent"],["body:ionAlertWillDismiss","alertWillDismiss"],["body:ionAlertDidUnload","alertWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-anchor","l6fxo45j",0,[["href",1,0,1,2],["routerDirection",1,0,"router-direction",2],["win",3,0,0,0,"window"]]],["ion-animation-controller","h7hla8uh",0,[["create",6]]],["ion-app",{ios:"7wbyktrg",md:"70hihgiy"},1,[["config",3,0,0,0,"config"],["el",7],["win",3,0,0,0,"window"]]],["ion-avatar",{ios:"r1bocw4w",md:"tapajnfv"},1],["ion-back-button",{ios:"s7jbv69a",md:"t18wihpq"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["defaultHref",1,0,"default-href",2],["el",7],["icon",1,0,1,2],["mode",1,0,1,2],["text",1,0,1,2],["win",3,0,0,0,"window"]]],["ion-backdrop",{ios:"9odfdsfd",md:"c2r9nj7j"},1,[["doc",3,0,0,0,"document"],["stopPropagation",1,0,"stop-propagation",3],["tappable",1,0,1,3],["visible",1,0,1,3]],0,[["touchstart","onTouchStart",0,0,1],["mousedown","onMouseDown",0,0,1]]],["ion-badge",{ios:"r1bocw4w",md:"tapajnfv"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-button",{ios:"ojczz4li",md:"qvbh74ji"},1,[["buttonType",2,0,"button-type",2],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["expand",1,0,1,2],["fill",1,0,1,2],["href",1,0,1,2],["keyFocus",5],["mode",1,0,1,2],["round",1,0,1,3],["routerDirection",1,0,"router-direction",2],["size",1,0,1,2],["strong",1,0,1,3],["type",1,0,1,2],["win",3,0,0,0,"window"]]],["ion-buttons","1duv9bkw"],["ion-card",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-content",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-header",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2],["translucent",1,0,1,3]]],["ion-card-subtitle",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-title",{ios:"mqqflcpm",md:"8hx1s2l2"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-checkbox",{ios:"oizwtk13",md:"mq2egzv0"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",1,0,1,2]]],["ion-chip",{ios:"jrmlgawb",md:"1tflupil"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-chip-button",{ios:"jrmlgawb",md:"1tflupil"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["fill",1,0,1,2],["href",1,0,1,2],["mode",1,0,1,2]]],["ion-col",{ios:"hlfan8ma",md:"1p6hiyxe"}],["ion-content",{ios:"7wbyktrg",md:"70hihgiy"},1,[["config",3,0,0,0,"config"],["el",7],["forceOverscroll",1,0,"force-overscroll",3],["fullscreen",1,0,1,3],["queue",3,0,0,0,"queue"],["scrollByPoint",6],["scrollEnabled",1,0,"scroll-enabled",3],["scrollEvents",1,0,"scroll-events",3],["scrollToBottom",6],["scrollToPoint",6],["scrollToTop",6]],0,[["body:ionNavDidChange","onNavChanged"]]],["ion-datetime",{ios:"v8mwaxuc",md:"avhv6nzq"},1,[["cancelText",1,0,"cancel-text",2],["dayNames",1,0,"day-names",2],["dayShortNames",1,0,"day-short-names",2],["dayValues",1,0,"day-values",2],["disabled",1,0,1,3],["displayFormat",1,0,"display-format",2],["doneText",1,0,"done-text",2],["hourValues",1,0,"hour-values",2],["max",2,0,1,2],["min",2,0,1,2],["minuteValues",1,0,"minute-values",2],["monthNames",1,0,"month-names",2],["monthShortNames",1,0,"month-short-names",2],["monthValues",1,0,"month-values",2],["pickerCtrl",4,0,0,0,"ion-picker-controller"],["pickerFormat",1,0,"picker-format",2],["pickerOptions",1],["placeholder",1,0,1,2],["text",5],["value",2,0,1,2],["yearValues",1,0,"year-values",2]]],["ion-fab",{ios:"arslimt2",md:"pbdfjonk"},1,[["activated",2,0,1,3],["close",6],["edge",1,0,1,3],["el",7],["horizontal",1,0,1,2],["vertical",1,0,1,2]],0,[["click","onClick"]]],["ion-fab-button",{ios:"arslimt2",md:"pbdfjonk"},1,[["activated",1,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["show",1,0,1,3],["translucent",1,0,1,3]]],["ion-fab-list",{ios:"arslimt2",md:"pbdfjonk"},1,[["activated",1,0,1,3],["el",7],["side",1,0,1,2]]],["ion-footer",{ios:"7wbyktrg",md:"70hihgiy"},1,[["translucent",1,0,1,3]]],["ion-gesture","baxxb4cz",0,[["attachTo",1,0,"attach-to",2],["autoBlockAll",1,0,"auto-block-all",3],["canStart",1],["direction",1,0,1,2],["disableScroll",1,0,"disable-scroll",3],["disabled",1,0,1,3],["enableListener",3,0,0,0,"enableListener"],["gestureCtrl",4,0,0,0,"ion-gesture-controller"],["gestureName",1,0,"gesture-name",2],["gesturePriority",1,0,"gesture-priority",4],["maxAngle",1,0,"max-angle",4],["notCaptured",1],["onEnd",1],["onMove",1],["onStart",1],["onWillStart",1],["passive",1,0,1,3],["queue",3,0,0,0,"queue"],["threshold",1,0,1,4]],0,[["touchstart","onTouchStart",1,1],["mousedown","onMouseDown",1,1],["touchmove","onTouchMove",1,1],["document:mousemove","onMoveMove",1,1],["touchcancel","onTouchCancel",1,1],["touchend","onTouchCancel",1,1],["document:mouseup","onMouseUp",1,1]]],["ion-gesture-controller","baxxb4cz",0,[["create",6],["createBlocker",6]]],["ion-grid",{ios:"hlfan8ma",md:"1p6hiyxe"},1],["ion-header",{ios:"7wbyktrg",md:"70hihgiy"},1,[["translucent",1,0,1,3]]],["ion-hide-when","wst3tvtu",1,[["config",3,0,0,0,"config"],["element",7],["mediaQuery",1,0,"media-query",2],["or",1,0,1,3],["orientation",1,0,1,2],["passesTest",5],["platform",1,0,1,2],["size",1,0,1,2],["win",3,0,0,0,"window"]],0,[["window:resize","onResize",0,1]]],["ion-icon","kbsihpqb",1,[["ariaLabel",1,0,"aria-label",2],["color",1,0,1,2],["ios",1,0,1,2],["isServer",3,0,0,0,"isServer"],["md",1,0,1,2],["mode",3,0,0,0,"mode"],["name",1,0,1,2],["publicPath",3,0,0,0,"publicPath"],["size",1,0,1,2],["svgContent",5]]],["ion-infinite-scroll",{ios:"qulsebje",md:"tkbkkmaa"},1,[["complete",6],["disabled",1,0,1,3],["el",7],["enableListener",3,0,0,0,"enableListener"],["isLoading",5],["position",1,0,1,2],["queue",3,0,0,0,"queue"],["threshold",1,0,1,2],["waitFor",6]],0,[["scroll","onScroll",1,1]]],["ion-infinite-scroll-content",{ios:"qulsebje",md:"tkbkkmaa"},1,[["config",3,0,0,0,"config"],["loadingSpinner",2,0,"loading-spinner",2],["loadingText",1,0,"loading-text",2]]],["ion-input",{ios:"ay3li3ri",md:"doq3deyg"},1,[["accept",1,0,1,2],["autocapitalize",1,0,1,2],["autocomplete",1,0,1,2],["autocorrect",1,0,1,2],["autofocus",1,0,1,3],["clearInput",1,0,"clear-input",3],["clearOnEdit",2,0,"clear-on-edit",3],["debounce",1,0,1,4],["disabled",1,0,1,3],["el",7],["inputmode",1,0,1,2],["max",1,0,1,2],["maxlength",1,0,1,4],["min",1,0,1,2],["minlength",1,0,1,4],["multiple",1,0,1,3],["name",1,0,1,2],["pattern",1,0,1,2],["placeholder",1,0,1,2],["readonly",1,0,1,3],["required",1,0,1,3],["results",1,0,1,4],["size",1,0,1,4],["spellcheck",1,0,1,3],["step",1,0,1,2],["type",1,0,1,2],["value",2,0,1,2]]],["ion-input-shims","6rgsypmp",0,[["config",3,0,0,0,"config"],["doc",3,0,0,0,"document"]],0,[["body:ionInputDidLoad","onInputDidLoad"],["body:ionInputDidUnload","onInputDidUnload"]]],["ion-item",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["button",1,0,1,3],["color",1,0,1,2],["detail",1,0,1,3],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["routerDirection",1,0,"router-direction",2],["win",3,0,0,0,"window"]],0,[["ionStyle","itemStyle"]]],["ion-item-divider",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["color",1,0,1,2],["el",7],["mode",1,0,1,2]]],["ion-item-group",{ios:"i0buxs1i",md:"q6bw90oi"},1],["ion-item-option",{ios:"ssvjeeiq",md:"umrrir55"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["expandable",1,0,1,3],["href",1,0,1,2],["mode",1,0,1,2]]],["ion-item-options",{ios:"ssvjeeiq",md:"umrrir55"},1,[["el",7],["fireSwipeEvent",6],["isRightSide",6],["side",1,0,1,2],["width",6],["win",3,0,0,0,"window"]]],["ion-item-sliding",{ios:"ssvjeeiq",md:"umrrir55"},1,[["close",6],["closeOpened",6],["el",7],["getOpenAmount",6],["getSlidingRatio",6],["state",5]]],["ion-label",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["color",1,0,1,2],["el",7],["getText",6],["mode",1,0,1,2],["position",1,0,1,2]]],["ion-list",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["closeSlidingItems",6],["getOpenItem",6],["setOpenItem",6]]],["ion-list-header",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-loading",{ios:"knasvvba",md:"2pfx1zet"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["config",3,0,0,0,"config"],["content",1,0,1,2],["cssClass",1,0,"css-class",2],["dismiss",6],["dismissOnPageChange",1,0,"dismiss-on-page-change",3],["duration",1,0,1,4],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["spinner",1,0,1,2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"]]],["ion-loading-controller",{ios:"knasvvba",md:"2pfx1zet"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionLoadingWillPresent","loadingWillPresent"],["body:ionLoadingWillDismiss","loadingWillDismiss"],["body:ionLoadingDidUnload","loadingWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-menu",{ios:"bnx1dfz2",md:"mlmu4mem"},1,[["close",6],["config",3,0,0,0,"config"],["contentId",1,0,"content-id",2],["disabled",2,0,1,3],["el",7],["enableListener",3,0,0,0,"enableListener"],["isActive",6],["isOpen",6],["isRightSide",5],["isServer",3,0,0,0,"isServer"],["lazyMenuCtrl",4,0,0,0,"ion-menu-controller"],["maxEdgeStart",1,0,"max-edge-start",4],["menuId",1,0,"menu-id",2],["open",6],["persistent",1,0,1,3],["setOpen",6],["side",1,0,1,2],["swipeEnabled",1,0,"swipe-enabled",3],["toggle",6],["type",2,0,1,2],["win",3,0,0,0,"window"]],0,[["body:ionSplitPaneVisible","splitPaneChanged"],["body:click","onBackdropClick",1,0,1]]],["ion-menu-button",{ios:"bnx1dfz2",md:"mlmu4mem"},1,[["autoHide",1,0,"auto-hide",3],["config",3,0,0,0,"config"],["el",7],["menu",1,0,1,2]]],["ion-menu-controller",{ios:"bnx1dfz2",md:"mlmu4mem"},0,[["_register",6],["_setActiveMenu",6],["_setOpen",6],["_unregister",6],["animationCtrl",4,0,0,0,"ion-animation-controller"],["close",6],["createAnimation",6],["enable",6],["get",6],["getMenus",6],["getOpen",6],["isAnimating",6],["isEnabled",6],["isOpen",6],["open",6],["registerAnimation",6],["swipeEnable",6],["toggle",6]]],["ion-menu-toggle",{ios:"bnx1dfz2",md:"mlmu4mem"},1,[["autoHide",1,0,"auto-hide",3],["doc",3,0,0,0,"document"],["menu",1,0,1,2],["visible",5]],0,[["child:click","onClick"],["body:ionMenuChange","updateVisibility"],["body:ionSplitPaneVisible","updateVisibility"]]],["ion-modal",{ios:"lhbnhwji",md:"sxz49quc"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["color",1,0,1,2],["component",1,0,1,2],["componentProps",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["delegate",1],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"],["ionBackdropTap","onBackdropTap"],["ionModalDidPresent","lifecycle"],["ionModalWillPresent","lifecycle"],["ionModalWillDismiss","lifecycle"],["ionModalDidDismiss","lifecycle"]]],["ion-modal-controller",{ios:"lhbnhwji",md:"sxz49quc"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionModalWillPresent","modalWillPresent"],["body:ionModalWillDismiss","modalWillDismiss"],["body:ionModalDidUnload","modalWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-nav","2v8izsxr",0,[["animated",2,0,1,3],["animationCtrl",4,0,0,0,"ion-animation-controller"],["canGoBack",6],["config",3,0,0,0,"config"],["delegate",1],["el",7],["getActive",6],["getByIndex",6],["getPrevious",6],["getRouteId",6],["insert",6],["insertPages",6],["length",6],["pop",6],["popTo",6],["popToRoot",6],["push",6],["queue",3,0,0,0,"queue"],["removeIndex",6],["root",1,0,1,2],["rootParams",1],["setPages",6],["setRoot",6],["setRouteId",6],["swipeBackEnabled",2,0,"swipe-back-enabled",3],["win",3,0,0,0,"window"]]],["ion-nav-pop","nzjvoog0",0,[["el",7]],0,[["child:click","pop"]]],["ion-nav-push","nud8lxwe",0,[["component",1,0,1,2],["componentProps",1],["el",7]],0,[["child:click","push"]]],["ion-nav-set-root","m1wtxzu9",0,[["component",1,0,1,2],["componentProps",1],["el",7]],0,[["child:click","push"]]],["ion-note",{ios:"fccmbelk",md:"nh4hjssz"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-picker",{ios:"v8mwaxuc",md:"avhv6nzq"},1,[["addButton",6],["addColumn",6],["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["columns",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["duration",1,0,1,4],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["getColumn",6],["getColumns",6],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["showSpinner",5],["spinner",5],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"]]],["ion-picker-column",{ios:"v8mwaxuc",md:"avhv6nzq"},0,[["col",1],["el",7],["queue",3,0,0,0,"queue"]]],["ion-picker-controller",{ios:"v8mwaxuc",md:"avhv6nzq"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionPickerWillPresent","pickerWillPresent"],["body:ionPickerWillDismiss","pickerWillDismiss"],["body:ionPickerDidUnload","pickerWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-popover",{ios:"cprhttaj",md:"ngcdrzy6"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["color",1,0,1,2],["component",1,0,1,2],["componentProps",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["delegate",1],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["ev",1,0,1,1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"],["ionBackdropTap","onBackdropTap"],["ionPopoverDidPresent","lifecycle"],["ionPopoverWillPresent","lifecycle"],["ionPopoverWillDismiss","lifecycle"],["ionPopoverDidDismiss","lifecycle"]]],["ion-popover-controller",{ios:"cprhttaj",md:"ngcdrzy6"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionPopoverWillPresent","popoverWillPresent"],["body:ionPopoverWillDismiss","popoverWillDismiss"],["body:ionPopoverDidUnload","popoverWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-radio",{ios:"0y1isdw0",md:"cgffoave"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",2,0,1,2]]],["ion-radio-group",{ios:"0y1isdw0",md:"cgffoave"},0,[["allowEmptySelection",1,0,"allow-empty-selection",3],["disabled",1,0,1,3],["el",7],["name",1,0,1,2],["value",2,0,1,2]],0,[["ionRadioDidLoad","onRadioDidLoad"],["ionRadioDidUnload","onRadioDidUnload"],["ionSelect","onRadioSelect"]]],["ion-range",{ios:"ktrvdb9i",md:"vwfzkjgd"},1,[["activeB",5],["barL",5],["barR",5],["color",1,0,1,2],["debounce",1,0,1,4],["disabled",1,0,1,3],["dualKnobs",1,0,"dual-knobs",3],["el",7],["max",1,0,1,4],["min",1,0,1,4],["mode",1,0,1,2],["name",1,0,1,2],["pin",1,0,1,3],["pressed",5],["pressedA",5],["pressedB",5],["ratio",6],["ratioA",5],["ratioB",5],["ratioUpper",6],["rect",5],["snaps",1,0,1,3],["step",1,0,1,4],["ticks",5],["valA",5],["valB",5],["value",2,0,1,1]],0,[["ionIncrease","keyChng"],["ionDecrease","keyChng"]]],["ion-range-knob",{ios:"ktrvdb9i",md:"vwfzkjgd"},0,[["disabled",1,0,1,3],["knob",1,0,1,2],["labelId",1,0,"label-id",2],["max",1,0,1,4],["min",1,0,1,4],["pin",1,0,1,3],["pressed",1,0,1,3],["ratio",1,0,1,4],["val",1,0,1,4]],0,[["keydown","handleKeyBoard"]]],["ion-refresher",{ios:"gxumexji",md:"yucxnc5v"},1,[["cancel",6],["closeDuration",1,0,"close-duration",2],["complete",6],["disabled",1,0,1,3],["el",7],["getProgress",6],["pullMax",1,0,"pull-max",4],["pullMin",1,0,"pull-min",4],["queue",3,0,0,0,"queue"],["snapbackDuration",1,0,"snapback-duration",2],["state",5]]],["ion-refresher-content",{ios:"gxumexji",md:"yucxnc5v"},0,[["config",3,0,0,0,"config"],["pullingIcon",2,0,"pulling-icon",2],["pullingText",1,0,"pulling-text",2],["refreshingSpinner",2,0,"refreshing-spinner",2],["refreshingText",1,0,"refreshing-text",2]]],["ion-reorder",{ios:"kbizmh9d",md:"gz7bqlor"},1,[["el",7]]],["ion-reorder-group",{ios:"kbizmh9d",md:"gz7bqlor"},1,[["activated",5],["disabled",1,0,1,3],["el",7],["enabled",5],["iconVisible",5],["queue",3,0,0,0,"queue"]]],["ion-ripple-effect","yq1yeptl",1,[["addRipple",6],["doc",3,0,0,0,"document"],["el",7],["enableListener",3,0,0,0,"enableListener"],["queue",3,0,0,0,"queue"],["tapClick",1,0,"tap-click",3]],0,[["parent:ionActivated","ionActivated",1],["touchstart","touchStart",1,1],["mousedown","mouseDown",1,1]]],["ion-route","dmwmem15",0,[["component",1,0,1,2],["componentProps",1],["url",1,0,1,2]]],["ion-route-redirect","dmwmem15",0,[["from",1,0,1,2],["to",1,0,1,2]]],["ion-router","dmwmem15",0,[["base",1,0,1,2],["config",3,0,0,0,"config"],["el",7],["navChanged",6],["push",6],["queue",3,0,0,0,"queue"],["useHash",1,0,"use-hash",3],["win",3,0,0,0,"window"]],0,[["ionRouteRedirectChanged","onRedirectChanged"],["ionRouteDataChanged","onRoutesChanged"],["window:popstate","onPopState"]]],["ion-router-outlet","l2rdlodc",0,[["animated",2,0,1,3],["animationBuilder",1],["animationCtrl",4,0,0,0,"ion-animation-controller"],["commit",6],["config",3,0,0,0,"config"],["delegate",1],["el",7],["getRouteId",6],["setRoot",6],["setRouteId",6],["win",3,0,0,0,"window"]]],["ion-row",{ios:"hlfan8ma",md:"1p6hiyxe"}],["ion-scroll",{ios:"7wbyktrg",md:"70hihgiy"},1,[["config",3,0,0,0,"config"],["el",7],["forceOverscroll",2,0,"force-overscroll",3],["mode",1,0,1,2],["queue",3,0,0,0,"queue"],["scrollByPoint",6],["scrollEvents",1,0,"scroll-events",3],["scrollToBottom",6],["scrollToPoint",6],["scrollToTop",6],["win",3,0,0,0,"window"]],0,[["scroll","onScroll",0,1]]],["ion-searchbar",{ios:"evxmyqcz",md:"t16t0anm"},1,[["activated",5],["animated",1,0,1,3],["autocomplete",1,0,1,2],["autocorrect",1,0,1,2],["cancelButtonText",1,0,"cancel-button-text",2],["color",1,0,1,2],["debounce",1,0,1,4],["doc",3,0,0,0,"document"],["el",7],["focused",5],["mode",1,0,1,2],["placeholder",1,0,1,2],["showCancelButton",1,0,"show-cancel-button",3],["spellcheck",1,0,1,3],["type",1,0,1,2],["value",2,0,1,2]]],["ion-segment",{ios:"nbfozjwy",md:"esslvunz"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["mode",1,0,1,2],["value",2,0,1,2]],0,[["ionSelect","segmentClick"]]],["ion-segment-button",{ios:"nbfozjwy",md:"esslvunz"},1,[["activated",2,0,1,3],["checked",1,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["value",1,0,1,2]]],["ion-select",{ios:"0vpthk59",md:"rzqpddw9"},1,[["actionSheetCtrl",4,0,0,0,"ion-action-sheet-controller"],["alertCtrl",4,0,0,0,"ion-alert-controller"],["cancelText",1,0,"cancel-text",2],["disabled",1,0,1,3],["el",7],["interface",1,0,1,2],["interfaceOptions",1,0,"interface-options",1],["isExpanded",5],["keyFocus",5],["multiple",1,0,1,3],["name",2,0,1,2],["okText",1,0,"ok-text",2],["placeholder",1,0,1,2],["popoverCtrl",4,0,0,0,"ion-popover-controller"],["selectedText",1,0,"selected-text",2],["text",5],["value",2,0,1,2]],0,[["ionSelectOptionDidLoad","optLoad"],["ionSelectOptionDidUnload","optUnload"],["ionSelect","onSelect"]]],["ion-select-option",{ios:"0vpthk59",md:"rzqpddw9"},0,[["disabled",1,0,1,3],["el",7],["selected",1,0,1,3],["value",2,0,1,2]]],["ion-select-popover",{ios:"0vpthk59",md:"rzqpddw9"},0,[["header",1,0,1,2],["message",1,0,1,2],["options",1],["subHeader",1,0,"sub-header",2]],0,[["ionSelect","onSelect"]]],["ion-show-when","wst3tvtu",1,[["calculatedPlatforms",3,0,0,0,"platforms"],["config",3,0,0,0,"config"],["element",7],["mediaQuery",1,0,"media-query",2],["or",1,0,1,3],["orientation",1,0,1,2],["passesTest",5],["platform",1,0,1,2],["size",1,0,1,2],["win",3,0,0,0,"window"]],0,[["window:resize","onResize",0,1]]],["ion-skeleton-text",{ios:"i0buxs1i",md:"q6bw90oi"},1,[["width",1,0,1,2]]],["ion-slide",{ios:"odbes8za",md:"m5xbwivb"},1],["ion-slides",{ios:"odbes8za",md:"m5xbwivb"},1,[["el",7],["getActiveIndex",6],["getPreviousIndex",6],["isBeginning",6],["isEnd",6],["length",6],["lockSwipeToNext",6],["lockSwipeToPrev",6],["lockSwipes",6],["options",1,0,1,1],["pager",1,0,1,3],["slideNext",6],["slidePrev",6],["slideTo",6],["startAutoplay",6],["stopAutoplay",6],["update",6]]],["ion-spinner",{ios:"yf4yeuao",md:"7nz4yktb"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["duration",1,0,1,4],["mode",1,0,1,2],["name",1,0,1,2],["paused",1,0,1,3]]],["ion-split-pane",{ios:"pczdkfru",md:"ltziabhu"},1,[["disabled",1,0,1,3],["el",7],["isPane",6],["isServer",3,0,0,0,"isServer"],["isVisible",6],["visible",5],["when",1,0,1,2],["win",3,0,0,0,"window"]]],["ion-status-tap","ggtoqmf3",0,[["duration",1,0,1,4],["queue",3,0,0,0,"queue"],["win",3,0,0,0,"window"]],0,[["window:statusTap","onStatusTap"]]],["ion-tab",{ios:"slesl8ba",md:"viihjkhh"},0,[["active",2,0,1,3],["badge",1,0,1,2],["badgeStyle",1,0,"badge-style",2],["btnId",1,0,"btn-id",2],["component",1,0,1,2],["delegate",1],["disabled",1,0,1,3],["el",7],["getTabId",6],["href",1,0,1,2],["icon",1,0,1,2],["label",1,0,1,2],["name",1,0,1,2],["selected",2,0,1,3],["setActive",6],["show",1,0,1,3],["tabsHideOnSubPages",1,0,"tabs-hide-on-sub-pages",3]]],["ion-tab-button",{ios:"slesl8ba",md:"viihjkhh"},1,[["el",7],["keyFocus",5],["selected",1,0,1,3],["tab",1]],0,[["click","onClick"]]],["ion-tabbar",{ios:"slesl8ba",md:"viihjkhh"},1,[["canScrollLeft",5],["canScrollRight",5],["doc",3,0,0,0,"document"],["el",7],["hidden",5],["highlight",1,0,1,3],["layout",1,0,1,2],["placement",1,0,1,2],["queue",3,0,0,0,"queue"],["scrollable",1,0,1,3],["selectedTab",1],["tabs",1],["translucent",1,0,1,3]],0,[["body:keyboardWillHide","onKeyboardWillHide"],["body:keyboardWillShow","onKeyboardWillShow"],["window:resize","onResize",0,1],["ionTabButtonDidLoad","onTabButtonLoad"],["ionTabButtonDidUnload","onTabButtonLoad"]]],["ion-tabs",{ios:"slesl8ba",md:"viihjkhh"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["doc",3,0,0,0,"document"],["el",7],["getRouteId",6],["getSelected",6],["getTab",6],["name",1,0,1,2],["scrollable",1,0,1,3],["select",6],["selectedTab",5],["setRouteId",6],["tabbarHidden",1,0,"tabbar-hidden",3],["tabbarHighlight",2,0,"tabbar-highlight",3],["tabbarLayout",2,0,"tabbar-layout",2],["tabbarPlacement",2,0,"tabbar-placement",2],["tabs",5],["translucent",1,0,1,3],["useRouter",2,0,"use-router",3]],0,[["ionTabbarClick","tabChange"]]],["ion-tap-click",{ios:"7wbyktrg",md:"70hihgiy"},0,[["el",7],["enableListener",3,0,0,0,"enableListener"],["isServer",3,0,0,0,"isServer"]],0,[["body:click","onBodyClick",0,0,1],["document:touchstart","onTouchStart",0,1,1],["document:touchcancel","onTouchEnd",0,0,1],["document:touchend","onTouchEnd",0,0,1],["document:mousedown","onMouseDown",0,1,1],["document:mouseup","onMouseUp",0,0,1],["body:ionScrollStart","cancelActive"],["body:ionGestureCaptured","cancelActive"]]],["ion-text",{ios:"ppliw44q",md:"nxgxomj5"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-textarea",{ios:"htowk7zj",md:"6nhxtfji"},1,[["autocapitalize",1,0,1,2],["autocomplete",1,0,1,2],["autofocus",1,0,1,3],["clearOnEdit",2,0,"clear-on-edit",3],["cols",1,0,1,4],["debounce",1,0,1,4],["disabled",1,0,1,3],["el",7],["maxlength",1,0,1,4],["minlength",1,0,1,4],["name",1,0,1,2],["placeholder",1,0,1,2],["readonly",1,0,1,3],["required",1,0,1,3],["rows",1,0,1,4],["spellcheck",1,0,1,3],["value",2,0,1,2],["wrap",1,0,1,2]]],["ion-thumbnail",{ios:"r1bocw4w",md:"tapajnfv"},1],["ion-title",{ios:"7wbyktrg",md:"70hihgiy"},1],["ion-toast",{ios:"bzydfvng",md:"4ygneg9w"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["closeButtonText",1,0,"close-button-text",2],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["duration",1,0,1,4],["el",7],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["message",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["position",1,0,1,2],["present",6],["showCloseButton",1,0,"show-close-button",3],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"]]],["ion-toast-controller",{ios:"bzydfvng",md:"4ygneg9w"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionToastWillPresent","toastWillPresent"],["body:ionToastWillDismiss","toastWillDismiss"],["body:ionToastDidUnload","toastWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-toggle",{ios:"ku9tkfjm",md:"a9rczu0y"},1,[["activated",5],["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",1,0,1,2]]],["ion-toolbar",{ios:"7wbyktrg",md:"70hihgiy"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["mode",1,0,1,2],["translucent",1,0,1,3]]],["ion-virtual-scroll","waveypz7",1,[["approxFooterHeight",1,0,"approx-footer-height",4],["approxHeaderHeight",1,0,"approx-header-height",4],["approxItemHeight",1,0,"approx-item-height",4],["domRender",1],["el",7],["enableListener",3,0,0,0,"enableListener"],["footerFn",1],["headerFn",1],["itemHeight",1],["itemRender",1],["items",1],["markDirty",6],["markDirtyTail",6],["nodeHeight",1],["positionForItem",6],["queue",3,0,0,0,"queue"],["renderer",1],["win",3,0,0,0,"window"]],0,[["scroll","onScroll",1],["window:resize","onResize",0,1]]]],HTMLElement.prototype);
+!function(e,o,i,n,t,s,l,a,r,d,c,m,u,p,b){for((c=e.Ionic=e.Ionic||{}).components=r,(u=r.filter(function(e){return e[2]}).map(function(e){return e[0]})).length&&((m=o.createElement("style")).innerHTML=u.join()+"{visibility:hidden}.hydrated{visibility:inherit}",m.setAttribute("data-styles",""),o.head.insertBefore(m,o.head.firstChild)),c.$r=[],b=d.componentOnReady,d.componentOnReady=function(o){const i=this;function n(e){c.$r?c.$r.push([i,e]):c.componentOnReady(i,e)}return b&&b.call(i),o?n(o):e.Promise?new Promise(n):{then:n}},m=(u=o.querySelectorAll("script")).length-1;m>=0&&!(p=u[m]).src&&!p.hasAttribute("data-resources-url");m--);(u=p.getAttribute("data-resources-url"))&&(t=u),!t&&p.src&&(t=(u=p.src.split("/").slice(0,-1)).join("/")+(u.length?"/":"")+"ionic/"),m=o.createElement("script"),function(e,o,i,n){return!(o.search.indexOf("core=esm")>0)&&(!(!(o.search.indexOf("core=es5")>0||"file:"===o.protocol)&&e.customElements&&e.customElements.define&&e.fetch&&e.CSS&&e.CSS.supports&&e.CSS.supports("color","var(--c)")&&"noModule"in i)||function(e){try{return new Function('import("")'),!1}catch(e){}return!0}())}(e,e.location,m)?m.src=t+"ionic.kuds4a3l.js":(m.src=t+"ionic.dtdxjdv4.js",m.setAttribute("type","module"),m.setAttribute("crossorigin",!0)),m.setAttribute("data-resources-url",t),m.setAttribute("data-namespace","ionic"),o.head.appendChild(m)}(window,document,0,0,0,0,0,0,[["ion-action-sheet",{ios:"kv1atjbp",md:"chji3lzz"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["header",1,0,1,2],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["subHeader",1,0,"sub-header",2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"],["ionActionSheetWillDismiss","dispatchCancelHandler"]]],["ion-action-sheet-controller",{ios:"kv1atjbp",md:"chji3lzz"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionActionSheetWillPresent","actionSheetWillPresent"],["body:ionActionSheetWillDismiss","actionSheetWillDismiss"],["body:ionActionSheetDidUnload","actionSheetWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-alert",{ios:"tuetgqdx",md:"nysbrquj"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["header",1,0,1,2],["inputs",2],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["message",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["subHeader",1,0,"sub-header",2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"],["ionAlertWillDismiss","dispatchCancelHandler"]]],["ion-alert-controller",{ios:"tuetgqdx",md:"nysbrquj"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionAlertWillPresent","alertWillPresent"],["body:ionAlertWillDismiss","alertWillDismiss"],["body:ionAlertDidUnload","alertWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-anchor","ffxoxmjm",0,[["href",1,0,1,2],["routerDirection",1,0,"router-direction",2],["win",3,0,0,0,"window"]]],["ion-animation-controller","fy7ko5ny",0,[["create",6]]],["ion-app",{ios:"oakuqbo0",md:"vb3jtkaj"},1,[["config",3,0,0,0,"config"],["el",7],["win",3,0,0,0,"window"]]],["ion-avatar",{ios:"r1bocw4w",md:"tapajnfv"},1],["ion-back-button",{ios:"m1up39wp",md:"ilxna4zm"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["defaultHref",1,0,"default-href",2],["el",7],["icon",1,0,1,2],["mode",1,0,1,2],["text",1,0,1,2],["win",3,0,0,0,"window"]]],["ion-backdrop",{ios:"9odfdsfd",md:"c2r9nj7j"},1,[["doc",3,0,0,0,"document"],["stopPropagation",1,0,"stop-propagation",3],["tappable",1,0,1,3],["visible",1,0,1,3]],0,[["touchstart","onTouchStart",0,0,1],["mousedown","onMouseDown",0,0,1]]],["ion-badge",{ios:"r1bocw4w",md:"tapajnfv"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-button",{ios:"hiz9v3gy",md:"fb4b8ggs"},1,[["buttonType",2,0,"button-type",2],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["expand",1,0,1,2],["fill",1,0,1,2],["href",1,0,1,2],["keyFocus",5],["mode",1,0,1,2],["round",1,0,1,3],["routerDirection",1,0,"router-direction",2],["size",1,0,1,2],["strong",1,0,1,3],["type",1,0,1,2],["win",3,0,0,0,"window"]]],["ion-buttons","1duv9bkw"],["ion-card",{ios:"g1ccq721",md:"6rguerlo"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-content",{ios:"g1ccq721",md:"6rguerlo"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-header",{ios:"g1ccq721",md:"6rguerlo"},1,[["color",1,0,1,2],["mode",1,0,1,2],["translucent",1,0,1,3]]],["ion-card-subtitle",{ios:"g1ccq721",md:"6rguerlo"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-card-title",{ios:"g1ccq721",md:"6rguerlo"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-checkbox",{ios:"fwjtwrge",md:"oapt2qis"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",1,0,1,2]]],["ion-chip",{ios:"5sru0lts",md:"oofrfjlb"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-chip-button",{ios:"5sru0lts",md:"oofrfjlb"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["fill",1,0,1,2],["href",1,0,1,2],["mode",1,0,1,2]]],["ion-col",{ios:"hlfan8ma",md:"1p6hiyxe"}],["ion-content",{ios:"oakuqbo0",md:"vb3jtkaj"},1,[["config",3,0,0,0,"config"],["el",7],["forceOverscroll",1,0,"force-overscroll",3],["fullscreen",1,0,1,3],["queue",3,0,0,0,"queue"],["scrollByPoint",6],["scrollEnabled",1,0,"scroll-enabled",3],["scrollEvents",1,0,"scroll-events",3],["scrollToBottom",6],["scrollToPoint",6],["scrollToTop",6]],0,[["body:ionNavDidChange","onNavChanged"]]],["ion-datetime",{ios:"nribsri2",md:"cjjn9jtn"},1,[["cancelText",1,0,"cancel-text",2],["dayNames",1,0,"day-names",2],["dayShortNames",1,0,"day-short-names",2],["dayValues",1,0,"day-values",1],["disabled",1,0,1,3],["displayFormat",1,0,"display-format",2],["doneText",1,0,"done-text",2],["hourValues",1,0,"hour-values",1],["max",2,0,1,2],["min",2,0,1,2],["minuteValues",1,0,"minute-values",1],["monthNames",1,0,"month-names",2],["monthShortNames",1,0,"month-short-names",2],["monthValues",1,0,"month-values",1],["pickerCtrl",4,0,0,0,"ion-picker-controller"],["pickerFormat",1,0,"picker-format",2],["pickerOptions",1],["placeholder",1,0,1,2],["text",5],["value",2,0,1,2],["yearValues",1,0,"year-values",1]]],["ion-fab",{ios:"1fzatbom",md:"oweylagb"},1,[["activated",2,0,1,3],["close",6],["edge",1,0,1,3],["el",7],["horizontal",1,0,1,2],["vertical",1,0,1,2]],0,[["click","onClick"]]],["ion-fab-button",{ios:"1fzatbom",md:"oweylagb"},1,[["activated",1,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["show",1,0,1,3],["translucent",1,0,1,3]]],["ion-fab-list",{ios:"1fzatbom",md:"oweylagb"},1,[["activated",1,0,1,3],["el",7],["side",1,0,1,2]]],["ion-footer",{ios:"oakuqbo0",md:"vb3jtkaj"},1,[["translucent",1,0,1,3]]],["ion-gesture","9yjw80r1",0,[["attachTo",1,0,"attach-to",2],["autoBlockAll",1,0,"auto-block-all",3],["canStart",1],["direction",1,0,1,2],["disableScroll",1,0,"disable-scroll",3],["disabled",1,0,1,3],["enableListener",3,0,0,0,"enableListener"],["gestureCtrl",4,0,0,0,"ion-gesture-controller"],["gestureName",1,0,"gesture-name",2],["gesturePriority",1,0,"gesture-priority",4],["isServer",3,0,0,0,"isServer"],["maxAngle",1,0,"max-angle",4],["notCaptured",1],["onEnd",1],["onMove",1],["onStart",1],["onWillStart",1],["passive",1,0,1,3],["queue",3,0,0,0,"queue"],["threshold",1,0,1,4]],0,[["touchstart","onTouchStart",1,1],["mousedown","onMouseDown",1,1],["touchmove","onTouchMove",1,1],["document:mousemove","onMoveMove",1,1],["touchcancel","onTouchCancel",1,1],["touchend","onTouchCancel",1,1],["document:mouseup","onMouseUp",1,1]]],["ion-gesture-controller","9yjw80r1",0,[["create",6],["createBlocker",6]]],["ion-grid",{ios:"hlfan8ma",md:"1p6hiyxe"},1],["ion-header",{ios:"oakuqbo0",md:"vb3jtkaj"},1,[["translucent",1,0,1,3]]],["ion-hide-when","uc41zbwp",1,[["config",3,0,0,0,"config"],["element",7],["mediaQuery",1,0,"media-query",2],["or",1,0,1,3],["orientation",1,0,1,2],["passesTest",5],["platform",1,0,1,2],["size",1,0,1,2],["win",3,0,0,0,"window"]],0,[["window:resize","onResize",0,1]]],["ion-icon","kbsihpqb",1,[["ariaLabel",1,0,"aria-label",2],["color",1,0,1,2],["ios",1,0,1,2],["isServer",3,0,0,0,"isServer"],["md",1,0,1,2],["mode",3,0,0,0,"mode"],["name",1,0,1,2],["publicPath",3,0,0,0,"publicPath"],["size",1,0,1,2],["svgContent",5]]],["ion-infinite-scroll",{ios:"qulsebje",md:"tkbkkmaa"},1,[["complete",6],["disabled",1,0,1,3],["el",7],["enableListener",3,0,0,0,"enableListener"],["isLoading",5],["position",1,0,1,2],["queue",3,0,0,0,"queue"],["threshold",1,0,1,2],["waitFor",6]],0,[["scroll","onScroll",1,1]]],["ion-infinite-scroll-content",{ios:"qulsebje",md:"tkbkkmaa"},1,[["config",3,0,0,0,"config"],["loadingSpinner",2,0,"loading-spinner",2],["loadingText",1,0,"loading-text",2]]],["ion-input",{ios:"cd04ebrn",md:"hbeyca0m"},1,[["accept",1,0,1,2],["autocapitalize",1,0,1,2],["autocomplete",1,0,1,2],["autocorrect",1,0,1,2],["autofocus",1,0,1,3],["clearInput",1,0,"clear-input",3],["clearOnEdit",2,0,"clear-on-edit",3],["debounce",1,0,1,4],["disabled",1,0,1,3],["el",7],["inputmode",1,0,1,2],["max",1,0,1,2],["maxlength",1,0,1,4],["min",1,0,1,2],["minlength",1,0,1,4],["multiple",1,0,1,3],["name",1,0,1,2],["pattern",1,0,1,2],["placeholder",1,0,1,2],["readonly",1,0,1,3],["required",1,0,1,3],["results",1,0,1,4],["size",1,0,1,4],["spellcheck",1,0,1,3],["step",1,0,1,2],["type",1,0,1,2],["value",2,0,1,2]]],["ion-input-shims","jh5bgkej",0,[["config",3,0,0,0,"config"],["doc",3,0,0,0,"document"]],0,[["body:ionInputDidLoad","onInputDidLoad"],["body:ionInputDidUnload","onInputDidUnload"]]],["ion-item",{ios:"9kgawmxt",md:"owvx169m"},1,[["button",1,0,1,3],["color",1,0,1,2],["detail",1,0,1,3],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["routerDirection",1,0,"router-direction",2],["win",3,0,0,0,"window"]],0,[["ionStyle","itemStyle"]]],["ion-item-divider",{ios:"9kgawmxt",md:"owvx169m"},1,[["color",1,0,1,2],["el",7],["mode",1,0,1,2]]],["ion-item-group",{ios:"9kgawmxt",md:"owvx169m"},1],["ion-item-option",{ios:"wbsbih9f",md:"mvuwgmwp"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["expandable",1,0,1,3],["href",1,0,1,2],["mode",1,0,1,2]]],["ion-item-options",{ios:"wbsbih9f",md:"mvuwgmwp"},1,[["el",7],["fireSwipeEvent",6],["isRightSide",6],["side",1,0,1,2],["width",6],["win",3,0,0,0,"window"]]],["ion-item-sliding",{ios:"wbsbih9f",md:"mvuwgmwp"},1,[["close",6],["closeOpened",6],["el",7],["getOpenAmount",6],["getSlidingRatio",6],["state",5]]],["ion-label",{ios:"9kgawmxt",md:"owvx169m"},1,[["color",1,0,1,2],["el",7],["getText",6],["mode",1,0,1,2],["position",1,0,1,2]]],["ion-list",{ios:"9kgawmxt",md:"owvx169m"},1,[["closeSlidingItems",6],["getOpenItem",6],["setOpenItem",6]]],["ion-list-header",{ios:"9kgawmxt",md:"owvx169m"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-loading",{ios:"p9mejuok",md:"t2961bud"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["config",3,0,0,0,"config"],["content",1,0,1,2],["cssClass",1,0,"css-class",2],["dismiss",6],["dismissOnPageChange",1,0,"dismiss-on-page-change",3],["duration",1,0,1,4],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["spinner",1,0,1,2],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"]]],["ion-loading-controller",{ios:"p9mejuok",md:"t2961bud"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionLoadingWillPresent","loadingWillPresent"],["body:ionLoadingWillDismiss","loadingWillDismiss"],["body:ionLoadingDidUnload","loadingWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-menu",{ios:"ay4qn8v6",md:"b2osvlnt"},1,[["close",6],["config",3,0,0,0,"config"],["contentId",1,0,"content-id",2],["disabled",2,0,1,3],["el",7],["enableListener",3,0,0,0,"enableListener"],["isActive",6],["isOpen",6],["isRightSide",5],["isServer",3,0,0,0,"isServer"],["lazyMenuCtrl",4,0,0,0,"ion-menu-controller"],["maxEdgeStart",1,0,"max-edge-start",4],["menuId",1,0,"menu-id",2],["open",6],["persistent",1,0,1,3],["setOpen",6],["side",1,0,1,2],["swipeEnabled",1,0,"swipe-enabled",3],["toggle",6],["type",2,0,1,2],["win",3,0,0,0,"window"]],0,[["body:ionSplitPaneVisible","splitPaneChanged"],["body:click","onBackdropClick",1,0,1]]],["ion-menu-button",{ios:"ay4qn8v6",md:"b2osvlnt"},1,[["autoHide",1,0,"auto-hide",3],["config",3,0,0,0,"config"],["menu",1,0,1,2]]],["ion-menu-controller",{ios:"ay4qn8v6",md:"b2osvlnt"},0,[["_register",6],["_setActiveMenu",6],["_setOpen",6],["_unregister",6],["animationCtrl",4,0,0,0,"ion-animation-controller"],["close",6],["createAnimation",6],["enable",6],["get",6],["getMenus",6],["getOpen",6],["isAnimating",6],["isEnabled",6],["isOpen",6],["open",6],["registerAnimation",6],["swipeEnable",6],["toggle",6]]],["ion-menu-toggle",{ios:"ay4qn8v6",md:"b2osvlnt"},1,[["autoHide",1,0,"auto-hide",3],["doc",3,0,0,0,"document"],["menu",1,0,1,2],["visible",5]],0,[["child:click","onClick"],["body:ionMenuChange","updateVisibility"],["body:ionSplitPaneVisible","updateVisibility"]]],["ion-modal",{ios:"jcvixeca",md:"ntep4h30"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["color",1,0,1,2],["component",1,0,1,2],["componentProps",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["delegate",1],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"],["ionBackdropTap","onBackdropTap"],["ionModalDidPresent","lifecycle"],["ionModalWillPresent","lifecycle"],["ionModalWillDismiss","lifecycle"],["ionModalDidDismiss","lifecycle"]]],["ion-modal-controller",{ios:"jcvixeca",md:"ntep4h30"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionModalWillPresent","modalWillPresent"],["body:ionModalWillDismiss","modalWillDismiss"],["body:ionModalDidUnload","modalWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-nav","cd08sf2w",0,[["animated",2,0,1,3],["animationCtrl",4,0,0,0,"ion-animation-controller"],["canGoBack",6],["config",3,0,0,0,"config"],["delegate",1],["el",7],["getActive",6],["getByIndex",6],["getPrevious",6],["getRouteId",6],["insert",6],["insertPages",6],["length",6],["pop",6],["popTo",6],["popToRoot",6],["push",6],["queue",3,0,0,0,"queue"],["removeIndex",6],["root",1,0,1,2],["rootParams",1],["setPages",6],["setRoot",6],["setRouteId",6],["swipeBackEnabled",2,0,"swipe-back-enabled",3],["win",3,0,0,0,"window"]]],["ion-nav-pop","nzjvoog0",0,[["el",7]],0,[["child:click","pop"]]],["ion-nav-push","nud8lxwe",0,[["component",1,0,1,2],["componentProps",1],["el",7]],0,[["child:click","push"]]],["ion-nav-set-root","m1wtxzu9",0,[["component",1,0,1,2],["componentProps",1],["el",7]],0,[["child:click","push"]]],["ion-note",{ios:"fccmbelk",md:"nh4hjssz"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-picker",{ios:"nribsri2",md:"cjjn9jtn"},1,[["addButton",6],["addColumn",6],["animationCtrl",4,0,0,0,"ion-animation-controller"],["buttons",1],["columns",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["duration",1,0,1,4],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["getColumn",6],["getColumns",6],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["showSpinner",5],["spinner",5],["willAnimate",1,0,"will-animate",3]],0,[["ionBackdropTap","onBackdropTap"]]],["ion-picker-column",{ios:"nribsri2",md:"cjjn9jtn"},0,[["col",1],["el",7],["queue",3,0,0,0,"queue"]]],["ion-picker-controller",{ios:"nribsri2",md:"cjjn9jtn"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionPickerWillPresent","pickerWillPresent"],["body:ionPickerWillDismiss","pickerWillDismiss"],["body:ionPickerDidUnload","pickerWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-popover",{ios:"6gwsl9rl",md:"aqpynahj"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["color",1,0,1,2],["component",1,0,1,2],["componentProps",1],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["delegate",1],["dismiss",6],["el",7],["enableBackdropDismiss",1,0,"enable-backdrop-dismiss",3],["enterAnimation",1],["ev",1,0,1,1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["mode",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["present",6],["showBackdrop",1,0,"show-backdrop",3],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"],["ionBackdropTap","onBackdropTap"],["ionPopoverDidPresent","lifecycle"],["ionPopoverWillPresent","lifecycle"],["ionPopoverWillDismiss","lifecycle"],["ionPopoverDidDismiss","lifecycle"]]],["ion-popover-controller",{ios:"6gwsl9rl",md:"aqpynahj"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionPopoverWillPresent","popoverWillPresent"],["body:ionPopoverWillDismiss","popoverWillDismiss"],["body:ionPopoverDidUnload","popoverWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-radio",{ios:"ppjjuwxq",md:"6akxldvp"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",2,0,1,2]]],["ion-radio-group",{ios:"ppjjuwxq",md:"6akxldvp"},0,[["allowEmptySelection",1,0,"allow-empty-selection",3],["disabled",1,0,1,3],["el",7],["name",1,0,1,2],["value",2,0,1,2]],0,[["ionRadioDidLoad","onRadioDidLoad"],["ionRadioDidUnload","onRadioDidUnload"],["ionSelect","onRadioSelect"]]],["ion-range",{ios:"3uuzr4tj",md:"xhaf8jr5"},1,[["activeB",5],["barL",5],["barR",5],["color",1,0,1,2],["debounce",1,0,1,4],["disabled",1,0,1,3],["dualKnobs",1,0,"dual-knobs",3],["el",7],["max",1,0,1,4],["min",1,0,1,4],["mode",1,0,1,2],["name",1,0,1,2],["pin",1,0,1,3],["pressed",5],["pressedA",5],["pressedB",5],["ratio",6],["ratioA",5],["ratioB",5],["ratioUpper",6],["rect",5],["snaps",1,0,1,3],["step",1,0,1,4],["ticks",5],["valA",5],["valB",5],["value",2,0,1,1]],0,[["ionIncrease","keyChng"],["ionDecrease","keyChng"]]],["ion-range-knob",{ios:"3uuzr4tj",md:"xhaf8jr5"},0,[["disabled",1,0,1,3],["knob",1,0,1,2],["labelId",1,0,"label-id",2],["max",1,0,1,4],["min",1,0,1,4],["pin",1,0,1,3],["pressed",1,0,1,3],["ratio",1,0,1,4],["val",1,0,1,4]],0,[["keydown","handleKeyBoard"]]],["ion-refresher",{ios:"gxumexji",md:"yucxnc5v"},1,[["cancel",6],["closeDuration",1,0,"close-duration",2],["complete",6],["disabled",1,0,1,3],["el",7],["getProgress",6],["pullMax",1,0,"pull-max",4],["pullMin",1,0,"pull-min",4],["queue",3,0,0,0,"queue"],["snapbackDuration",1,0,"snapback-duration",2],["state",5]]],["ion-refresher-content",{ios:"gxumexji",md:"yucxnc5v"},0,[["config",3,0,0,0,"config"],["pullingIcon",2,0,"pulling-icon",2],["pullingText",1,0,"pulling-text",2],["refreshingSpinner",2,0,"refreshing-spinner",2],["refreshingText",1,0,"refreshing-text",2]]],["ion-reorder",{ios:"t81xagha",md:"f83x2dk9"},1],["ion-reorder-group",{ios:"t81xagha",md:"f83x2dk9"},1,[["activated",5],["disabled",1,0,1,3],["el",7],["enabled",5],["iconVisible",5],["queue",3,0,0,0,"queue"]]],["ion-ripple-effect","yq1yeptl",1,[["addRipple",6],["doc",3,0,0,0,"document"],["el",7],["enableListener",3,0,0,0,"enableListener"],["queue",3,0,0,0,"queue"],["tapClick",1,0,"tap-click",3]],0,[["parent:ionActivated","ionActivated",1],["touchstart","touchStart",1,1],["mousedown","mouseDown",1,1]]],["ion-route","zlpiprc6",0,[["component",1,0,1,2],["componentProps",1],["url",1,0,1,2]]],["ion-route-redirect","zlpiprc6",0,[["from",1,0,1,2],["to",1,0,1,2]]],["ion-router","zlpiprc6",0,[["config",3,0,0,0,"config"],["el",7],["navChanged",6],["push",6],["queue",3,0,0,0,"queue"],["root",1,0,1,2],["useHash",1,0,"use-hash",3],["win",3,0,0,0,"window"]],0,[["ionRouteRedirectChanged","onRedirectChanged"],["ionRouteDataChanged","onRoutesChanged"],["window:popstate","onPopState"]]],["ion-router-outlet","7evseiph",0,[["animated",2,0,1,3],["animationBuilder",1],["animationCtrl",4,0,0,0,"ion-animation-controller"],["commit",6],["config",3,0,0,0,"config"],["delegate",1],["el",7],["getRouteId",6],["setRoot",6],["setRouteId",6],["win",3,0,0,0,"window"]]],["ion-row",{ios:"hlfan8ma",md:"1p6hiyxe"}],["ion-scroll",{ios:"oakuqbo0",md:"vb3jtkaj"},1,[["config",3,0,0,0,"config"],["el",7],["forceOverscroll",2,0,"force-overscroll",3],["mode",1,0,1,2],["queue",3,0,0,0,"queue"],["scrollByPoint",6],["scrollEvents",1,0,"scroll-events",3],["scrollToBottom",6],["scrollToPoint",6],["scrollToTop",6],["win",3,0,0,0,"window"]],0,[["scroll","onScroll",0,1]]],["ion-searchbar",{ios:"zxia8lm6",md:"z0xw02xv"},1,[["activated",5],["animated",1,0,1,3],["autocomplete",1,0,1,2],["autocorrect",1,0,1,2],["cancelButtonText",1,0,"cancel-button-text",2],["color",1,0,1,2],["debounce",1,0,1,4],["doc",3,0,0,0,"document"],["el",7],["focused",5],["mode",1,0,1,2],["placeholder",1,0,1,2],["showCancelButton",1,0,"show-cancel-button",3],["spellcheck",1,0,1,3],["type",1,0,1,2],["value",2,0,1,2]]],["ion-segment",{ios:"fktrg3xe",md:"wogtuad5"},1,[["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["mode",1,0,1,2],["value",2,0,1,2]],0,[["ionSelect","segmentClick"]]],["ion-segment-button",{ios:"fktrg3xe",md:"wogtuad5"},1,[["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["el",7],["href",1,0,1,2],["mode",1,0,1,2],["value",1,0,1,2]]],["ion-select",{ios:"ude9vsej",md:"dk291wah"},1,[["actionSheetCtrl",4,0,0,0,"ion-action-sheet-controller"],["alertCtrl",4,0,0,0,"ion-alert-controller"],["cancelText",1,0,"cancel-text",2],["disabled",1,0,1,3],["el",7],["interface",1,0,1,2],["interfaceOptions",1,0,"interface-options",1],["isExpanded",5],["keyFocus",5],["multiple",1,0,1,3],["name",2,0,1,2],["okText",1,0,"ok-text",2],["placeholder",1,0,1,2],["popoverCtrl",4,0,0,0,"ion-popover-controller"],["selectedText",1,0,"selected-text",2],["text",5],["value",2,0,1,2]],0,[["ionSelectOptionDidLoad","optLoad"],["ionSelectOptionDidUnload","optUnload"],["ionSelect","onSelect"]]],["ion-select-option",{ios:"ude9vsej",md:"dk291wah"},0,[["disabled",1,0,1,3],["el",7],["selected",1,0,1,3],["value",2,0,1,2]]],["ion-select-popover",{ios:"ude9vsej",md:"dk291wah"},0,[["header",1,0,1,2],["message",1,0,1,2],["options",1],["subHeader",1,0,"sub-header",2]],0,[["ionSelect","onSelect"]]],["ion-show-when","uc41zbwp",1,[["calculatedPlatforms",3,0,0,0,"platforms"],["config",3,0,0,0,"config"],["element",7],["mediaQuery",1,0,"media-query",2],["or",1,0,1,3],["orientation",1,0,1,2],["passesTest",5],["platform",1,0,1,2],["size",1,0,1,2],["win",3,0,0,0,"window"]],0,[["window:resize","onResize",0,1]]],["ion-skeleton-text",{ios:"9kgawmxt",md:"owvx169m"},1,[["width",1,0,1,2]]],["ion-slide",{ios:"odbes8za",md:"m5xbwivb"},1],["ion-slides",{ios:"odbes8za",md:"m5xbwivb"},1,[["el",7],["getActiveIndex",6],["getPreviousIndex",6],["isBeginning",6],["isEnd",6],["length",6],["lockSwipeToNext",6],["lockSwipeToPrev",6],["lockSwipes",6],["options",1,0,1,1],["pager",1,0,1,3],["slideNext",6],["slidePrev",6],["slideTo",6],["startAutoplay",6],["stopAutoplay",6],["update",6]]],["ion-spinner",{ios:"mzvctsxi",md:"eawcrapa"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["duration",1,0,1,4],["mode",1,0,1,2],["name",1,0,1,2],["paused",1,0,1,3]]],["ion-split-pane",{ios:"6iyfrthp",md:"hkprhlhn"},1,[["disabled",1,0,1,3],["el",7],["isPane",6],["isServer",3,0,0,0,"isServer"],["isVisible",6],["visible",5],["when",1,0,1,1],["win",3,0,0,0,"window"]]],["ion-status-tap","ggtoqmf3",0,[["duration",1,0,1,4],["queue",3,0,0,0,"queue"],["win",3,0,0,0,"window"]],0,[["window:statusTap","onStatusTap"]]],["ion-tab",{ios:"4blz08bu",md:"qh6rseej"},0,[["active",2,0,1,3],["badge",1,0,1,2],["badgeStyle",1,0,"badge-style",2],["btnId",1,0,"btn-id",2],["component",1,0,1,2],["delegate",1],["disabled",1,0,1,3],["el",7],["getTabId",6],["href",1,0,1,2],["icon",1,0,1,2],["label",1,0,1,2],["name",1,0,1,2],["selected",2,0,1,3],["setActive",6],["show",1,0,1,3],["tabsHideOnSubPages",1,0,"tabs-hide-on-sub-pages",3]]],["ion-tab-button",{ios:"4blz08bu",md:"qh6rseej"},1,[["el",7],["keyFocus",5],["selected",1,0,1,3],["tab",1]],0,[["click","onClick"]]],["ion-tabbar",{ios:"4blz08bu",md:"qh6rseej"},1,[["canScrollLeft",5],["canScrollRight",5],["doc",3,0,0,0,"document"],["el",7],["hidden",5],["highlight",1,0,1,3],["layout",1,0,1,2],["placement",1,0,1,2],["queue",3,0,0,0,"queue"],["scrollable",1,0,1,3],["selectedTab",1],["tabs",1],["translucent",1,0,1,3]],0,[["body:keyboardWillHide","onKeyboardWillHide"],["body:keyboardWillShow","onKeyboardWillShow"],["window:resize","onResize",0,1],["ionTabButtonDidLoad","onTabButtonLoad"],["ionTabButtonDidUnload","onTabButtonLoad"]]],["ion-tabs",{ios:"4blz08bu",md:"qh6rseej"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["doc",3,0,0,0,"document"],["el",7],["getRouteId",6],["getSelected",6],["getTab",6],["name",1,0,1,2],["scrollable",1,0,1,3],["select",6],["selectedTab",5],["setRouteId",6],["tabbarHidden",1,0,"tabbar-hidden",3],["tabbarHighlight",2,0,"tabbar-highlight",3],["tabbarLayout",2,0,"tabbar-layout",2],["tabbarPlacement",2,0,"tabbar-placement",2],["tabs",5],["translucent",1,0,1,3],["useRouter",2,0,"use-router",3]],0,[["ionTabbarClick","tabChange"]]],["ion-tap-click",{ios:"oakuqbo0",md:"vb3jtkaj"},0,[["el",7],["enableListener",3,0,0,0,"enableListener"],["isServer",3,0,0,0,"isServer"]],0,[["body:click","onBodyClick",0,0,1],["document:touchstart","onTouchStart",0,1,1],["document:touchcancel","onTouchEnd",0,0,1],["document:touchend","onTouchEnd",0,0,1],["document:mousedown","onMouseDown",0,1,1],["document:mouseup","onMouseUp",0,0,1],["body:ionScrollStart","cancelActive"],["body:ionGestureCaptured","cancelActive"]]],["ion-text",{ios:"ppliw44q",md:"nxgxomj5"},1,[["color",1,0,1,2],["mode",1,0,1,2]]],["ion-textarea",{ios:"fcdw8xaq",md:"ptu36ocu"},1,[["autocapitalize",1,0,1,2],["autocomplete",1,0,1,2],["autofocus",1,0,1,3],["clearOnEdit",2,0,"clear-on-edit",3],["cols",1,0,1,4],["debounce",1,0,1,4],["disabled",1,0,1,3],["el",7],["maxlength",1,0,1,4],["minlength",1,0,1,4],["name",1,0,1,2],["placeholder",1,0,1,2],["readonly",1,0,1,3],["required",1,0,1,3],["rows",1,0,1,4],["spellcheck",1,0,1,3],["value",2,0,1,2],["wrap",1,0,1,2]]],["ion-thumbnail",{ios:"r1bocw4w",md:"tapajnfv"},1],["ion-title",{ios:"oakuqbo0",md:"vb3jtkaj"},1],["ion-toast",{ios:"hgf6utr8",md:"llep0hnd"},1,[["animationCtrl",4,0,0,0,"ion-animation-controller"],["closeButtonText",1,0,"close-button-text",2],["config",3,0,0,0,"config"],["cssClass",1,0,"css-class",2],["dismiss",6],["duration",1,0,1,4],["el",7],["enterAnimation",1],["keyboardClose",1,0,"keyboard-close",3],["leaveAnimation",1],["message",1,0,1,2],["onDidDismiss",6],["onWillDismiss",6],["overlayId",1,0,"overlay-id",4],["position",1,0,1,2],["present",6],["showCloseButton",1,0,"show-close-button",3],["translucent",1,0,1,3],["willAnimate",1,0,"will-animate",3]],0,[["ionDismiss","onDismiss"]]],["ion-toast-controller",{ios:"hgf6utr8",md:"llep0hnd"},0,[["create",6],["dismiss",6],["doc",3,0,0,0,"document"],["getTop",6]],0,[["body:ionToastWillPresent","toastWillPresent"],["body:ionToastWillDismiss","toastWillDismiss"],["body:ionToastDidUnload","toastWillDismiss"],["body:keyup.escape","escapeKeyUp"]]],["ion-toggle",{ios:"5giqxlqf",md:"gnbekp2j"},1,[["activated",5],["checked",2,0,1,3],["color",1,0,1,2],["disabled",1,0,1,3],["keyFocus",5],["mode",1,0,1,2],["name",1,0,1,2],["value",1,0,1,2]]],["ion-toolbar",{ios:"oakuqbo0",md:"vb3jtkaj"},1,[["color",1,0,1,2],["config",3,0,0,0,"config"],["mode",1,0,1,2],["translucent",1,0,1,3]]],["ion-virtual-scroll","waveypz7",1,[["approxFooterHeight",1,0,"approx-footer-height",4],["approxHeaderHeight",1,0,"approx-header-height",4],["approxItemHeight",1,0,"approx-item-height",4],["domRender",1],["el",7],["enableListener",3,0,0,0,"enableListener"],["footerFn",1],["headerFn",1],["itemHeight",1],["itemRender",1],["items",1],["markDirty",6],["markDirtyTail",6],["nodeHeight",1],["positionForItem",6],["queue",3,0,0,0,"queue"],["renderer",1],["win",3,0,0,0,"window"]],0,[["scroll","onScroll",1],["window:resize","onResize",0,1]]]],HTMLElement.prototype);
 
 /***/ }),
 
@@ -65750,19 +65750,20 @@ if (Ionic) {
 /*!****************************************************!*\
   !*** ./node_modules/@ionic/angular/dist/module.js ***!
   \****************************************************/
-/*! exports provided: IonicModule, ConfigToken, setupConfig */
+/*! exports provided: IonicModule, ConfigToken */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonicModule", function() { return IonicModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigToken", function() { return ConfigToken; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupConfig", function() { return setupConfig; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _directives__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directives */ "./node_modules/@ionic/angular/dist/directives/index.js");
 /* harmony import */ var _directives_proxies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./directives/proxies */ "./node_modules/@ionic/angular/dist/directives/proxies.js");
 /* harmony import */ var _providers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./providers */ "./node_modules/@ionic/angular/dist/providers/index.js");
+/* harmony import */ var _ionic_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/core */ "./node_modules/@ionic/core/dist/collection/index.js");
+
 
 
 
@@ -65877,18 +65878,16 @@ var PROVIDERS = [
     _providers__WEBPACK_IMPORTED_MODULE_4__["Platform"],
     _providers__WEBPACK_IMPORTED_MODULE_4__["Events"],
     _providers__WEBPACK_IMPORTED_MODULE_4__["DomController"],
+    _providers__WEBPACK_IMPORTED_MODULE_4__["Config"]
 ];
 var IonicModule = /** @class */ (function () {
     function IonicModule() {
     }
     IonicModule.forRoot = function (config) {
+        Object(_ionic_core__WEBPACK_IMPORTED_MODULE_5__["setupConfig"])(config);
         return {
             ngModule: IonicModule,
-            providers: [
-                // Load config with defualt values
-                { provide: ConfigToken, useValue: config },
-                { provide: _providers__WEBPACK_IMPORTED_MODULE_4__["Config"], useFactory: setupConfig, deps: [ConfigToken] }
-            ].concat(PROVIDERS)
+            providers: PROVIDERS
         };
     };
     IonicModule.decorators = [
@@ -65909,10 +65908,6 @@ var IonicModule = /** @class */ (function () {
 }());
 
 var ConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('USERCONFIG');
-function setupConfig(userConfig) {
-    var config = new _providers__WEBPACK_IMPORTED_MODULE_4__["Config"](userConfig);
-    return config;
-}
 
 
 /***/ }),
@@ -66136,22 +66131,10 @@ function provideNavParamsInjectable(params) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Config", function() { return Config; });
-var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
 var Config = /** @class */ (function () {
-    function Config(defaultConfig) {
-        var Ionic = window.Ionic;
-        if (Ionic.config && Ionic.config.constructor.name !== 'Object') {
-            console.error('ionic config was already initialized');
-            return;
-        }
-        Ionic.config = __assign({}, Ionic.config, defaultConfig);
+    function Config() {
     }
     Config.prototype.get = function (key, fallback) {
         return getConfig().get(key, fallback);
@@ -66165,6 +66148,9 @@ var Config = /** @class */ (function () {
     Config.prototype.set = function (key, value) {
         getConfig().set(key, value);
     };
+    Config.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] },
+    ];
     return Config;
 }());
 
@@ -66951,11 +66937,11 @@ var Platform = /** @class */ (function () {
         this._readyPromise = new Promise(function (res) { readyResolve = res; });
         if (window['cordova']) {
             window.addEventListener('deviceready', function () {
-                readyResolve();
-            });
+                readyResolve('cordova');
+            }, { once: true });
         }
         else {
-            readyResolve();
+            readyResolve('dom');
         }
     }
     /**
@@ -67395,7 +67381,11 @@ var IonicRouteStrategy = /** @class */ (function () {
         return null;
     };
     IonicRouteStrategy.prototype.shouldReuseRoute = function (future, curr) {
-        if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["objectValues"])(future.params) && Object(_util__WEBPACK_IMPORTED_MODULE_0__["objectValues"])(curr.params)) {
+        // checking router params
+        var futureParams = Object(_util__WEBPACK_IMPORTED_MODULE_0__["objectValues"])(future.params);
+        var currParams = Object(_util__WEBPACK_IMPORTED_MODULE_0__["objectValues"])(curr.params);
+        if (futureParams && !!futureParams.length && currParams && currParams.length > 0) {
+            // If the router params do not match, render the new component
             return Object(_util__WEBPACK_IMPORTED_MODULE_0__["deepEqual"])(future.params, curr.params);
         }
         else {
@@ -67508,6 +67498,1007 @@ function deepEqual(x, y) {
     }
     else
         return false;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/index.js ***!
+  \***********************************************************/
+/*! exports provided: reorderArray, clamp, assert, now, pointerCoord, isRightSide, deferEvent, debounceEvent, debounce, hapticAvailable, hapticSelection, hapticSelectionStart, hapticSelectionChanged, hapticSelectionEnd, hapticNotification, hapticImpact, createOverlay, dismissOverlay, getTopOverlay, getHighestId, removeLastOverlay, present, dismiss, autoFocus, eventMethod, onceEvent, isCancel, BACKDROP, attachComponent, detachComponent, isIpad, isIphone, isIOS, isAndroid, isPhablet, isTablet, isDevice, isHybrid, isCordova, isCapacitor, isElectron, needInputShims, testUserAgent, matchMedia, transition, lifecycle, setupConfig, configFromURL */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/helpers */ "./node_modules/@ionic/core/dist/collection/utils/helpers.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "reorderArray", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["reorderArray"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "clamp", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["clamp"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "assert", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["assert"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "now", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["now"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pointerCoord", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["pointerCoord"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isRightSide", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["isRightSide"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "deferEvent", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["deferEvent"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "debounceEvent", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["debounceEvent"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "debounce", function() { return _utils_helpers__WEBPACK_IMPORTED_MODULE_0__["debounce"]; });
+
+/* harmony import */ var _utils_haptic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/haptic */ "./node_modules/@ionic/core/dist/collection/utils/haptic.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hapticAvailable", function() { return _utils_haptic__WEBPACK_IMPORTED_MODULE_1__["hapticAvailable"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hapticSelection", function() { return _utils_haptic__WEBPACK_IMPORTED_MODULE_1__["hapticSelection"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hapticSelectionStart", function() { return _utils_haptic__WEBPACK_IMPORTED_MODULE_1__["hapticSelectionStart"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hapticSelectionChanged", function() { return _utils_haptic__WEBPACK_IMPORTED_MODULE_1__["hapticSelectionChanged"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hapticSelectionEnd", function() { return _utils_haptic__WEBPACK_IMPORTED_MODULE_1__["hapticSelectionEnd"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hapticNotification", function() { return _utils_haptic__WEBPACK_IMPORTED_MODULE_1__["hapticNotification"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hapticImpact", function() { return _utils_haptic__WEBPACK_IMPORTED_MODULE_1__["hapticImpact"]; });
+
+/* harmony import */ var _utils_overlays__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/overlays */ "./node_modules/@ionic/core/dist/collection/utils/overlays.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createOverlay", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["createOverlay"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dismissOverlay", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["dismissOverlay"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getTopOverlay", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["getTopOverlay"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getHighestId", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["getHighestId"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeLastOverlay", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["removeLastOverlay"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "present", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["present"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dismiss", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["dismiss"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "autoFocus", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["autoFocus"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "eventMethod", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["eventMethod"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "onceEvent", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["onceEvent"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isCancel", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["isCancel"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BACKDROP", function() { return _utils_overlays__WEBPACK_IMPORTED_MODULE_2__["BACKDROP"]; });
+
+/* harmony import */ var _utils_framework_delegate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/framework-delegate */ "./node_modules/@ionic/core/dist/collection/utils/framework-delegate.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "attachComponent", function() { return _utils_framework_delegate__WEBPACK_IMPORTED_MODULE_3__["attachComponent"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "detachComponent", function() { return _utils_framework_delegate__WEBPACK_IMPORTED_MODULE_3__["detachComponent"]; });
+
+/* harmony import */ var _utils_platform__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/platform */ "./node_modules/@ionic/core/dist/collection/utils/platform.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isIpad", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isIpad"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isIphone", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isIphone"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isIOS", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isIOS"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isAndroid", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isAndroid"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isPhablet", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isPhablet"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isTablet", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isTablet"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isDevice", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isDevice"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isHybrid", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isHybrid"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isCordova", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isCordova"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isCapacitor", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isCapacitor"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isElectron", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["isElectron"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "needInputShims", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["needInputShims"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "testUserAgent", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["testUserAgent"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "matchMedia", function() { return _utils_platform__WEBPACK_IMPORTED_MODULE_4__["matchMedia"]; });
+
+/* harmony import */ var _utils_transition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/transition */ "./node_modules/@ionic/core/dist/collection/utils/transition.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "transition", function() { return _utils_transition__WEBPACK_IMPORTED_MODULE_5__["transition"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lifecycle", function() { return _utils_transition__WEBPACK_IMPORTED_MODULE_5__["lifecycle"]; });
+
+/* harmony import */ var _utils_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/config */ "./node_modules/@ionic/core/dist/collection/utils/config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "setupConfig", function() { return _utils_config__WEBPACK_IMPORTED_MODULE_6__["setupConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "configFromURL", function() { return _utils_config__WEBPACK_IMPORTED_MODULE_6__["configFromURL"]; });
+
+// Util functions
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/animations/ios.transition.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/animations/ios.transition.js ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return iosTransitionAnimation; });
+const DURATION = 500;
+const EASING = 'cubic-bezier(0.36,0.66,0.04,1)';
+const OPACITY = 'opacity';
+const TRANSFORM = 'transform';
+const TRANSLATEX = 'translateX';
+const CENTER = '0%';
+const OFF_OPACITY = 0.8;
+function iosTransitionAnimation(Animation, navEl, opts) {
+    const isRTL = document.dir === 'rtl';
+    const OFF_RIGHT = isRTL ? '-99.5%' : '99.5%';
+    const OFF_LEFT = isRTL ? '33%' : '-33%';
+    const enteringEl = opts.enteringEl;
+    const leavingEl = opts.leavingEl;
+    const rootTransition = new Animation();
+    rootTransition
+        .addElement(enteringEl)
+        .duration(opts.duration || DURATION)
+        .easing(opts.easing || EASING)
+        .beforeRemoveClass('hide-page');
+    if (leavingEl && navEl) {
+        const navDecor = new Animation();
+        navDecor
+            .addElement(navEl)
+            .duringAddClass('show-decor');
+        rootTransition.add(navDecor);
+    }
+    const backDirection = (opts.direction === 'back');
+    // setting up enter view
+    if (enteringEl) {
+        const contentEl = enteringEl.querySelector(':scope > ion-content');
+        const headerEls = enteringEl.querySelectorAll(':scope > ion-header > *:not(ion-toolbar), :scope > ion-footer > *');
+        const enteringToolBarEle = enteringEl.querySelector(':scope > ion-header > ion-toolbar');
+        const enteringContent = new Animation();
+        if (!contentEl && !enteringToolBarEle && headerEls.length === 0) {
+            enteringContent.addElement(enteringEl.querySelector(':scope > ion-page, :scope > ion-nav, :scope > ion-tabs'));
+        }
+        else {
+            enteringContent.addElement(contentEl);
+            enteringContent.addElement(headerEls);
+        }
+        rootTransition.add(enteringContent);
+        if (backDirection) {
+            enteringContent
+                .beforeClearStyles([OPACITY])
+                .fromTo(TRANSLATEX, OFF_LEFT, CENTER, true)
+                .fromTo(OPACITY, OFF_OPACITY, 1, true);
+        }
+        else {
+            // entering content, forward direction
+            enteringContent
+                .beforeClearStyles([OPACITY])
+                .fromTo(TRANSLATEX, OFF_RIGHT, CENTER, true);
+        }
+        if (enteringToolBarEle) {
+            const enteringToolBar = new Animation();
+            enteringToolBar.addElement(enteringToolBarEle);
+            rootTransition.add(enteringToolBar);
+            const enteringTitle = new Animation();
+            enteringTitle.addElement(enteringToolBarEle.querySelector('ion-title'));
+            const enteringToolBarItems = new Animation();
+            enteringToolBarItems.addElement(enteringToolBarEle.querySelectorAll('ion-buttons,[menuToggle]'));
+            const enteringToolBarBg = new Animation();
+            enteringToolBarBg.addElement(enteringToolBarEle.querySelector('.toolbar-background'));
+            const enteringBackButton = new Animation();
+            enteringBackButton.addElement(enteringToolBarEle.querySelector('ion-back-button'));
+            enteringToolBar
+                .add(enteringTitle)
+                .add(enteringToolBarItems)
+                .add(enteringToolBarBg)
+                .add(enteringBackButton);
+            enteringTitle.fromTo(OPACITY, 0.01, 1, true);
+            enteringToolBarItems.fromTo(OPACITY, 0.01, 1, true);
+            if (backDirection) {
+                enteringTitle.fromTo(TRANSLATEX, OFF_LEFT, CENTER, true);
+                // back direction, entering page has a back button
+                enteringBackButton.fromTo(OPACITY, 0.01, 1, true);
+            }
+            else {
+                // entering toolbar, forward direction
+                enteringTitle.fromTo(TRANSLATEX, OFF_RIGHT, CENTER, true);
+                enteringToolBarBg
+                    .beforeClearStyles([OPACITY])
+                    .fromTo(OPACITY, 0.01, 1, true);
+                // forward direction, entering page has a back button
+                enteringBackButton.fromTo(OPACITY, 0.01, 1, true);
+                const enteringBackBtnText = new Animation();
+                enteringBackBtnText
+                    .addElement(enteringToolBarEle.querySelector('ion-back-button .button-text'))
+                    .fromTo(TRANSLATEX, (isRTL ? '-100px' : '100px'), '0px');
+                enteringToolBar.add(enteringBackBtnText);
+            }
+        }
+    }
+    // setup leaving view
+    if (leavingEl) {
+        const leavingContent = new Animation();
+        leavingContent.addElement(leavingEl.querySelector(':scope > ion-content'));
+        leavingContent.addElement(leavingEl.querySelectorAll(':scope > ion-header > *:not(ion-toolbar), :scope > ion-footer > *'));
+        rootTransition.add(leavingContent);
+        if (backDirection) {
+            // leaving content, back direction
+            leavingContent
+                .beforeClearStyles([OPACITY])
+                .fromTo(TRANSLATEX, CENTER, (isRTL ? '-100%' : '100%'));
+        }
+        else {
+            // leaving content, forward direction
+            leavingContent
+                .fromTo(TRANSLATEX, CENTER, OFF_LEFT, true)
+                .fromTo(OPACITY, 1, OFF_OPACITY, true);
+        }
+        const leavingToolBarEle = leavingEl.querySelector(':scope > ion-header > ion-toolbar');
+        if (leavingToolBarEle) {
+            const leavingToolBar = new Animation();
+            leavingToolBar.addElement(leavingToolBarEle);
+            const leavingTitle = new Animation();
+            leavingTitle.addElement(leavingToolBarEle.querySelector('ion-title'));
+            const leavingToolBarItems = new Animation();
+            leavingToolBarItems.addElement(leavingToolBarEle.querySelectorAll('ion-buttons,[menuToggle]'));
+            const leavingToolBarBg = new Animation();
+            leavingToolBarBg.addElement(leavingToolBarEle.querySelector('.toolbar-background'));
+            const leavingBackButton = new Animation();
+            leavingBackButton.addElement(leavingToolBarEle.querySelector('ion-back-button'));
+            leavingToolBar
+                .add(leavingTitle)
+                .add(leavingToolBarItems)
+                .add(leavingBackButton)
+                .add(leavingToolBarBg);
+            rootTransition.add(leavingToolBar);
+            // fade out leaving toolbar items
+            leavingBackButton.fromTo(OPACITY, 0.99, 0, true);
+            leavingTitle.fromTo(OPACITY, 0.99, 0, true);
+            leavingToolBarItems.fromTo(OPACITY, 0.99, 0, true);
+            if (backDirection) {
+                // leaving toolbar, back direction
+                leavingTitle.fromTo(TRANSLATEX, CENTER, (isRTL ? '-100%' : '100%'));
+                // leaving toolbar, back direction, and there's no entering toolbar
+                // should just slide out, no fading out
+                leavingToolBarBg
+                    .beforeClearStyles([OPACITY])
+                    .fromTo(OPACITY, 1, 0.01, true);
+                const leavingBackBtnText = new Animation();
+                leavingBackBtnText.addElement(leavingToolBarEle.querySelector('ion-back-button .button-text'));
+                leavingBackBtnText.fromTo(TRANSLATEX, CENTER, (isRTL ? -124 : 124) + 'px');
+                leavingToolBar.add(leavingBackBtnText);
+            }
+            else {
+                // leaving toolbar, forward direction
+                leavingTitle
+                    .fromTo(TRANSLATEX, CENTER, OFF_LEFT)
+                    .afterClearStyles([TRANSFORM]);
+                leavingBackButton.afterClearStyles([OPACITY]);
+                leavingTitle.afterClearStyles([OPACITY]);
+                leavingToolBarItems.afterClearStyles([OPACITY]);
+            }
+        }
+    }
+    // Return the rootTransition promise
+    return Promise.resolve(rootTransition);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/animations/md.transition.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/animations/md.transition.js ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mdTransitionAnimation; });
+const TRANSLATEY = 'translateY';
+const OFF_BOTTOM = '40px';
+const CENTER = '0px';
+function mdTransitionAnimation(Animation, _, opts) {
+    const enteringEl = opts.enteringEl;
+    const leavingEl = opts.leavingEl;
+    const ionPageElement = getIonPageElement(enteringEl);
+    const rootTransition = new Animation();
+    rootTransition
+        .addElement(ionPageElement)
+        .beforeRemoveClass('hide-page');
+    const backDirection = (opts.direction === 'back');
+    if (enteringEl) {
+        // animate the component itself
+        if (backDirection) {
+            rootTransition
+                .duration(opts.duration || 200)
+                .easing('cubic-bezier(0.47,0,0.745,0.715)');
+        }
+        else {
+            rootTransition
+                .duration(opts.duration || 280)
+                .easing('cubic-bezier(0.36,0.66,0.04,1)')
+                .fromTo(TRANSLATEY, OFF_BOTTOM, CENTER, true)
+                .fromTo('opacity', 0.01, 1, true);
+        }
+        // Animate toolbar if it's there
+        const enteringToolbarEle = ionPageElement.querySelector('ion-toolbar');
+        if (enteringToolbarEle) {
+            const enteringToolBar = new Animation();
+            enteringToolBar.addElement(enteringToolbarEle);
+            rootTransition.add(enteringToolBar);
+        }
+    }
+    // setup leaving view
+    if (leavingEl && backDirection) {
+        // leaving content
+        rootTransition
+            .duration(opts.duration || 200)
+            .easing('cubic-bezier(0.47,0,0.745,0.715)');
+        const leavingPage = new Animation();
+        leavingPage
+            .addElement(getIonPageElement(leavingEl))
+            .fromTo(TRANSLATEY, CENTER, OFF_BOTTOM)
+            .fromTo('opacity', 1, 0);
+        rootTransition.add(leavingPage);
+    }
+    return Promise.resolve(rootTransition);
+}
+function getIonPageElement(element) {
+    if (element.classList.contains('ion-page')) {
+        return element;
+    }
+    const ionPage = element.querySelector(':scope > .ion-page, :scope > ion-nav, :scope > ion-tabs');
+    if (ionPage) {
+        return ionPage;
+    }
+    // idk, return the original element so at least something animates and we don't have a null pointer
+    return element;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/config.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/config.js ***!
+  \******************************************************************/
+/*! exports provided: setupConfig, configFromURL */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupConfig", function() { return setupConfig; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "configFromURL", function() { return configFromURL; });
+function setupConfig(config) {
+    const win = window;
+    const Ionic = win.Ionic;
+    if (Ionic && Ionic.config && Ionic.config.constructor.name !== 'Object') {
+        console.error('ionic config was already initialized');
+        return;
+    }
+    win.Ionic = win.Ionic || {};
+    win.Ionic.config = Object.assign({}, win.Ionic.config, config);
+    return win.Ionic.config;
+}
+function configFromURL() {
+    const config = {};
+    const win = window;
+    win.location.search.slice(1)
+        .split('&')
+        .filter(entryText => entryText.startsWith('ionic:'))
+        .map(entryText => entryText.split('='))
+        .forEach(entry => {
+        config[entry[0].slice(6)] = decodeURIComponent(entry[1]);
+    });
+    return config;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/framework-delegate.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/framework-delegate.js ***!
+  \******************************************************************************/
+/*! exports provided: attachComponent, detachComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "attachComponent", function() { return attachComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detachComponent", function() { return detachComponent; });
+function attachComponent(delegate, container, component, cssClasses, componentProps) {
+    if (delegate) {
+        return delegate.attachViewToDom(container, component, componentProps, cssClasses);
+    }
+    if (typeof component !== 'string' && !(component instanceof HTMLElement)) {
+        throw new Error('framework delegate is missing');
+    }
+    const el = (typeof component === 'string')
+        ? container.ownerDocument.createElement(component)
+        : component;
+    cssClasses && cssClasses.forEach(c => el.classList.add(c));
+    componentProps && Object.assign(el, componentProps);
+    container.appendChild(el);
+    if (el.componentOnReady) {
+        return el.componentOnReady();
+    }
+    return Promise.resolve(el);
+}
+function detachComponent(delegate, element) {
+    if (element) {
+        if (delegate) {
+            const container = element.parentElement;
+            return delegate.removeViewFromDom(container, element);
+        }
+        element.remove();
+    }
+    return Promise.resolve();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/haptic.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/haptic.js ***!
+  \******************************************************************/
+/*! exports provided: hapticAvailable, hapticSelection, hapticSelectionStart, hapticSelectionChanged, hapticSelectionEnd, hapticNotification, hapticImpact */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hapticAvailable", function() { return hapticAvailable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hapticSelection", function() { return hapticSelection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hapticSelectionStart", function() { return hapticSelectionStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hapticSelectionChanged", function() { return hapticSelectionChanged; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hapticSelectionEnd", function() { return hapticSelectionEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hapticNotification", function() { return hapticNotification; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hapticImpact", function() { return hapticImpact; });
+/**
+ * Check to see if the Haptic Plugin is available
+ * @return Returns true or false if the plugin is available
+ */
+function hapticAvailable() {
+    const engine = window.TapticEngine;
+    return !!engine;
+}
+/**
+ * Trigger a selection changed haptic event. Good for one-time events
+ * (not for gestures)
+ */
+function hapticSelection() {
+    const engine = window.TapticEngine;
+    engine && engine.selection();
+}
+/**
+ * Tell the haptic engine that a gesture for a selection change is starting.
+ */
+function hapticSelectionStart() {
+    const engine = window.TapticEngine;
+    engine && engine.gestureSelectionStart();
+}
+/**
+ * Tell the haptic engine that a selection changed during a gesture.
+ */
+function hapticSelectionChanged() {
+    const engine = window.TapticEngine;
+    engine && engine.gestureSelectionChanged();
+}
+/**
+ * Tell the haptic engine we are done with a gesture. This needs to be
+ * called lest resources are not properly recycled.
+ */
+function hapticSelectionEnd() {
+    const engine = window.TapticEngine;
+    engine && engine.gestureSelectionEnd();
+}
+/**
+ * Use this to indicate success/failure/warning to the user.
+ * options should be of the type `{ type: 'success' }` (or `warning`/`error`)
+ */
+function hapticNotification(options) {
+    const engine = window.TapticEngine;
+    engine && engine.notification(options);
+}
+/**
+ * Use this to indicate success/failure/warning to the user.
+ * options should be of the type `{ style: 'light' }` (or `medium`/`heavy`)
+ */
+function hapticImpact(options) {
+    const engine = window.TapticEngine;
+    engine && engine.impact(options);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/helpers.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/helpers.js ***!
+  \*******************************************************************/
+/*! exports provided: reorderArray, clamp, assert, now, pointerCoord, isRightSide, deferEvent, debounceEvent, debounce */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reorderArray", function() { return reorderArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clamp", function() { return clamp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "assert", function() { return assert; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "now", function() { return now; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pointerCoord", function() { return pointerCoord; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isRightSide", function() { return isRightSide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deferEvent", function() { return deferEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "debounceEvent", function() { return debounceEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "debounce", function() { return debounce; });
+function reorderArray(array, indexes) {
+    const element = array[indexes.from];
+    array.splice(indexes.from, 1);
+    array.splice(indexes.to, 0, element);
+    return array;
+}
+function clamp(min, n, max) {
+    return Math.max(min, Math.min(n, max));
+}
+function assert(actual, reason) {
+    if (!actual) {
+        const message = 'ASSERT: ' + reason;
+        console.error(message);
+        debugger; // tslint:disable-line
+        throw new Error(message);
+    }
+}
+function now(ev) {
+    return ev.timeStamp || Date.now();
+}
+function pointerCoord(ev) {
+    // get X coordinates for either a mouse click
+    // or a touch depending on the given event
+    if (ev) {
+        const changedTouches = ev.changedTouches;
+        if (changedTouches && changedTouches.length > 0) {
+            const touch = changedTouches[0];
+            return { x: touch.clientX, y: touch.clientY };
+        }
+        if (ev.pageX !== undefined) {
+            return { x: ev.pageX, y: ev.pageY };
+        }
+    }
+    return { x: 0, y: 0 };
+}
+/**
+ * @hidden
+ * Given a side, return if it should be on the right
+ * based on the value of dir
+ * @param side the side
+ * @param isRTL whether the application dir is rtl
+ */
+function isRightSide(win, side) {
+    const isRTL = win.document.dir === 'rtl';
+    switch (side) {
+        case 'start': return isRTL;
+        case 'end': return !isRTL;
+        default:
+            throw new Error(`"${side}" is not a valid value for [side]. Use "start" or "end" instead.`);
+    }
+}
+function deferEvent(event) {
+    return debounceEvent(event, 0);
+}
+function debounceEvent(event, wait) {
+    const original = event._original || event;
+    return {
+        _original: event,
+        emit: debounce(original.emit.bind(original), wait)
+    };
+}
+function debounce(func, wait = 0) {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(func, wait, ...args);
+    };
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/overlays.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/overlays.js ***!
+  \********************************************************************/
+/*! exports provided: createOverlay, dismissOverlay, getTopOverlay, getHighestId, removeLastOverlay, present, dismiss, autoFocus, eventMethod, onceEvent, isCancel, BACKDROP */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createOverlay", function() { return createOverlay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dismissOverlay", function() { return dismissOverlay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTopOverlay", function() { return getTopOverlay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHighestId", function() { return getHighestId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeLastOverlay", function() { return removeLastOverlay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "present", function() { return present; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dismiss", function() { return dismiss; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "autoFocus", function() { return autoFocus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eventMethod", function() { return eventMethod; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onceEvent", function() { return onceEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isCancel", function() { return isCancel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BACKDROP", function() { return BACKDROP; });
+let lastId = 1;
+function createOverlay(element, opts) {
+    // convert the passed in overlay options into props
+    // that get passed down into the new overlay
+    Object.assign(element, opts);
+    element.overlayId = lastId++;
+    // append the overlay element to the document body
+    const doc = element.ownerDocument;
+    const appRoot = doc.querySelector('ion-app') || doc.body;
+    appRoot.appendChild(element);
+    return element.componentOnReady();
+}
+function dismissOverlay(data, role, overlays, id) {
+    id = id >= 0 ? id : getHighestId(overlays);
+    const overlay = overlays.get(id);
+    if (!overlay) {
+        return Promise.reject('overlay does not exist');
+    }
+    return overlay.dismiss(data, role);
+}
+function getTopOverlay(overlays) {
+    return overlays.get(getHighestId(overlays));
+}
+function getHighestId(overlays) {
+    let minimum = -1;
+    overlays.forEach((_, id) => {
+        if (id > minimum) {
+            minimum = id;
+        }
+    });
+    return minimum;
+}
+function removeLastOverlay(overlays) {
+    const toRemove = getTopOverlay(overlays);
+    return toRemove ? toRemove.dismiss() : Promise.resolve();
+}
+async function present(overlay, name, iosEnterAnimation, mdEnterAnimation, opts) {
+    if (overlay.presented) {
+        return;
+    }
+    overlay.presented = true;
+    overlay.willPresent.emit();
+    // get the user's animation fn if one was provided
+    const animationBuilder = (overlay.enterAnimation)
+        ? overlay.enterAnimation
+        : overlay.config.get(name, overlay.mode === 'ios' ? iosEnterAnimation : mdEnterAnimation);
+    await overlayAnimation(overlay, animationBuilder, overlay.el, opts);
+    overlay.didPresent.emit();
+}
+async function dismiss(overlay, data, role, name, iosLeaveAnimation, mdLeaveAnimation, opts) {
+    if (!overlay.presented) {
+        return;
+    }
+    overlay.presented = false;
+    overlay.willDismiss.emit({ data, role });
+    const animationBuilder = (overlay.leaveAnimation)
+        ? overlay.leaveAnimation
+        : overlay.config.get(name, overlay.mode === 'ios' ? iosLeaveAnimation : mdLeaveAnimation);
+    await overlayAnimation(overlay, animationBuilder, overlay.el, opts);
+    overlay.didDismiss.emit({ data, role });
+    overlay.el.remove();
+}
+async function overlayAnimation(overlay, animationBuilder, baseEl, opts) {
+    if (overlay.keyboardClose) {
+        const activeElement = baseEl.ownerDocument.activeElement;
+        activeElement && activeElement.blur && activeElement.blur();
+    }
+    if (overlay.animation) {
+        overlay.animation.destroy();
+        overlay.animation = undefined;
+    }
+    const animation = overlay.animation = await overlay.animationCtrl.create(animationBuilder, baseEl, opts);
+    overlay.animation = animation;
+    if (!overlay.willAnimate) {
+        animation.duration(0);
+    }
+    await animation.playAsync();
+    animation.destroy();
+    overlay.animation = undefined;
+}
+function autoFocus(containerEl) {
+    const focusableEls = containerEl.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
+    if (focusableEls.length > 0) {
+        const el = focusableEls[0];
+        el.focus();
+        return el;
+    }
+    return null;
+}
+function eventMethod(element, eventName, callback) {
+    let resolve;
+    const promise = new Promise(r => resolve = r);
+    onceEvent(element, eventName, (event) => {
+        const detail = event.detail;
+        callback && callback(detail);
+        resolve(detail);
+    });
+    return promise;
+}
+function onceEvent(element, eventName, callback) {
+    const handler = (ev) => {
+        element.removeEventListener(eventName, handler);
+        callback(ev);
+    };
+    element.addEventListener(eventName, handler);
+}
+function isCancel(role) {
+    return role === 'cancel' || role === BACKDROP;
+}
+const BACKDROP = 'backdrop';
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/platform.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/platform.js ***!
+  \********************************************************************/
+/*! exports provided: isIpad, isIphone, isIOS, isAndroid, isPhablet, isTablet, isDevice, isHybrid, isCordova, isCapacitor, isElectron, needInputShims, testUserAgent, matchMedia */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIpad", function() { return isIpad; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIphone", function() { return isIphone; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIOS", function() { return isIOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAndroid", function() { return isAndroid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPhablet", function() { return isPhablet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isTablet", function() { return isTablet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDevice", function() { return isDevice; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isHybrid", function() { return isHybrid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isCordova", function() { return isCordova; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isCapacitor", function() { return isCapacitor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isElectron", function() { return isElectron; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "needInputShims", function() { return needInputShims; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "testUserAgent", function() { return testUserAgent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "matchMedia", function() { return matchMedia; });
+function isIpad(win) {
+    return testUserAgent(win, /iPad/i);
+}
+function isIphone(win) {
+    return testUserAgent(win, /iPhone/i);
+}
+function isIOS(win) {
+    return testUserAgent(win, /iPad|iPhone|iPod/i);
+}
+function isAndroid(win) {
+    return !isIOS(win);
+}
+function isPhablet(win) {
+    const width = win.innerWidth;
+    const height = win.innerHeight;
+    const smallest = Math.min(width, height);
+    const largest = Math.max(width, height);
+    return (smallest > 390 && smallest < 520) &&
+        (largest > 620 && largest < 800);
+}
+function isTablet(win) {
+    const width = win.innerWidth;
+    const height = win.innerHeight;
+    const smallest = Math.min(width, height);
+    const largest = Math.max(width, height);
+    return (smallest > 460 && smallest < 820) &&
+        (largest > 780 && largest < 1400);
+}
+function isDevice(win) {
+    return matchMedia(win, '(any-pointer:coarse)');
+}
+function isHybrid(win) {
+    return isCordova(win) || isCapacitor(win);
+}
+function isCordova(window) {
+    const win = window;
+    return !!(win['cordova'] || win['phonegap'] || win['PhoneGap']);
+}
+function isCapacitor(window) {
+    const win = window;
+    return !!(win['Capacitor']);
+}
+function isElectron(win) {
+    return testUserAgent(win, /electron/);
+}
+function needInputShims(win) {
+    return isIOS(win) && isDevice(win);
+}
+function testUserAgent(win, expr) {
+    return expr.test(win.navigator.userAgent);
+}
+function matchMedia(win, query, fallback = false) {
+    return win.matchMedia
+        ? win.matchMedia(query).matches
+        : fallback;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/collection/utils/transition.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/collection/utils/transition.js ***!
+  \**********************************************************************/
+/*! exports provided: transition, lifecycle */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transition", function() { return transition; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lifecycle", function() { return lifecycle; });
+/* harmony import */ var _animations_ios_transition__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./animations/ios.transition */ "./node_modules/@ionic/core/dist/collection/utils/animations/ios.transition.js");
+/* harmony import */ var _animations_md_transition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./animations/md.transition */ "./node_modules/@ionic/core/dist/collection/utils/animations/md.transition.js");
+
+
+function transition(opts) {
+    beforeTransition(opts);
+    const animationBuilder = getAnimationBuilder(opts);
+    return (animationBuilder)
+        ? animation(animationBuilder, opts)
+        : noAnimation(opts); // fast path for no animation
+}
+function getAnimationBuilder(opts) {
+    if (!opts.leavingEl || opts.animated === false || opts.duration === 0) {
+        return undefined;
+    }
+    if (opts.animationBuilder) {
+        return opts.animationBuilder;
+    }
+    return opts.mode === 'ios' ? _animations_ios_transition__WEBPACK_IMPORTED_MODULE_0__["default"] : _animations_md_transition__WEBPACK_IMPORTED_MODULE_1__["default"];
+}
+function beforeTransition(opts) {
+    const enteringEl = opts.enteringEl;
+    const leavingEl = opts.leavingEl;
+    setZIndex(enteringEl, leavingEl, opts.direction);
+    if (opts.showGoBack) {
+        enteringEl.classList.add('can-go-back');
+    }
+    else {
+        enteringEl.classList.remove('can-go-back');
+    }
+    enteringEl.hidden = false;
+    if (leavingEl) {
+        leavingEl.hidden = false;
+    }
+}
+async function animation(animationBuilder, opts) {
+    await waitForReady(opts, true);
+    const trns = await opts.animationCtrl.create(animationBuilder, opts.baseEl, opts);
+    fireWillEvents(opts.window, opts.enteringEl, opts.leavingEl);
+    await playTransition(trns, opts);
+    if (trns.hasCompleted) {
+        fireDidEvents(opts.window, opts.enteringEl, opts.leavingEl);
+    }
+    return trns;
+}
+async function noAnimation(opts) {
+    const enteringEl = opts.enteringEl;
+    const leavingEl = opts.leavingEl;
+    if (enteringEl) {
+        enteringEl.classList.remove('hide-page');
+    }
+    if (leavingEl) {
+        leavingEl.classList.remove('hide-page');
+    }
+    await waitForReady(opts, false);
+    fireWillEvents(opts.window, enteringEl, leavingEl);
+    fireDidEvents(opts.window, enteringEl, leavingEl);
+    return null;
+}
+async function waitForReady(opts, defaultDeep) {
+    const deep = opts.deepWait != null ? opts.deepWait : defaultDeep;
+    const promises = deep ? [
+        deepReady(opts.enteringEl),
+        deepReady(opts.leavingEl),
+    ] : [
+        shallowReady(opts.enteringEl),
+        shallowReady(opts.leavingEl),
+    ];
+    await Promise.all(promises);
+    await notifyViewReady(opts.viewIsReady, opts.enteringEl);
+}
+async function notifyViewReady(viewIsReady, enteringEl) {
+    if (viewIsReady) {
+        await viewIsReady(enteringEl);
+    }
+}
+function playTransition(transition, opts) {
+    const progressCallback = opts.progressCallback;
+    const promise = new Promise(resolve => transition.onFinish(resolve));
+    // cool, let's do this, start the transition
+    if (progressCallback) {
+        // this is a swipe to go back, just get the transition progress ready
+        // kick off the swipe animation start
+        transition.progressStart();
+        progressCallback(transition);
+    }
+    else {
+        // only the top level transition should actually start "play"
+        // kick it off and let it play through
+        // ******** DOM WRITE ****************
+        transition.play();
+    }
+    // create a callback for when the animation is done
+    return promise;
+}
+function fireWillEvents(win, enteringEl, leavingEl) {
+    lifecycle(win, leavingEl, "ionViewWillLeave" /* WillLeave */);
+    lifecycle(win, enteringEl, "ionViewWillEnter" /* WillEnter */);
+}
+function fireDidEvents(win, enteringEl, leavingEl) {
+    lifecycle(win, enteringEl, "ionViewDidEnter" /* DidEnter */);
+    lifecycle(win, leavingEl, "ionViewDidLeave" /* DidLeave */);
+}
+function lifecycle(win, el, eventName) {
+    if (el) {
+        const CEvent = win.CustomEvent;
+        const event = new CEvent(eventName, {
+            bubbles: false,
+            cancelable: false,
+        });
+        el.dispatchEvent(event);
+    }
+}
+function shallowReady(el) {
+    if (el && el.componentOnReady) {
+        return el.componentOnReady();
+    }
+    return Promise.resolve();
+}
+function deepReady(el) {
+    if (!el) {
+        return Promise.resolve();
+    }
+    if (customElements.get) {
+        if (customElements.get(el.tagName.toLowerCase())) {
+            return componentOnReady(el);
+        }
+        else {
+            return Promise.all(Array.from(el.children).map(deepReady));
+        }
+    }
+    return componentOnReady(el);
+}
+function componentOnReady(el) {
+    if (el.componentOnReady) {
+        return el.componentOnReady();
+    }
+    else {
+        return Promise.all(Array.from(el.children).map(deepReady));
+    }
+}
+function setZIndex(enteringEl, leavingEl, direction) {
+    if (enteringEl) {
+        enteringEl.style.zIndex = (direction === 'back')
+            ? '99'
+            : '101';
+    }
+    if (leavingEl) {
+        leavingEl.style.zIndex = '100';
+    }
 }
 
 
