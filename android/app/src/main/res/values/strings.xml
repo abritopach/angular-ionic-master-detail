@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">angular-ionic-master-detail</string>
     <string name="title_activity_main">angular-ionic-master-detail</string>
-    <string name="package_name">com.ionic4.app</string>
-    <string name="fileprovider_authority">com.ionic4.app.fileprovider</string>
-    <string name="custom_url_scheme">com.ionic4.app</string>
+    <string name="package_name">com.angularionic.masterdetail</string>
+    <string name="fileprovider_authority">com.angularionic.masterdetail.fileprovider</string>
+    <string name="custom_url_scheme">com.angularionic.masterdetail</string>
 </resources>

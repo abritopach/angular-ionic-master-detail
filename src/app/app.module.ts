@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 
-import { IonicModule, Item } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular';
 
 import { ItemService } from './providers/item-service';
-
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ItemService } from './providers/item-service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     IonicModule.forRoot()
   ],
   providers: [ItemService],

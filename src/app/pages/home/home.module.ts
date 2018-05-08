@@ -12,6 +12,6 @@ import { HomeComponentRoutingModule } from './home-routing.module';
     HomeComponentRoutingModule
   ],
   declarations: [HomeComponent],
-  entryComponents: [HomeComponent],
+  entryComponents: [HomeComponent]
 })
 export class HomeModule {}

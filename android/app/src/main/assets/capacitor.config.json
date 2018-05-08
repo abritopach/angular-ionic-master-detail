@@ -1,6 +1,7 @@
 {
-  "appId": "com.ionic4.app",
+  "appId": "com.angularionic.masterdetail",
   "appName": "angular-ionic-master-detail",
   "bundledWebRuntime": false,
-  "webDir": "dist/angular-ionic-master-detail"
+  "webDir": "www"
 }
+

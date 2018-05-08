@@ -18,10 +18,10 @@ export class DetailComponent {
   }
 
   ionViewWillEnter() {
-    console.log('ionViewWillEnter');
-    console.log('this.route.snapshot', this.route.snapshot);
+    // console.log('ionViewWillEnter');
+    // console.log('this.route.snapshot', this.route.snapshot);
     const itemId = this.route.snapshot.paramMap.get('id');
-    console.log('itemId', itemId);
+    // console.log('itemId', itemId);
     this.item = this.itemService.getItem(itemId);
   }
 }

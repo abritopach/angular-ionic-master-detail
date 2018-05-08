@@ -12,6 +12,6 @@ import { DetailComponentRoutingModule } from './detail-routing.module';
     DetailComponentRoutingModule
   ],
   declarations: [DetailComponent],
-  entryComponents: [DetailComponent],
+  entryComponents: [DetailComponent]
 })
 export class DetailModule {}
