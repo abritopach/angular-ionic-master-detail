@@ -3,6 +3,8 @@ import { Platform } from '@ionic/angular';
 
 import { ItemService } from '../../providers/item-service';
 
+import { Plugins } from '@capacitor/core';
+
 @Component({
   selector: 'app-page-home',
   templateUrl: './home.html',
