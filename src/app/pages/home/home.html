@@ -7,6 +7,7 @@
 <ion-content no-bounce>
   <ion-list>
     <ion-item *ngFor="let item of itemService.items" detail="true" tappable routerLink="/detail/{{ item.id }}">
+    <!--<ion-item *ngFor="let item of itemService.items" detail="true" tappable href="/detail/{{ item.id }}">-->
     <!--<ion-item *ngFor="let item of items">-->
       <ion-thumbnail slot="start">
         <img [src]="item.image" alt="">

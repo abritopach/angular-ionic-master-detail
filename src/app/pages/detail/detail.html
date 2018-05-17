@@ -9,14 +9,16 @@
 
 <ion-content no-bounce>
     <ion-card *ngIf="item">
-        <ion-item>
+        <ion-item class="avatar">
           <ion-avatar item-start>
             <img [src]="item?.image">
           </ion-avatar>
-          <h2>{{ item?.title }}</h2>
+          <h2 class="title">{{ item?.title }}</h2>
         </ion-item>
       
+        <ion-item>
         <img src="https://placeimg.com/640/480/nature">
+        </ion-item>
       
         <ion-card-content>
           <p>{{ item?.description }}</p>
