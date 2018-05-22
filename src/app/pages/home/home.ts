@@ -5,6 +5,8 @@ import { ItemService } from '../../providers/item-service';
 
 import { Plugins } from '@capacitor/core';
 
+// import { MyPlugin } from 'todo-plugin';
+
 @Component({
   selector: 'app-page-home',
   templateUrl: './home.html',
@@ -17,11 +19,11 @@ export class HomeComponent implements OnInit {
   // items: any;
 
   constructor(private platform: Platform, public itemService: ItemService) {
+    // this.testPlugin();
   }
 
   ngOnInit() {
     this.currentYear = new Date().getFullYear();
-
     /*
     this.items = [
       {
@@ -42,5 +44,12 @@ export class HomeComponent implements OnInit {
     ];
     */
   }
+
+  /*
+  async testPlugin() {
+    const result = await MyPlugin.echo({value: 'Hola'});
+  }
+  */
+
 }
 

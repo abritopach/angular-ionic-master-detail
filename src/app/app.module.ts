@@ -7,7 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { RouteReuseStrategy } from '@angular/router';
 
 import { ItemService } from './providers/item-service';
 
@@ -21,7 +22,10 @@ import { ItemService } from './providers/item-service';
     HttpClientModule,
     IonicModule.forRoot()
   ],
-  providers: [ItemService],
+  providers: [
+    ItemService,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService, Item } from '../../providers/item-service';
 
@@ -8,13 +8,16 @@ import { ItemService, Item } from '../../providers/item-service';
   styleUrls: ['./detail.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DetailComponent {
+export class DetailComponent implements OnInit {
 
   currentYear: Number = new Date().getFullYear();
   item: Item;
 
   constructor(private route: ActivatedRoute, public itemService: ItemService) {
 
+  }
+
+  ngOnInit() {
   }
 
   ionViewWillEnter() {
