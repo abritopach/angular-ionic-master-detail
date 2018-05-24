@@ -5,7 +5,8 @@ import { ItemService } from '../../providers/item-service';
 
 import { Plugins } from '@capacitor/core';
 
-// import { MyPlugin } from 'todo-plugin';
+// import { EchoPlugin, MyPlugin } from 'echo-test/dist/esm';
+
 
 @Component({
   selector: 'app-page-home',
@@ -19,7 +20,12 @@ export class HomeComponent implements OnInit {
   // items: any;
 
   constructor(private platform: Platform, public itemService: ItemService) {
-    // this.testPlugin();
+    // if (Capacitor.platform === 'web') {
+      // this.testPluginWeb();
+      // this.testYoutubePlayerPlugin();
+    // } else {
+      // this.testPluginNative();
+    // }
   }
 
   ngOnInit() {
@@ -46,10 +52,21 @@ export class HomeComponent implements OnInit {
   }
 
   /*
-  async testPlugin() {
-    const result = await MyPlugin.echo({value: 'Hola'});
+  async testPluginNative() {
+    const { EchoTest } = Plugins;
+    const result = await EchoTest.echo({value: 'hola' });
+    console.log('result', result);
+  }
+
+  async testPluginWeb() {
+    const result = await MyPlugin.echo({value: 'hola' });
+    console.log('result', result);
+  }
+
+  async testYoutubePlayerPlugin() {
+    const result = await YoutubePlayerWeb.echo({value: 'hola' });
+    console.log('result', result);
   }
   */
-
 }
 
