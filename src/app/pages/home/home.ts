@@ -5,7 +5,7 @@ import { ItemService } from '../../providers/item-service';
 
 import { Plugins, Capacitor } from '@capacitor/core';
 
-// import { EchoPlugin, MyPlugin } from 'echo-test/dist/esm';
+import { EchoPlugin, MyPlugin } from 'echo-test/dist/esm';
 
 // import { CapacitorDataStorageSqlite } from '../../../../capacitor-data-storage-sqlite';
 
@@ -28,11 +28,11 @@ export class HomeComponent implements OnInit {
   constructor(private platform: Platform, public itemService: ItemService) {
     // this.testPlugin();
     if (Capacitor.platform === 'web') {
-      // this.testPluginWeb();
+      this.testPluginWeb();
       this.testYoutubePlayerPluginWeb();
     } else {
       console.log('device');
-      // this.testPluginNative();
+      this.testPluginNative();
       this.testYoutubePlayerPlugin();
     }
 
@@ -83,7 +83,6 @@ export class HomeComponent implements OnInit {
     */
   }
 
-  /*
   async testPluginNative() {
     const { EchoTest } = Plugins;
     const result = await EchoTest.echo({value: 'hola' });
@@ -94,7 +93,6 @@ export class HomeComponent implements OnInit {
     const result = await MyPlugin.echo({value: 'hola' });
     console.log('result', result);
   }
-  */
 
   async testYoutubePlayerPlugin() {
 

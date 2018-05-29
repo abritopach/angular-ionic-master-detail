@@ -30,8 +30,9 @@
     "@ionic/angular": "4.0.0-alpha.7",
     "@ionic/cli-hooks": "1.0.0-rc.1",
     "@ionic/schematics-angular": "^1.0.0-rc.6",
-    "capacitor-youtube-player": "0.0.1-alpha7",
+    "capacitor-youtube-player": "0.0.1-alpha9",
     "core-js": "^2.5.7",
+    "echo-test": "0.0.2",
     "rxjs": "6.2.0",
     "rxjs-compat": "6.2.0",
     "zone.js": "^0.8.26"
