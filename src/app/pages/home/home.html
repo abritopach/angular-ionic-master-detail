@@ -18,8 +18,12 @@
       </ion-label>
     </ion-item>
   </ion-list>
-  <!-- The <iframe> (and video player) will replace this <div> tag. -->
-  <div id="player"></div>
+  <ion-item>
+    <!-- The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+  </ion-item>
+  <ion-button (click)="stopVideo()">Stop Video</ion-button>
+  <ion-button (click)="loadNewVideo()">Load New Video</ion-button>
 </ion-content>
 
 <ion-footer>
