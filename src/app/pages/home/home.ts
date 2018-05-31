@@ -100,6 +100,9 @@ export class HomeComponent implements OnInit {
 
     const result = await YoutubePlayer.echo({value: 'hola' });
     console.log('result', result);
+
+    const options = {playerId: 'player', width: 640, height: 360, videoId: 'oa9cnWTpqP8'};
+    const playerReady = await YoutubePlayer.initialize(options);
   }
 
   async testYoutubePlayerPluginWeb() {
