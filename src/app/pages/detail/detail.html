@@ -21,7 +21,10 @@
         </ion-item>
       
         <ion-card-content>
-          <p>{{ item?.description }}</p>
+          <ion-item>
+            <p>{{ item?.description }}</p>
+            <ion-badge slot="end" (click)="watchVideo()"><ion-icon name="eye"></ion-icon> Watch Video</ion-badge>
+          </ion-item>
         </ion-card-content>
       
         <ion-row>
@@ -39,7 +42,6 @@
           </ion-note>
           </ion-item>
         </ion-row>
-      
       </ion-card>
 </ion-content>
 

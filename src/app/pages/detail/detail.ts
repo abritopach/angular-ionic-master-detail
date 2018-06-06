@@ -2,6 +2,13 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService, Item } from '../../providers/item-service';
 
+import { Plugins, Capacitor } from '@capacitor/core';
+// import { YoutubePlayerPlugin, YoutubePlayerWeb } from 'capacitor-youtube-player';
+
+import { ModalController } from '@ionic/angular';
+
+import { YoutubeModalComponent } from '../../modals/youtube.modal';
+
 @Component({
   selector: 'app-page-detail',
   templateUrl: './detail.html',
@@ -13,8 +20,7 @@ export class DetailComponent implements OnInit {
   currentYear: Number = new Date().getFullYear();
   item: Item;
 
-  constructor(private route: ActivatedRoute, public itemService: ItemService) {
-
+  constructor(private route: ActivatedRoute, public itemService: ItemService, private modalCtrl: ModalController) {
   }
 
   ngOnInit() {
@@ -27,4 +33,44 @@ export class DetailComponent implements OnInit {
     // console.log('itemId', itemId);
     this.item = this.itemService.getItem(itemId);
   }
+
+  watchVideo() {
+    console.log('DetailsPage::watchVideo | method called');
+    console.log('DetailsPage::watchVideo -> platform: ' + Capacitor.platform);
+    if (Capacitor.platform === 'web') {
+      // this.testYoutubePlayerPluginWeb();
+      this.presentModal();
+    } /* else {
+      this.testYoutubePlayerPlugin();
+    }
+    */
+  }
+
+  /*
+  async testYoutubePlayerPlugin() {
+
+    const { YoutubePlayer } = Plugins;
+
+    const result = await YoutubePlayer.echo({value: 'hola' });
+    console.log('result', result);
+
+    const options = {playerId: 'player', width: 640, height: 360, videoId: 'oa9cnWTpqP8'};
+    const playerReady = await YoutubePlayer.initialize(options);
+  }
+  */
+
+  async presentModal() {
+    const componentProps = { modalProps: { item: this.item}};
+    const modal = await this.modalCtrl.create({
+      component: YoutubeModalComponent,
+      componentProps: componentProps
+    });
+    await modal.present();
+
+    const {data} = await modal.onWillDismiss();
+    if (data) {
+      console.log('data', data);
+    }
+  }
+
 }

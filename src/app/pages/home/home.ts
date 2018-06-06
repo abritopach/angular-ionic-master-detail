@@ -3,15 +3,15 @@ import { Platform } from '@ionic/angular';
 
 import { ItemService } from '../../providers/item-service';
 
-import { Plugins, Capacitor } from '@capacitor/core';
+// import { Plugins, Capacitor } from '@capacitor/core';
 
-import { EchoPlugin, MyPlugin } from 'echo-test/dist/esm';
+// import { EchoPlugin, MyPlugin } from 'echo-test/dist/esm';
 
 // import { CapacitorDataStorageSqlite } from '../../../../capacitor-data-storage-sqlite';
 
 // import { YoutubePlayerPlugin, YoutubePlayerWeb  } from '../../../../capacitor-youtube-player/dist/esm';
 
-import { YoutubePlayerPlugin, YoutubePlayerWeb } from 'capacitor-youtube-player';
+// import { YoutubePlayerPlugin, YoutubePlayerWeb } from 'capacitor-youtube-player';
 
 
 @Component({
@@ -27,6 +27,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private platform: Platform, public itemService: ItemService) {
     // this.testPlugin();
+
+    /*
     if (Capacitor.platform === 'web') {
       this.testPluginWeb();
       this.testYoutubePlayerPluginWeb();
@@ -35,6 +37,7 @@ export class HomeComponent implements OnInit {
       this.testPluginNative();
       this.testYoutubePlayerPlugin();
     }
+    */
 
     /*
     // This code loads the IFrame Player API code asynchronously.
@@ -83,6 +86,7 @@ export class HomeComponent implements OnInit {
     */
   }
 
+  /*
   async testPluginNative() {
     const { EchoTest } = Plugins;
     const result = await EchoTest.echo({value: 'hola' });
@@ -107,10 +111,8 @@ export class HomeComponent implements OnInit {
 
   async testYoutubePlayerPluginWeb() {
 
-    /*
     const result = await YoutubePlayerWeb.echo({value: 'hola' });
     console.log('result', result);
-    */
 
     const options = {playerId: 'player', playerSize: {width: 640, height: 360}, videoId: 'oa9cnWTpqP8'};
     const playerReady = await YoutubePlayerWeb.initialize(options);
@@ -127,6 +129,7 @@ export class HomeComponent implements OnInit {
     const loadNewVideo = await YoutubePlayerWeb.cueVideoById(options);
     console.log('loadNewVideo', loadNewVideo);
   }
+  */
 
   /*
  async testPlugin() {
