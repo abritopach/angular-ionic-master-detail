@@ -40,13 +40,11 @@ export class DetailComponent implements OnInit {
     if (Capacitor.platform === 'web') {
       // this.testYoutubePlayerPluginWeb();
       this.presentModal();
-    } /* else {
+    } else {
       this.testYoutubePlayerPlugin();
     }
-    */
   }
 
-  /*
   async testYoutubePlayerPlugin() {
 
     const { YoutubePlayer } = Plugins;
@@ -54,10 +52,9 @@ export class DetailComponent implements OnInit {
     const result = await YoutubePlayer.echo({value: 'hola' });
     console.log('result', result);
 
-    const options = {playerId: 'player', width: 640, height: 360, videoId: 'oa9cnWTpqP8'};
+    const options = {playerId: 'player', width: 640, height: 360, videoId: this.item.videoId};
     const playerReady = await YoutubePlayer.initialize(options);
   }
-  */
 
   async presentModal() {
     const componentProps = { modalProps: { item: this.item}};

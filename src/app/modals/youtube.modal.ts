@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, AfterViewInit } from '@angular/core';
 import { ModalController, NavParams} from '@ionic/angular';
 
 import { Plugins, Capacitor } from '@capacitor/core';
@@ -10,7 +10,7 @@ import { YoutubePlayerPlugin, YoutubePlayerWeb } from 'capacitor-youtube-player'
   styleUrls: ['./youtube.modal.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class YoutubeModalComponent implements OnInit {
+export class YoutubeModalComponent implements OnInit, AfterViewInit {
 
   item: any;
 
