@@ -1,0 +1,6 @@
+framework module CapacitorYoutubePlayer {
+  umbrella header "CapacitorYoutubePlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
