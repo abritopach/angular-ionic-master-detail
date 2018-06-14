@@ -2,6 +2,3 @@
 
 include ':capacitor-youtube-player'
 project(':capacitor-youtube-player').projectDir = new File('../node_modules/capacitor-youtube-player/android/capacitor-youtube-player')
-
-include ':echo-test'
-project(':echo-test').projectDir = new File('../node_modules/echo-test/android/echo-test')

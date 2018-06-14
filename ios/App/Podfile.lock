@@ -8,15 +8,18 @@ PODS:
   - GCDWebServer (3.4.2):
     - GCDWebServer/Core (= 3.4.2)
   - GCDWebServer/Core (3.4.2)
+  - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
   - CapacitorYoutubePlayer (from `../../node_modules/capacitor-youtube-player`)
+  - YouTubePlayer
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GCDWebServer
+    - YouTubePlayer
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -31,7 +34,8 @@ SPEC CHECKSUMS:
   CapacitorCordova: c81099ca611d8b1d0c556712a2793bc474f1ab2b
   CapacitorYoutubePlayer: 11dc818e216b2e6209778b4ec3c9810d0a9974fb
   GCDWebServer: 8d67ee9f634b4bb91eb4b8aee440318a5fc6debd
+  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: ef2c719d1b658a234ffd1c6b2f82f81e15f37c99
+PODFILE CHECKSUM: 7498cd6586a3adcd67f849c3aef2dd0cf6b379f0
 
 COCOAPODS: 1.5.3

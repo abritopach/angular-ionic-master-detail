@@ -2,7 +2,6 @@
 
 dependencies {
     implementation project(':capacitor-youtube-player')
-    implementation project(':echo-test')
 
 }
 
