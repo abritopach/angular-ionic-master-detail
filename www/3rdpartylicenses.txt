@@ -28,7 +28,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 MIT
 MIT
 
-@capacitor/core@1.0.0-alpha.39
+@capacitor/core@1.0.0-beta.0
 MIT
 Copyright 2015-present Drifty Co.
 http://drifty.com/
