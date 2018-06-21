@@ -1,7 +1,7 @@
 import { Component,  OnInit, ViewEncapsulation } from '@angular/core';
 import { Platform } from '@ionic/angular';
 
-import { ItemService } from '../../providers/item-service';
+import { ItemService, Item } from '../../providers/item-service';
 
 import { Plugins } from '@capacitor/core';
 
@@ -17,7 +17,7 @@ import { Plugins } from '@capacitor/core';
 export class HomeComponent implements OnInit {
 
   currentYear: number;
-  // items: any;
+  items: Item[];
 
   constructor(private platform: Platform, public itemService: ItemService) {
     // if (Capacitor.platform === 'web') {
@@ -26,6 +26,14 @@ export class HomeComponent implements OnInit {
     // } else {
       // this.testPluginNative();
     // }
+    this
+      .itemService
+      .itemsData
+      .subscribe((items: Item[]) => {
+        this.items = items;
+      });
+
+    this.itemService.getAllItems();
   }
 
   ngOnInit() {
