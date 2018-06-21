@@ -59,4 +59,9 @@ export class YoutubeModalComponent implements OnInit, AfterViewInit {
     console.log('loadNewVideo', loadNewVideo);
   }
 
+  async toggleFullscreen() {
+    const toggleFullscreen = await YoutubePlayerWeb.toggleFullScreen(this.item.id, false);
+    console.log('toggleFullscreen', toggleFullscreen);
+  }
+
 }
