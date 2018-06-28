@@ -52,7 +52,8 @@ export class DetailComponent implements OnInit {
     const result = await YoutubePlayer.echo({value: 'hola' });
     console.log('result', result);
 
-    const options = {playerId: 'player', width: 640, height: 360, videoId: this.item.videoId};
+    const playerVars = {'controls': 1, 'color': 'red', 'showinfo': 1, 'autoplay': 0, 'fs': 0, 'loop': 0, 'start': 60};
+    const options = {width: 640, height: 360, videoId: this.item.videoId, playerVars: playerVars};
     const playerReady = await YoutubePlayer.initialize(options);
   }
 
