@@ -4,12 +4,14 @@ import { IonicModule } from '@ionic/angular';
 
 import { DetailComponent } from './detail';
 import { DetailComponentRoutingModule } from './detail-routing.module';
+import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
-    DetailComponentRoutingModule
+    DetailComponentRoutingModule,
+    NtkmeButtonModule
   ],
   declarations: [DetailComponent],
   entryComponents: [DetailComponent]
