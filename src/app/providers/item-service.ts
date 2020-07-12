@@ -22,25 +22,25 @@ export class ItemService {
         id: 'item-1',
         title: 'Item 1',
         description: 'Description 1',
-        image: 'https://avatars.io/twitter/juan'
+        image: 'https://i.pravatar.cc/300?img=1'
       },
       {
         id: 'item-2',
         title: 'Item 2',
         description: 'Description 2',
-        image: 'https://avatars.io/twitter/laura'
+        image: 'https://i.pravatar.cc/300?img=2'
       },
       {
         id: 'item-3',
         title: 'Item 3',
         description: 'Description 3',
-        image: 'https://avatars.io/twitter/luis'
+        image: 'https://i.pravatar.cc/300?img=3'
       }
     ];
     this.itemsData.next(this.items);
   }
 
-  getItem(id): Item {
-    return this.items.find(item => item.id === id);
+  getItem(id: string): Item {
+    return this.items.find(item => item.id === id) as Item;
   }
 }
